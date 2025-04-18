@@ -1,0 +1,2 @@
+/usr/bin/ar qc libmsgs_control_grpc_proto.a CMakeFiles/msgs_control_grpc_proto.dir/proto_generated/msgs_control.grpc.pb.cc.o CMakeFiles/msgs_control_grpc_proto.dir/proto_generated/msgs_control.pb.cc.o
+/usr/bin/ranlib libmsgs_control_grpc_proto.a

@@ -1,0 +1,212 @@
+[
+{
+  "directory": "/home/surrogate/Desktop/MARCH_Surrogate/build",
+  "command": "/usr/bin/g++-9 -DCARES_STATICLIB -Dcustom_grpc_server_EXPORTS -I/home/surrogate/Desktop/MARCH_Surrogate/include/gRPC/cpp/proto_generated -isystem /home/surrogate/.local/include  -I/usr/xenomai/include/cobalt -I/usr/xenomai/include -D_GNU_SOURCE -D_REENTRANT -fasynchronous-unwind-tables -D__COBALT__ -D__COBALT_WRAP__ -I/usr/xenomai/include/alchemy -g -fPIC -std=gnu++17 -o CMakeFiles/custom_grpc_server.dir/include/gRPC/cpp/custom_server.cpp.o -c /home/surrogate/Desktop/MARCH_Surrogate/include/gRPC/cpp/custom_server.cpp",
+  "file": "/home/surrogate/Desktop/MARCH_Surrogate/include/gRPC/cpp/custom_server.cpp"
+},
+{
+  "directory": "/home/surrogate/Desktop/MARCH_Surrogate/build",
+  "command": "/usr/bin/g++-9 -DCARES_STATICLIB -Dcustom_grpc_server_EXPORTS -I/home/surrogate/Desktop/MARCH_Surrogate/include/gRPC/cpp/proto_generated -isystem /home/surrogate/.local/include  -I/usr/xenomai/include/cobalt -I/usr/xenomai/include -D_GNU_SOURCE -D_REENTRANT -fasynchronous-unwind-tables -D__COBALT__ -D__COBALT_WRAP__ -I/usr/xenomai/include/alchemy -g -fPIC -std=gnu++17 -o CMakeFiles/custom_grpc_server.dir/include/gRPC/cpp/custom_grpc_service.cpp.o -c /home/surrogate/Desktop/MARCH_Surrogate/include/gRPC/cpp/custom_grpc_service.cpp",
+  "file": "/home/surrogate/Desktop/MARCH_Surrogate/include/gRPC/cpp/custom_grpc_service.cpp"
+},
+{
+  "directory": "/home/surrogate/Desktop/MARCH_Surrogate/build/include/SOEM",
+  "command": "/usr/bin/gcc-9  -I/home/surrogate/Desktop/MARCH_Surrogate/include/SOEM/soem -I/home/surrogate/Desktop/MARCH_Surrogate/include/SOEM/osal -I/home/surrogate/Desktop/MARCH_Surrogate/include/SOEM/osal/linux -I/home/surrogate/Desktop/MARCH_Surrogate/include/SOEM/oshw/linux  -I/usr/xenomai/include/cobalt -I/usr/xenomai/include -D_GNU_SOURCE -D_REENTRANT -fasynchronous-unwind-tables -D__COBALT__ -D__COBALT_WRAP__ -I/usr/xenomai/include/alchemy -Wall -Wextra -Werror -g -o CMakeFiles/soem.dir/soem/ethercatbase.c.o -c /home/surrogate/Desktop/MARCH_Surrogate/include/SOEM/soem/ethercatbase.c",
+  "file": "/home/surrogate/Desktop/MARCH_Surrogate/include/SOEM/soem/ethercatbase.c"
+},
+{
+  "directory": "/home/surrogate/Desktop/MARCH_Surrogate/build/include/SOEM",
+  "command": "/usr/bin/gcc-9  -I/home/surrogate/Desktop/MARCH_Surrogate/include/SOEM/soem -I/home/surrogate/Desktop/MARCH_Surrogate/include/SOEM/osal -I/home/surrogate/Desktop/MARCH_Surrogate/include/SOEM/osal/linux -I/home/surrogate/Desktop/MARCH_Surrogate/include/SOEM/oshw/linux  -I/usr/xenomai/include/cobalt -I/usr/xenomai/include -D_GNU_SOURCE -D_REENTRANT -fasynchronous-unwind-tables -D__COBALT__ -D__COBALT_WRAP__ -I/usr/xenomai/include/alchemy -Wall -Wextra -Werror -g -o CMakeFiles/soem.dir/soem/ethercatcoe.c.o -c /home/surrogate/Desktop/MARCH_Surrogate/include/SOEM/soem/ethercatcoe.c",
+  "file": "/home/surrogate/Desktop/MARCH_Surrogate/include/SOEM/soem/ethercatcoe.c"
+},
+{
+  "directory": "/home/surrogate/Desktop/MARCH_Surrogate/build/include/SOEM",
+  "command": "/usr/bin/gcc-9  -I/home/surrogate/Desktop/MARCH_Surrogate/include/SOEM/soem -I/home/surrogate/Desktop/MARCH_Surrogate/include/SOEM/osal -I/home/surrogate/Desktop/MARCH_Surrogate/include/SOEM/osal/linux -I/home/surrogate/Desktop/MARCH_Surrogate/include/SOEM/oshw/linux  -I/usr/xenomai/include/cobalt -I/usr/xenomai/include -D_GNU_SOURCE -D_REENTRANT -fasynchronous-unwind-tables -D__COBALT__ -D__COBALT_WRAP__ -I/usr/xenomai/include/alchemy -Wall -Wextra -Werror -g -o CMakeFiles/soem.dir/soem/ethercatconfig.c.o -c /home/surrogate/Desktop/MARCH_Surrogate/include/SOEM/soem/ethercatconfig.c",
+  "file": "/home/surrogate/Desktop/MARCH_Surrogate/include/SOEM/soem/ethercatconfig.c"
+},
+{
+  "directory": "/home/surrogate/Desktop/MARCH_Surrogate/build/include/SOEM",
+  "command": "/usr/bin/gcc-9  -I/home/surrogate/Desktop/MARCH_Surrogate/include/SOEM/soem -I/home/surrogate/Desktop/MARCH_Surrogate/include/SOEM/osal -I/home/surrogate/Desktop/MARCH_Surrogate/include/SOEM/osal/linux -I/home/surrogate/Desktop/MARCH_Surrogate/include/SOEM/oshw/linux  -I/usr/xenomai/include/cobalt -I/usr/xenomai/include -D_GNU_SOURCE -D_REENTRANT -fasynchronous-unwind-tables -D__COBALT__ -D__COBALT_WRAP__ -I/usr/xenomai/include/alchemy -Wall -Wextra -Werror -g -o CMakeFiles/soem.dir/soem/ethercatdc.c.o -c /home/surrogate/Desktop/MARCH_Surrogate/include/SOEM/soem/ethercatdc.c",
+  "file": "/home/surrogate/Desktop/MARCH_Surrogate/include/SOEM/soem/ethercatdc.c"
+},
+{
+  "directory": "/home/surrogate/Desktop/MARCH_Surrogate/build/include/SOEM",
+  "command": "/usr/bin/gcc-9  -I/home/surrogate/Desktop/MARCH_Surrogate/include/SOEM/soem -I/home/surrogate/Desktop/MARCH_Surrogate/include/SOEM/osal -I/home/surrogate/Desktop/MARCH_Surrogate/include/SOEM/osal/linux -I/home/surrogate/Desktop/MARCH_Surrogate/include/SOEM/oshw/linux  -I/usr/xenomai/include/cobalt -I/usr/xenomai/include -D_GNU_SOURCE -D_REENTRANT -fasynchronous-unwind-tables -D__COBALT__ -D__COBALT_WRAP__ -I/usr/xenomai/include/alchemy -Wall -Wextra -Werror -g -o CMakeFiles/soem.dir/soem/ethercateoe.c.o -c /home/surrogate/Desktop/MARCH_Surrogate/include/SOEM/soem/ethercateoe.c",
+  "file": "/home/surrogate/Desktop/MARCH_Surrogate/include/SOEM/soem/ethercateoe.c"
+},
+{
+  "directory": "/home/surrogate/Desktop/MARCH_Surrogate/build/include/SOEM",
+  "command": "/usr/bin/gcc-9  -I/home/surrogate/Desktop/MARCH_Surrogate/include/SOEM/soem -I/home/surrogate/Desktop/MARCH_Surrogate/include/SOEM/osal -I/home/surrogate/Desktop/MARCH_Surrogate/include/SOEM/osal/linux -I/home/surrogate/Desktop/MARCH_Surrogate/include/SOEM/oshw/linux  -I/usr/xenomai/include/cobalt -I/usr/xenomai/include -D_GNU_SOURCE -D_REENTRANT -fasynchronous-unwind-tables -D__COBALT__ -D__COBALT_WRAP__ -I/usr/xenomai/include/alchemy -Wall -Wextra -Werror -g -o CMakeFiles/soem.dir/soem/ethercatfoe.c.o -c /home/surrogate/Desktop/MARCH_Surrogate/include/SOEM/soem/ethercatfoe.c",
+  "file": "/home/surrogate/Desktop/MARCH_Surrogate/include/SOEM/soem/ethercatfoe.c"
+},
+{
+  "directory": "/home/surrogate/Desktop/MARCH_Surrogate/build/include/SOEM",
+  "command": "/usr/bin/gcc-9  -I/home/surrogate/Desktop/MARCH_Surrogate/include/SOEM/soem -I/home/surrogate/Desktop/MARCH_Surrogate/include/SOEM/osal -I/home/surrogate/Desktop/MARCH_Surrogate/include/SOEM/osal/linux -I/home/surrogate/Desktop/MARCH_Surrogate/include/SOEM/oshw/linux  -I/usr/xenomai/include/cobalt -I/usr/xenomai/include -D_GNU_SOURCE -D_REENTRANT -fasynchronous-unwind-tables -D__COBALT__ -D__COBALT_WRAP__ -I/usr/xenomai/include/alchemy -Wall -Wextra -Werror -g -o CMakeFiles/soem.dir/soem/ethercatmain.c.o -c /home/surrogate/Desktop/MARCH_Surrogate/include/SOEM/soem/ethercatmain.c",
+  "file": "/home/surrogate/Desktop/MARCH_Surrogate/include/SOEM/soem/ethercatmain.c"
+},
+{
+  "directory": "/home/surrogate/Desktop/MARCH_Surrogate/build/include/SOEM",
+  "command": "/usr/bin/gcc-9  -I/home/surrogate/Desktop/MARCH_Surrogate/include/SOEM/soem -I/home/surrogate/Desktop/MARCH_Surrogate/include/SOEM/osal -I/home/surrogate/Desktop/MARCH_Surrogate/include/SOEM/osal/linux -I/home/surrogate/Desktop/MARCH_Surrogate/include/SOEM/oshw/linux  -I/usr/xenomai/include/cobalt -I/usr/xenomai/include -D_GNU_SOURCE -D_REENTRANT -fasynchronous-unwind-tables -D__COBALT__ -D__COBALT_WRAP__ -I/usr/xenomai/include/alchemy -Wall -Wextra -Werror -g -o CMakeFiles/soem.dir/soem/ethercatprint.c.o -c /home/surrogate/Desktop/MARCH_Surrogate/include/SOEM/soem/ethercatprint.c",
+  "file": "/home/surrogate/Desktop/MARCH_Surrogate/include/SOEM/soem/ethercatprint.c"
+},
+{
+  "directory": "/home/surrogate/Desktop/MARCH_Surrogate/build/include/SOEM",
+  "command": "/usr/bin/gcc-9  -I/home/surrogate/Desktop/MARCH_Surrogate/include/SOEM/soem -I/home/surrogate/Desktop/MARCH_Surrogate/include/SOEM/osal -I/home/surrogate/Desktop/MARCH_Surrogate/include/SOEM/osal/linux -I/home/surrogate/Desktop/MARCH_Surrogate/include/SOEM/oshw/linux  -I/usr/xenomai/include/cobalt -I/usr/xenomai/include -D_GNU_SOURCE -D_REENTRANT -fasynchronous-unwind-tables -D__COBALT__ -D__COBALT_WRAP__ -I/usr/xenomai/include/alchemy -Wall -Wextra -Werror -g -o CMakeFiles/soem.dir/soem/ethercatsoe.c.o -c /home/surrogate/Desktop/MARCH_Surrogate/include/SOEM/soem/ethercatsoe.c",
+  "file": "/home/surrogate/Desktop/MARCH_Surrogate/include/SOEM/soem/ethercatsoe.c"
+},
+{
+  "directory": "/home/surrogate/Desktop/MARCH_Surrogate/build/include/SOEM",
+  "command": "/usr/bin/gcc-9  -I/home/surrogate/Desktop/MARCH_Surrogate/include/SOEM/soem -I/home/surrogate/Desktop/MARCH_Surrogate/include/SOEM/osal -I/home/surrogate/Desktop/MARCH_Surrogate/include/SOEM/osal/linux -I/home/surrogate/Desktop/MARCH_Surrogate/include/SOEM/oshw/linux  -I/usr/xenomai/include/cobalt -I/usr/xenomai/include -D_GNU_SOURCE -D_REENTRANT -fasynchronous-unwind-tables -D__COBALT__ -D__COBALT_WRAP__ -I/usr/xenomai/include/alchemy -Wall -Wextra -Werror -g -o CMakeFiles/soem.dir/osal/linux/osal.c.o -c /home/surrogate/Desktop/MARCH_Surrogate/include/SOEM/osal/linux/osal.c",
+  "file": "/home/surrogate/Desktop/MARCH_Surrogate/include/SOEM/osal/linux/osal.c"
+},
+{
+  "directory": "/home/surrogate/Desktop/MARCH_Surrogate/build/include/SOEM",
+  "command": "/usr/bin/gcc-9  -I/home/surrogate/Desktop/MARCH_Surrogate/include/SOEM/soem -I/home/surrogate/Desktop/MARCH_Surrogate/include/SOEM/osal -I/home/surrogate/Desktop/MARCH_Surrogate/include/SOEM/osal/linux -I/home/surrogate/Desktop/MARCH_Surrogate/include/SOEM/oshw/linux  -I/usr/xenomai/include/cobalt -I/usr/xenomai/include -D_GNU_SOURCE -D_REENTRANT -fasynchronous-unwind-tables -D__COBALT__ -D__COBALT_WRAP__ -I/usr/xenomai/include/alchemy -Wall -Wextra -Werror -g -o CMakeFiles/soem.dir/oshw/linux/nicdrv.c.o -c /home/surrogate/Desktop/MARCH_Surrogate/include/SOEM/oshw/linux/nicdrv.c",
+  "file": "/home/surrogate/Desktop/MARCH_Surrogate/include/SOEM/oshw/linux/nicdrv.c"
+},
+{
+  "directory": "/home/surrogate/Desktop/MARCH_Surrogate/build/include/SOEM",
+  "command": "/usr/bin/gcc-9  -I/home/surrogate/Desktop/MARCH_Surrogate/include/SOEM/soem -I/home/surrogate/Desktop/MARCH_Surrogate/include/SOEM/osal -I/home/surrogate/Desktop/MARCH_Surrogate/include/SOEM/osal/linux -I/home/surrogate/Desktop/MARCH_Surrogate/include/SOEM/oshw/linux  -I/usr/xenomai/include/cobalt -I/usr/xenomai/include -D_GNU_SOURCE -D_REENTRANT -fasynchronous-unwind-tables -D__COBALT__ -D__COBALT_WRAP__ -I/usr/xenomai/include/alchemy -Wall -Wextra -Werror -g -o CMakeFiles/soem.dir/oshw/linux/oshw.c.o -c /home/surrogate/Desktop/MARCH_Surrogate/include/SOEM/oshw/linux/oshw.c",
+  "file": "/home/surrogate/Desktop/MARCH_Surrogate/include/SOEM/oshw/linux/oshw.c"
+},
+{
+  "directory": "/home/surrogate/Desktop/MARCH_Surrogate/build/include/gRPC",
+  "command": "/usr/bin/g++-9 -DCARES_STATICLIB -Dmsgs_common_grpc_proto_EXPORTS -I/home/surrogate/Desktop/MARCH_Surrogate/include/gRPC/cpp/proto_generated -isystem /home/surrogate/.local/include  -I/usr/xenomai/include/cobalt -I/usr/xenomai/include -D_GNU_SOURCE -D_REENTRANT -fasynchronous-unwind-tables -D__COBALT__ -D__COBALT_WRAP__ -I/usr/xenomai/include/alchemy -g -fPIC -std=gnu++17 -o CMakeFiles/msgs_common_grpc_proto.dir/cpp/proto_generated/msgs_common.grpc.pb.cc.o -c /home/surrogate/Desktop/MARCH_Surrogate/include/gRPC/cpp/proto_generated/msgs_common.grpc.pb.cc",
+  "file": "/home/surrogate/Desktop/MARCH_Surrogate/include/gRPC/cpp/proto_generated/msgs_common.grpc.pb.cc"
+},
+{
+  "directory": "/home/surrogate/Desktop/MARCH_Surrogate/build/include/gRPC",
+  "command": "/usr/bin/g++-9 -DCARES_STATICLIB -Dmsgs_common_grpc_proto_EXPORTS -I/home/surrogate/Desktop/MARCH_Surrogate/include/gRPC/cpp/proto_generated -isystem /home/surrogate/.local/include  -I/usr/xenomai/include/cobalt -I/usr/xenomai/include -D_GNU_SOURCE -D_REENTRANT -fasynchronous-unwind-tables -D__COBALT__ -D__COBALT_WRAP__ -I/usr/xenomai/include/alchemy -g -fPIC -std=gnu++17 -o CMakeFiles/msgs_common_grpc_proto.dir/cpp/proto_generated/msgs_common.pb.cc.o -c /home/surrogate/Desktop/MARCH_Surrogate/include/gRPC/cpp/proto_generated/msgs_common.pb.cc",
+  "file": "/home/surrogate/Desktop/MARCH_Surrogate/include/gRPC/cpp/proto_generated/msgs_common.pb.cc"
+},
+{
+  "directory": "/home/surrogate/Desktop/MARCH_Surrogate/build/include/gRPC",
+  "command": "/usr/bin/g++-9 -DCARES_STATICLIB -Dmotion_grpc_proto_EXPORTS -I/home/surrogate/Desktop/MARCH_Surrogate/include/gRPC/cpp/proto_generated -isystem /home/surrogate/.local/include  -I/usr/xenomai/include/cobalt -I/usr/xenomai/include -D_GNU_SOURCE -D_REENTRANT -fasynchronous-unwind-tables -D__COBALT__ -D__COBALT_WRAP__ -I/usr/xenomai/include/alchemy -g -fPIC -std=gnu++17 -o CMakeFiles/motion_grpc_proto.dir/cpp/proto_generated/motion.grpc.pb.cc.o -c /home/surrogate/Desktop/MARCH_Surrogate/include/gRPC/cpp/proto_generated/motion.grpc.pb.cc",
+  "file": "/home/surrogate/Desktop/MARCH_Surrogate/include/gRPC/cpp/proto_generated/motion.grpc.pb.cc"
+},
+{
+  "directory": "/home/surrogate/Desktop/MARCH_Surrogate/build/include/gRPC",
+  "command": "/usr/bin/g++-9 -DCARES_STATICLIB -Dmotion_grpc_proto_EXPORTS -I/home/surrogate/Desktop/MARCH_Surrogate/include/gRPC/cpp/proto_generated -isystem /home/surrogate/.local/include  -I/usr/xenomai/include/cobalt -I/usr/xenomai/include -D_GNU_SOURCE -D_REENTRANT -fasynchronous-unwind-tables -D__COBALT__ -D__COBALT_WRAP__ -I/usr/xenomai/include/alchemy -g -fPIC -std=gnu++17 -o CMakeFiles/motion_grpc_proto.dir/cpp/proto_generated/motion.pb.cc.o -c /home/surrogate/Desktop/MARCH_Surrogate/include/gRPC/cpp/proto_generated/motion.pb.cc",
+  "file": "/home/surrogate/Desktop/MARCH_Surrogate/include/gRPC/cpp/proto_generated/motion.pb.cc"
+},
+{
+  "directory": "/home/surrogate/Desktop/MARCH_Surrogate/build/include/gRPC",
+  "command": "/usr/bin/g++-9 -DCARES_STATICLIB -Dsystem_grpc_proto_EXPORTS -I/home/surrogate/Desktop/MARCH_Surrogate/include/gRPC/cpp/proto_generated -isystem /home/surrogate/.local/include  -I/usr/xenomai/include/cobalt -I/usr/xenomai/include -D_GNU_SOURCE -D_REENTRANT -fasynchronous-unwind-tables -D__COBALT__ -D__COBALT_WRAP__ -I/usr/xenomai/include/alchemy -g -fPIC -std=gnu++17 -o CMakeFiles/system_grpc_proto.dir/cpp/proto_generated/system.grpc.pb.cc.o -c /home/surrogate/Desktop/MARCH_Surrogate/include/gRPC/cpp/proto_generated/system.grpc.pb.cc",
+  "file": "/home/surrogate/Desktop/MARCH_Surrogate/include/gRPC/cpp/proto_generated/system.grpc.pb.cc"
+},
+{
+  "directory": "/home/surrogate/Desktop/MARCH_Surrogate/build/include/gRPC",
+  "command": "/usr/bin/g++-9 -DCARES_STATICLIB -Dsystem_grpc_proto_EXPORTS -I/home/surrogate/Desktop/MARCH_Surrogate/include/gRPC/cpp/proto_generated -isystem /home/surrogate/.local/include  -I/usr/xenomai/include/cobalt -I/usr/xenomai/include -D_GNU_SOURCE -D_REENTRANT -fasynchronous-unwind-tables -D__COBALT__ -D__COBALT_WRAP__ -I/usr/xenomai/include/alchemy -g -fPIC -std=gnu++17 -o CMakeFiles/system_grpc_proto.dir/cpp/proto_generated/system.pb.cc.o -c /home/surrogate/Desktop/MARCH_Surrogate/include/gRPC/cpp/proto_generated/system.pb.cc",
+  "file": "/home/surrogate/Desktop/MARCH_Surrogate/include/gRPC/cpp/proto_generated/system.pb.cc"
+},
+{
+  "directory": "/home/surrogate/Desktop/MARCH_Surrogate/build/include/gRPC",
+  "command": "/usr/bin/g++-9 -DCARES_STATICLIB -Dmsgs_system_grpc_proto_EXPORTS -I/home/surrogate/Desktop/MARCH_Surrogate/include/gRPC/cpp/proto_generated -isystem /home/surrogate/.local/include  -I/usr/xenomai/include/cobalt -I/usr/xenomai/include -D_GNU_SOURCE -D_REENTRANT -fasynchronous-unwind-tables -D__COBALT__ -D__COBALT_WRAP__ -I/usr/xenomai/include/alchemy -g -fPIC -std=gnu++17 -o CMakeFiles/msgs_system_grpc_proto.dir/cpp/proto_generated/msgs_system.grpc.pb.cc.o -c /home/surrogate/Desktop/MARCH_Surrogate/include/gRPC/cpp/proto_generated/msgs_system.grpc.pb.cc",
+  "file": "/home/surrogate/Desktop/MARCH_Surrogate/include/gRPC/cpp/proto_generated/msgs_system.grpc.pb.cc"
+},
+{
+  "directory": "/home/surrogate/Desktop/MARCH_Surrogate/build/include/gRPC",
+  "command": "/usr/bin/g++-9 -DCARES_STATICLIB -Dmsgs_system_grpc_proto_EXPORTS -I/home/surrogate/Desktop/MARCH_Surrogate/include/gRPC/cpp/proto_generated -isystem /home/surrogate/.local/include  -I/usr/xenomai/include/cobalt -I/usr/xenomai/include -D_GNU_SOURCE -D_REENTRANT -fasynchronous-unwind-tables -D__COBALT__ -D__COBALT_WRAP__ -I/usr/xenomai/include/alchemy -g -fPIC -std=gnu++17 -o CMakeFiles/msgs_system_grpc_proto.dir/cpp/proto_generated/msgs_system.pb.cc.o -c /home/surrogate/Desktop/MARCH_Surrogate/include/gRPC/cpp/proto_generated/msgs_system.pb.cc",
+  "file": "/home/surrogate/Desktop/MARCH_Surrogate/include/gRPC/cpp/proto_generated/msgs_system.pb.cc"
+},
+{
+  "directory": "/home/surrogate/Desktop/MARCH_Surrogate/build/include/gRPC",
+  "command": "/usr/bin/g++-9 -DCARES_STATICLIB -Dcontrol_grpc_proto_EXPORTS -I/home/surrogate/Desktop/MARCH_Surrogate/include/gRPC/cpp/proto_generated -isystem /home/surrogate/.local/include  -I/usr/xenomai/include/cobalt -I/usr/xenomai/include -D_GNU_SOURCE -D_REENTRANT -fasynchronous-unwind-tables -D__COBALT__ -D__COBALT_WRAP__ -I/usr/xenomai/include/alchemy -g -fPIC -std=gnu++17 -o CMakeFiles/control_grpc_proto.dir/cpp/proto_generated/control.grpc.pb.cc.o -c /home/surrogate/Desktop/MARCH_Surrogate/include/gRPC/cpp/proto_generated/control.grpc.pb.cc",
+  "file": "/home/surrogate/Desktop/MARCH_Surrogate/include/gRPC/cpp/proto_generated/control.grpc.pb.cc"
+},
+{
+  "directory": "/home/surrogate/Desktop/MARCH_Surrogate/build/include/gRPC",
+  "command": "/usr/bin/g++-9 -DCARES_STATICLIB -Dcontrol_grpc_proto_EXPORTS -I/home/surrogate/Desktop/MARCH_Surrogate/include/gRPC/cpp/proto_generated -isystem /home/surrogate/.local/include  -I/usr/xenomai/include/cobalt -I/usr/xenomai/include -D_GNU_SOURCE -D_REENTRANT -fasynchronous-unwind-tables -D__COBALT__ -D__COBALT_WRAP__ -I/usr/xenomai/include/alchemy -g -fPIC -std=gnu++17 -o CMakeFiles/control_grpc_proto.dir/cpp/proto_generated/control.pb.cc.o -c /home/surrogate/Desktop/MARCH_Surrogate/include/gRPC/cpp/proto_generated/control.pb.cc",
+  "file": "/home/surrogate/Desktop/MARCH_Surrogate/include/gRPC/cpp/proto_generated/control.pb.cc"
+},
+{
+  "directory": "/home/surrogate/Desktop/MARCH_Surrogate/build/include/gRPC",
+  "command": "/usr/bin/g++-9 -DCARES_STATICLIB -Dmsgs_config_grpc_proto_EXPORTS -I/home/surrogate/Desktop/MARCH_Surrogate/include/gRPC/cpp/proto_generated -isystem /home/surrogate/.local/include  -I/usr/xenomai/include/cobalt -I/usr/xenomai/include -D_GNU_SOURCE -D_REENTRANT -fasynchronous-unwind-tables -D__COBALT__ -D__COBALT_WRAP__ -I/usr/xenomai/include/alchemy -g -fPIC -std=gnu++17 -o CMakeFiles/msgs_config_grpc_proto.dir/cpp/proto_generated/msgs_config.grpc.pb.cc.o -c /home/surrogate/Desktop/MARCH_Surrogate/include/gRPC/cpp/proto_generated/msgs_config.grpc.pb.cc",
+  "file": "/home/surrogate/Desktop/MARCH_Surrogate/include/gRPC/cpp/proto_generated/msgs_config.grpc.pb.cc"
+},
+{
+  "directory": "/home/surrogate/Desktop/MARCH_Surrogate/build/include/gRPC",
+  "command": "/usr/bin/g++-9 -DCARES_STATICLIB -Dmsgs_config_grpc_proto_EXPORTS -I/home/surrogate/Desktop/MARCH_Surrogate/include/gRPC/cpp/proto_generated -isystem /home/surrogate/.local/include  -I/usr/xenomai/include/cobalt -I/usr/xenomai/include -D_GNU_SOURCE -D_REENTRANT -fasynchronous-unwind-tables -D__COBALT__ -D__COBALT_WRAP__ -I/usr/xenomai/include/alchemy -g -fPIC -std=gnu++17 -o CMakeFiles/msgs_config_grpc_proto.dir/cpp/proto_generated/msgs_config.pb.cc.o -c /home/surrogate/Desktop/MARCH_Surrogate/include/gRPC/cpp/proto_generated/msgs_config.pb.cc",
+  "file": "/home/surrogate/Desktop/MARCH_Surrogate/include/gRPC/cpp/proto_generated/msgs_config.pb.cc"
+},
+{
+  "directory": "/home/surrogate/Desktop/MARCH_Surrogate/build/include/gRPC",
+  "command": "/usr/bin/g++-9 -DCARES_STATICLIB -Dmsgs_control_grpc_proto_EXPORTS -I/home/surrogate/Desktop/MARCH_Surrogate/include/gRPC/cpp/proto_generated -isystem /home/surrogate/.local/include  -I/usr/xenomai/include/cobalt -I/usr/xenomai/include -D_GNU_SOURCE -D_REENTRANT -fasynchronous-unwind-tables -D__COBALT__ -D__COBALT_WRAP__ -I/usr/xenomai/include/alchemy -g -fPIC -std=gnu++17 -o CMakeFiles/msgs_control_grpc_proto.dir/cpp/proto_generated/msgs_control.grpc.pb.cc.o -c /home/surrogate/Desktop/MARCH_Surrogate/include/gRPC/cpp/proto_generated/msgs_control.grpc.pb.cc",
+  "file": "/home/surrogate/Desktop/MARCH_Surrogate/include/gRPC/cpp/proto_generated/msgs_control.grpc.pb.cc"
+},
+{
+  "directory": "/home/surrogate/Desktop/MARCH_Surrogate/build/include/gRPC",
+  "command": "/usr/bin/g++-9 -DCARES_STATICLIB -Dmsgs_control_grpc_proto_EXPORTS -I/home/surrogate/Desktop/MARCH_Surrogate/include/gRPC/cpp/proto_generated -isystem /home/surrogate/.local/include  -I/usr/xenomai/include/cobalt -I/usr/xenomai/include -D_GNU_SOURCE -D_REENTRANT -fasynchronous-unwind-tables -D__COBALT__ -D__COBALT_WRAP__ -I/usr/xenomai/include/alchemy -g -fPIC -std=gnu++17 -o CMakeFiles/msgs_control_grpc_proto.dir/cpp/proto_generated/msgs_control.pb.cc.o -c /home/surrogate/Desktop/MARCH_Surrogate/include/gRPC/cpp/proto_generated/msgs_control.pb.cc",
+  "file": "/home/surrogate/Desktop/MARCH_Surrogate/include/gRPC/cpp/proto_generated/msgs_control.pb.cc"
+},
+{
+  "directory": "/home/surrogate/Desktop/MARCH_Surrogate/build/include/gRPC",
+  "command": "/usr/bin/g++-9 -DCARES_STATICLIB -Dmsgs_motion_grpc_proto_EXPORTS -I/home/surrogate/Desktop/MARCH_Surrogate/include/gRPC/cpp/proto_generated -isystem /home/surrogate/.local/include  -I/usr/xenomai/include/cobalt -I/usr/xenomai/include -D_GNU_SOURCE -D_REENTRANT -fasynchronous-unwind-tables -D__COBALT__ -D__COBALT_WRAP__ -I/usr/xenomai/include/alchemy -g -fPIC -std=gnu++17 -o CMakeFiles/msgs_motion_grpc_proto.dir/cpp/proto_generated/msgs_motion.grpc.pb.cc.o -c /home/surrogate/Desktop/MARCH_Surrogate/include/gRPC/cpp/proto_generated/msgs_motion.grpc.pb.cc",
+  "file": "/home/surrogate/Desktop/MARCH_Surrogate/include/gRPC/cpp/proto_generated/msgs_motion.grpc.pb.cc"
+},
+{
+  "directory": "/home/surrogate/Desktop/MARCH_Surrogate/build/include/gRPC",
+  "command": "/usr/bin/g++-9 -DCARES_STATICLIB -Dmsgs_motion_grpc_proto_EXPORTS -I/home/surrogate/Desktop/MARCH_Surrogate/include/gRPC/cpp/proto_generated -isystem /home/surrogate/.local/include  -I/usr/xenomai/include/cobalt -I/usr/xenomai/include -D_GNU_SOURCE -D_REENTRANT -fasynchronous-unwind-tables -D__COBALT__ -D__COBALT_WRAP__ -I/usr/xenomai/include/alchemy -g -fPIC -std=gnu++17 -o CMakeFiles/msgs_motion_grpc_proto.dir/cpp/proto_generated/msgs_motion.pb.cc.o -c /home/surrogate/Desktop/MARCH_Surrogate/include/gRPC/cpp/proto_generated/msgs_motion.pb.cc",
+  "file": "/home/surrogate/Desktop/MARCH_Surrogate/include/gRPC/cpp/proto_generated/msgs_motion.pb.cc"
+},
+{
+  "directory": "/home/surrogate/Desktop/MARCH_Surrogate/build/src/example_xenomai",
+  "command": "/usr/bin/g++-9 -DCARES_STATICLIB -I/home/surrogate/Desktop/MARCH_Surrogate/include/gRPC/cpp/proto_generated -I/home/surrogate/Desktop/MARCH_Surrogate/include/SOEM/soem -I/home/surrogate/Desktop/MARCH_Surrogate/include/SOEM/osal -I/home/surrogate/Desktop/MARCH_Surrogate/include/SOEM/osal/linux -I/home/surrogate/Desktop/MARCH_Surrogate/include/SOEM/oshw/linux -isystem /home/surrogate/.local/include  -I/usr/xenomai/include/cobalt -I/usr/xenomai/include -D_GNU_SOURCE -D_REENTRANT -fasynchronous-unwind-tables -D__COBALT__ -D__COBALT_WRAP__ -I/usr/xenomai/include/alchemy -g -std=gnu++17 -o CMakeFiles/hello_xenomai.dir/src/hello_xenomai.cpp.o -c /home/surrogate/Desktop/MARCH_Surrogate/src/example_xenomai/src/hello_xenomai.cpp",
+  "file": "/home/surrogate/Desktop/MARCH_Surrogate/src/example_xenomai/src/hello_xenomai.cpp"
+},
+{
+  "directory": "/home/surrogate/Desktop/MARCH_Surrogate/build/src/example_xenomai",
+  "command": "/usr/bin/g++-9 -DCARES_STATICLIB -I/home/surrogate/Desktop/MARCH_Surrogate/include/gRPC/cpp/proto_generated -I/home/surrogate/Desktop/MARCH_Surrogate/include/SOEM/soem -I/home/surrogate/Desktop/MARCH_Surrogate/include/SOEM/osal -I/home/surrogate/Desktop/MARCH_Surrogate/include/SOEM/osal/linux -I/home/surrogate/Desktop/MARCH_Surrogate/include/SOEM/oshw/linux -isystem /home/surrogate/.local/include  -I/usr/xenomai/include/cobalt -I/usr/xenomai/include -D_GNU_SOURCE -D_REENTRANT -fasynchronous-unwind-tables -D__COBALT__ -D__COBALT_WRAP__ -I/usr/xenomai/include/alchemy -g -std=gnu++17 -o CMakeFiles/hello_rt_task.dir/src/hello_rt_task.cpp.o -c /home/surrogate/Desktop/MARCH_Surrogate/src/example_xenomai/src/hello_rt_task.cpp",
+  "file": "/home/surrogate/Desktop/MARCH_Surrogate/src/example_xenomai/src/hello_rt_task.cpp"
+},
+{
+  "directory": "/home/surrogate/Desktop/MARCH_Surrogate/build/src/example_xenomai",
+  "command": "/usr/bin/g++-9 -DCARES_STATICLIB -I/home/surrogate/Desktop/MARCH_Surrogate/include/gRPC/cpp/proto_generated -I/home/surrogate/Desktop/MARCH_Surrogate/include/SOEM/soem -I/home/surrogate/Desktop/MARCH_Surrogate/include/SOEM/osal -I/home/surrogate/Desktop/MARCH_Surrogate/include/SOEM/osal/linux -I/home/surrogate/Desktop/MARCH_Surrogate/include/SOEM/oshw/linux -isystem /home/surrogate/.local/include  -I/usr/xenomai/include/cobalt -I/usr/xenomai/include -D_GNU_SOURCE -D_REENTRANT -fasynchronous-unwind-tables -D__COBALT__ -D__COBALT_WRAP__ -I/usr/xenomai/include/alchemy -g -std=gnu++17 -o CMakeFiles/hello_grpc.dir/src/hello_grpc.cpp.o -c /home/surrogate/Desktop/MARCH_Surrogate/src/example_xenomai/src/hello_grpc.cpp",
+  "file": "/home/surrogate/Desktop/MARCH_Surrogate/src/example_xenomai/src/hello_grpc.cpp"
+},
+{
+  "directory": "/home/surrogate/Desktop/MARCH_Surrogate/build/src/Test_Wheel",
+  "command": "/usr/bin/g++-9 -DCARES_STATICLIB -DCUSTOM_ECAT_UTILS_EXPORTS -I/home/surrogate/Desktop/MARCH_Surrogate/include/gRPC/cpp/proto_generated -I/home/surrogate/Desktop/MARCH_Surrogate/include/SOEM/soem -I/home/surrogate/Desktop/MARCH_Surrogate/include/SOEM/osal -I/home/surrogate/Desktop/MARCH_Surrogate/include/SOEM/osal/linux -I/home/surrogate/Desktop/MARCH_Surrogate/include/SOEM/oshw/linux -isystem /home/surrogate/.local/include  -I/usr/xenomai/include/cobalt -I/usr/xenomai/include -D_GNU_SOURCE -D_REENTRANT -fasynchronous-unwind-tables -D__COBALT__ -D__COBALT_WRAP__ -I/usr/xenomai/include/alchemy -g -fPIC -std=gnu++17 -o CMakeFiles/CUSTOM_ECAT_UTILS.dir/utils/CustomECAT/CustomEtherCAT.cpp.o -c /home/surrogate/Desktop/MARCH_Surrogate/src/Test_Wheel/utils/CustomECAT/CustomEtherCAT.cpp",
+  "file": "/home/surrogate/Desktop/MARCH_Surrogate/src/Test_Wheel/utils/CustomECAT/CustomEtherCAT.cpp"
+},
+{
+  "directory": "/home/surrogate/Desktop/MARCH_Surrogate/build/src/Test_Wheel",
+  "command": "/usr/bin/g++-9 -DCARES_STATICLIB -I/home/surrogate/Desktop/MARCH_Surrogate/include/gRPC/cpp/proto_generated -I/home/surrogate/Desktop/MARCH_Surrogate/include/SOEM/soem -I/home/surrogate/Desktop/MARCH_Surrogate/include/SOEM/osal -I/home/surrogate/Desktop/MARCH_Surrogate/include/SOEM/osal/linux -I/home/surrogate/Desktop/MARCH_Surrogate/include/SOEM/oshw/linux -isystem /home/surrogate/.local/include  -I/usr/xenomai/include/cobalt -I/usr/xenomai/include -D_GNU_SOURCE -D_REENTRANT -fasynchronous-unwind-tables -D__COBALT__ -D__COBALT_WRAP__ -I/usr/xenomai/include/alchemy -g -std=gnu++17 -o CMakeFiles/Test_Wheel.dir/src/Test_Wheel.cpp.o -c /home/surrogate/Desktop/MARCH_Surrogate/src/Test_Wheel/src/Test_Wheel.cpp",
+  "file": "/home/surrogate/Desktop/MARCH_Surrogate/src/Test_Wheel/src/Test_Wheel.cpp"
+},
+{
+  "directory": "/home/surrogate/Desktop/MARCH_Surrogate/build/src/Test_Dynamixel",
+  "command": "/usr/bin/g++-9 -DCARES_STATICLIB -DCUSTOM_DMX_UTILS_EXPORTS -I/home/surrogate/Desktop/MARCH_Surrogate/include/gRPC/cpp/proto_generated -I/home/surrogate/Desktop/MARCH_Surrogate/include/SOEM/soem -I/home/surrogate/Desktop/MARCH_Surrogate/include/SOEM/osal -I/home/surrogate/Desktop/MARCH_Surrogate/include/SOEM/osal/linux -I/home/surrogate/Desktop/MARCH_Surrogate/include/SOEM/oshw/linux -isystem /home/surrogate/.local/include  -I/usr/xenomai/include/cobalt -I/usr/xenomai/include -D_GNU_SOURCE -D_REENTRANT -fasynchronous-unwind-tables -D__COBALT__ -D__COBALT_WRAP__ -I/usr/xenomai/include/alchemy -g -fPIC -std=gnu++17 -o CMakeFiles/CUSTOM_DMX_UTILS.dir/src/CustomDynamixel.cpp.o -c /home/surrogate/Desktop/MARCH_Surrogate/src/Test_Dynamixel/src/CustomDynamixel.cpp",
+  "file": "/home/surrogate/Desktop/MARCH_Surrogate/src/Test_Dynamixel/src/CustomDynamixel.cpp"
+},
+{
+  "directory": "/home/surrogate/Desktop/MARCH_Surrogate/build/src/Test_Dynamixel",
+  "command": "/usr/bin/g++-9 -DCARES_STATICLIB -DCUSTOM_DMX_UTILS_EXPORTS -I/home/surrogate/Desktop/MARCH_Surrogate/include/gRPC/cpp/proto_generated -I/home/surrogate/Desktop/MARCH_Surrogate/include/SOEM/soem -I/home/surrogate/Desktop/MARCH_Surrogate/include/SOEM/osal -I/home/surrogate/Desktop/MARCH_Surrogate/include/SOEM/osal/linux -I/home/surrogate/Desktop/MARCH_Surrogate/include/SOEM/oshw/linux -isystem /home/surrogate/.local/include  -I/usr/xenomai/include/cobalt -I/usr/xenomai/include -D_GNU_SOURCE -D_REENTRANT -fasynchronous-unwind-tables -D__COBALT__ -D__COBALT_WRAP__ -I/usr/xenomai/include/alchemy -g -fPIC -std=gnu++17 -o CMakeFiles/CUSTOM_DMX_UTILS.dir/src/EL6021.cpp.o -c /home/surrogate/Desktop/MARCH_Surrogate/src/Test_Dynamixel/src/EL6021.cpp",
+  "file": "/home/surrogate/Desktop/MARCH_Surrogate/src/Test_Dynamixel/src/EL6021.cpp"
+},
+{
+  "directory": "/home/surrogate/Desktop/MARCH_Surrogate/build/src/Test_Dynamixel",
+  "command": "/usr/bin/g++-9 -DCARES_STATICLIB -I/home/surrogate/Desktop/MARCH_Surrogate/include/gRPC/cpp/proto_generated -I/home/surrogate/Desktop/MARCH_Surrogate/include/SOEM/soem -I/home/surrogate/Desktop/MARCH_Surrogate/include/SOEM/osal -I/home/surrogate/Desktop/MARCH_Surrogate/include/SOEM/osal/linux -I/home/surrogate/Desktop/MARCH_Surrogate/include/SOEM/oshw/linux -isystem /home/surrogate/.local/include  -I/usr/xenomai/include/cobalt -I/usr/xenomai/include -D_GNU_SOURCE -D_REENTRANT -fasynchronous-unwind-tables -D__COBALT__ -D__COBALT_WRAP__ -I/usr/xenomai/include/alchemy -g -std=gnu++17 -o CMakeFiles/Test_Dynamixel.dir/src/Test_Dynamixel.cpp.o -c /home/surrogate/Desktop/MARCH_Surrogate/src/Test_Dynamixel/src/Test_Dynamixel.cpp",
+  "file": "/home/surrogate/Desktop/MARCH_Surrogate/src/Test_Dynamixel/src/Test_Dynamixel.cpp"
+},
+{
+  "directory": "/home/surrogate/Desktop/MARCH_Surrogate/build/src/test_integration",
+  "command": "/usr/bin/g++-9 -DCARES_STATICLIB -I/home/surrogate/Desktop/MARCH_Surrogate/include/gRPC/cpp/proto_generated -I/home/surrogate/Desktop/MARCH_Surrogate/include/SOEM/soem -I/home/surrogate/Desktop/MARCH_Surrogate/include/SOEM/osal -I/home/surrogate/Desktop/MARCH_Surrogate/include/SOEM/osal/linux -I/home/surrogate/Desktop/MARCH_Surrogate/include/SOEM/oshw/linux -isystem /home/surrogate/.local/include  -I/usr/xenomai/include/cobalt -I/usr/xenomai/include -D_GNU_SOURCE -D_REENTRANT -fasynchronous-unwind-tables -D__COBALT__ -D__COBALT_WRAP__ -I/usr/xenomai/include/alchemy -g -std=gnu++17 -o CMakeFiles/test_integration.dir/src/test_integration.cpp.o -c /home/surrogate/Desktop/MARCH_Surrogate/src/test_integration/src/test_integration.cpp",
+  "file": "/home/surrogate/Desktop/MARCH_Surrogate/src/test_integration/src/test_integration.cpp"
+},
+{
+  "directory": "/home/surrogate/Desktop/MARCH_Surrogate/build/src/test_integration",
+  "command": "/usr/bin/g++-9 -DCARES_STATICLIB -I/home/surrogate/Desktop/MARCH_Surrogate/include/gRPC/cpp/proto_generated -I/home/surrogate/Desktop/MARCH_Surrogate/include/SOEM/soem -I/home/surrogate/Desktop/MARCH_Surrogate/include/SOEM/osal -I/home/surrogate/Desktop/MARCH_Surrogate/include/SOEM/osal/linux -I/home/surrogate/Desktop/MARCH_Surrogate/include/SOEM/oshw/linux -isystem /home/surrogate/.local/include  -I/usr/xenomai/include/cobalt -I/usr/xenomai/include -D_GNU_SOURCE -D_REENTRANT -fasynchronous-unwind-tables -D__COBALT__ -D__COBALT_WRAP__ -I/usr/xenomai/include/alchemy -g -std=gnu++17 -o CMakeFiles/test_integration.dir/src/MarchSurrogate.cpp.o -c /home/surrogate/Desktop/MARCH_Surrogate/src/test_integration/src/MarchSurrogate.cpp",
+  "file": "/home/surrogate/Desktop/MARCH_Surrogate/src/test_integration/src/MarchSurrogate.cpp"
+},
+{
+  "directory": "/home/surrogate/Desktop/MARCH_Surrogate/build/src/Test_Balancer",
+  "command": "/usr/bin/g++-9 -DCARES_STATICLIB -DCUSTOM_BALANCER_UTILS_EXPORTS -I/home/surrogate/Desktop/MARCH_Surrogate/include/gRPC/cpp/proto_generated -I/home/surrogate/Desktop/MARCH_Surrogate/include/SOEM/soem -I/home/surrogate/Desktop/MARCH_Surrogate/include/SOEM/osal -I/home/surrogate/Desktop/MARCH_Surrogate/include/SOEM/osal/linux -I/home/surrogate/Desktop/MARCH_Surrogate/include/SOEM/oshw/linux -isystem /home/surrogate/.local/include  -I/usr/xenomai/include/cobalt -I/usr/xenomai/include -D_GNU_SOURCE -D_REENTRANT -fasynchronous-unwind-tables -D__COBALT__ -D__COBALT_WRAP__ -I/usr/xenomai/include/alchemy -g -fPIC -std=gnu++17 -o CMakeFiles/CUSTOM_BALANCER_UTILS.dir/src/CustomBalancer.cpp.o -c /home/surrogate/Desktop/MARCH_Surrogate/src/Test_Balancer/src/CustomBalancer.cpp",
+  "file": "/home/surrogate/Desktop/MARCH_Surrogate/src/Test_Balancer/src/CustomBalancer.cpp"
+},
+{
+  "directory": "/home/surrogate/Desktop/MARCH_Surrogate/build/src/Test_Balancer",
+  "command": "/usr/bin/g++-9 -DCARES_STATICLIB -I/home/surrogate/Desktop/MARCH_Surrogate/include/gRPC/cpp/proto_generated -I/home/surrogate/Desktop/MARCH_Surrogate/include/SOEM/soem -I/home/surrogate/Desktop/MARCH_Surrogate/include/SOEM/osal -I/home/surrogate/Desktop/MARCH_Surrogate/include/SOEM/osal/linux -I/home/surrogate/Desktop/MARCH_Surrogate/include/SOEM/oshw/linux -isystem /home/surrogate/.local/include  -I/usr/xenomai/include/cobalt -I/usr/xenomai/include -D_GNU_SOURCE -D_REENTRANT -fasynchronous-unwind-tables -D__COBALT__ -D__COBALT_WRAP__ -I/usr/xenomai/include/alchemy -g -std=gnu++17 -o CMakeFiles/Test_Balancer.dir/src/Test_Balancer.cpp.o -c /home/surrogate/Desktop/MARCH_Surrogate/src/Test_Balancer/src/Test_Balancer.cpp",
+  "file": "/home/surrogate/Desktop/MARCH_Surrogate/src/Test_Balancer/src/Test_Balancer.cpp"
+}
+]

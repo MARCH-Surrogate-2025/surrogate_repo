@@ -1,0 +1,2 @@
+/usr/bin/ar qc libmotion_grpc_proto.a CMakeFiles/motion_grpc_proto.dir/proto_generated/motion.grpc.pb.cc.o CMakeFiles/motion_grpc_proto.dir/proto_generated/motion.pb.cc.o
+/usr/bin/ranlib libmotion_grpc_proto.a

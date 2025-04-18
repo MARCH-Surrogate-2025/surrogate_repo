@@ -1,0 +1,2 @@
+/usr/bin/ar qc libsystem_grpc_proto.a CMakeFiles/system_grpc_proto.dir/proto_generated/system.grpc.pb.cc.o CMakeFiles/system_grpc_proto.dir/proto_generated/system.pb.cc.o
+/usr/bin/ranlib libsystem_grpc_proto.a

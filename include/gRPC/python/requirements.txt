@@ -1,0 +1,9 @@
+matplotlib
+numpy
+scipy
+jupyter
+
+pyqt5==5.14.2
+
+grpcio
+grpcio-tools

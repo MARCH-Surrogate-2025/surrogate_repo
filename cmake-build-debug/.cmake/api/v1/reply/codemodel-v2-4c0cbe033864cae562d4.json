@@ -1,0 +1,391 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Debug-f5ebdc15457944623624.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.8"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						8,
+						9
+					]
+				},
+				{
+					"build" : "include/SOEM",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-include.SOEM-Debug-a333ac71e03e18ae1af9.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.9"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 1,
+					"source" : "include/SOEM",
+					"targetIndexes" : 
+					[
+						19
+					]
+				},
+				{
+					"build" : "include/gRPC",
+					"jsonFile" : "directory-include.gRPC-Debug-c7942737583f28c7f544.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.8"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 2,
+					"source" : "include/gRPC",
+					"targetIndexes" : 
+					[
+						7,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18,
+						20
+					]
+				},
+				{
+					"build" : "src/example_xenomai",
+					"jsonFile" : "directory-src.example_xenomai-Debug-ac98e124ddd48f9b7eff.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.8"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "src/example_xenomai",
+					"targetIndexes" : 
+					[
+						10,
+						11,
+						12
+					]
+				},
+				{
+					"build" : "src/Test_Wheel",
+					"jsonFile" : "directory-src.Test_Wheel-Debug-cd131a02e1ba1a076d93.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.8"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "src/Test_Wheel",
+					"targetIndexes" : 
+					[
+						2,
+						3,
+						6
+					]
+				},
+				{
+					"build" : "src/Test_Dynamixel",
+					"jsonFile" : "directory-src.Test_Dynamixel-Debug-623fd31a4a96d3092fb0.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.8"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "src/Test_Dynamixel",
+					"targetIndexes" : 
+					[
+						1,
+						5
+					]
+				},
+				{
+					"build" : "src/test_integration",
+					"jsonFile" : "directory-src.test_integration-Debug-c16c5419b51790ea4525.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.8"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "src/test_integration",
+					"targetIndexes" : 
+					[
+						21
+					]
+				},
+				{
+					"build" : "src/Test_Balancer",
+					"jsonFile" : "directory-src.Test_Balancer-Debug-fabbe779758d1a533eb2.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.8"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "src/Test_Balancer",
+					"targetIndexes" : 
+					[
+						0,
+						4
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"childIndexes" : 
+					[
+						1,
+						2
+					],
+					"directoryIndexes" : 
+					[
+						0,
+						3,
+						4,
+						5,
+						6,
+						7
+					],
+					"name" : "Surrogate",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						8,
+						9,
+						10,
+						11,
+						12,
+						21
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						1
+					],
+					"name" : "SOEM",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						19
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						2
+					],
+					"name" : "CustomRPC",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						7,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18,
+						20
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 7,
+					"id" : "CUSTOM_BALANCER_UTILS::@b6c3fee0dd200f91bc27",
+					"jsonFile" : "target-CUSTOM_BALANCER_UTILS-Debug-37c94976427735a0b164.json",
+					"name" : "CUSTOM_BALANCER_UTILS",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "CUSTOM_DMX_UTILS::@fa7f2bee087ca863d6ad",
+					"jsonFile" : "target-CUSTOM_DMX_UTILS-Debug-021c92b65b781204d7d9.json",
+					"name" : "CUSTOM_DMX_UTILS",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "CUSTOM_ECAT_UTILS::@948285eb41a06bf75f9e",
+					"jsonFile" : "target-CUSTOM_ECAT_UTILS-Debug-eb9e86defde43df212cd.json",
+					"name" : "CUSTOM_ECAT_UTILS",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "CUSTOM_PDO::@948285eb41a06bf75f9e",
+					"jsonFile" : "target-CUSTOM_PDO-Debug-366d369451fef2de8e7b.json",
+					"name" : "CUSTOM_PDO",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 7,
+					"id" : "Test_Balancer::@b6c3fee0dd200f91bc27",
+					"jsonFile" : "target-Test_Balancer-Debug-fa900fcc321ceedb9695.json",
+					"name" : "Test_Balancer",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "Test_Dynamixel::@fa7f2bee087ca863d6ad",
+					"jsonFile" : "target-Test_Dynamixel-Debug-5e138b7730c32a1929c0.json",
+					"name" : "Test_Dynamixel",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "Test_Wheel::@948285eb41a06bf75f9e",
+					"jsonFile" : "target-Test_Wheel-Debug-c189fba73c83f970b4b1.json",
+					"name" : "Test_Wheel",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "control_grpc_proto::@c9a3a2a73d0f92c8cabe",
+					"jsonFile" : "target-control_grpc_proto-Debug-df3234adc57c3926fced.json",
+					"name" : "control_grpc_proto",
+					"projectIndex" : 2
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "custom_grpc_server::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-custom_grpc_server-Debug-bd25e5ac6304a69c92f3.json",
+					"name" : "custom_grpc_server",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "custom_shared_memory::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-custom_shared_memory-Debug-61ffcfc1472e51268692.json",
+					"name" : "custom_shared_memory",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "hello_grpc::@6b1d77ce7471f9b77493",
+					"jsonFile" : "target-hello_grpc-Debug-7c1b7c6b5657baa82072.json",
+					"name" : "hello_grpc",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "hello_rt_task::@6b1d77ce7471f9b77493",
+					"jsonFile" : "target-hello_rt_task-Debug-98570e387ea536b3a463.json",
+					"name" : "hello_rt_task",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "hello_xenomai::@6b1d77ce7471f9b77493",
+					"jsonFile" : "target-hello_xenomai-Debug-f87eaa6e81e6275673df.json",
+					"name" : "hello_xenomai",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "motion_grpc_proto::@c9a3a2a73d0f92c8cabe",
+					"jsonFile" : "target-motion_grpc_proto-Debug-2b3fb9d9e1e131dc6ee1.json",
+					"name" : "motion_grpc_proto",
+					"projectIndex" : 2
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "msgs_common_grpc_proto::@c9a3a2a73d0f92c8cabe",
+					"jsonFile" : "target-msgs_common_grpc_proto-Debug-8ba626d8c2cb93b41a01.json",
+					"name" : "msgs_common_grpc_proto",
+					"projectIndex" : 2
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "msgs_config_grpc_proto::@c9a3a2a73d0f92c8cabe",
+					"jsonFile" : "target-msgs_config_grpc_proto-Debug-19dcb0e259c07b00ef42.json",
+					"name" : "msgs_config_grpc_proto",
+					"projectIndex" : 2
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "msgs_control_grpc_proto::@c9a3a2a73d0f92c8cabe",
+					"jsonFile" : "target-msgs_control_grpc_proto-Debug-d0823855082122af70e7.json",
+					"name" : "msgs_control_grpc_proto",
+					"projectIndex" : 2
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "msgs_motion_grpc_proto::@c9a3a2a73d0f92c8cabe",
+					"jsonFile" : "target-msgs_motion_grpc_proto-Debug-6e01486d10b46e2bcc56.json",
+					"name" : "msgs_motion_grpc_proto",
+					"projectIndex" : 2
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "msgs_system_grpc_proto::@c9a3a2a73d0f92c8cabe",
+					"jsonFile" : "target-msgs_system_grpc_proto-Debug-06c35e5f20812b8c3da8.json",
+					"name" : "msgs_system_grpc_proto",
+					"projectIndex" : 2
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "soem::@1ff090bef7c0cc66cd65",
+					"jsonFile" : "target-soem-Debug-bd7d53e4c5b1a1d4a6e2.json",
+					"name" : "soem",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "system_grpc_proto::@c9a3a2a73d0f92c8cabe",
+					"jsonFile" : "target-system_grpc_proto-Debug-6c04e4cfb318c7ddaf5d.json",
+					"name" : "system_grpc_proto",
+					"projectIndex" : 2
+				},
+				{
+					"directoryIndex" : 6,
+					"id" : "test_integration::@cf537f14952a2b66ca56",
+					"jsonFile" : "target-test_integration-Debug-019a3dd9e1559c5dff91.json",
+					"name" : "test_integration",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/surrogate/Jaehyun/github_repos/surrogate_repo/cmake-build-debug",
+		"source" : "/home/surrogate/Jaehyun/github_repos/surrogate_repo"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 7
+	}
+}

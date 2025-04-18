@@ -1,0 +1,2 @@
+/usr/bin/ar qc libmsgs_motion_grpc_proto.a CMakeFiles/msgs_motion_grpc_proto.dir/proto_generated/msgs_motion.grpc.pb.cc.o CMakeFiles/msgs_motion_grpc_proto.dir/proto_generated/msgs_motion.pb.cc.o
+/usr/bin/ranlib libmsgs_motion_grpc_proto.a

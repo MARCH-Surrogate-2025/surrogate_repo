@@ -1,0 +1,2 @@
+/usr/bin/ar qc libcustom_shared_memory.a 
+/usr/bin/ranlib libcustom_shared_memory.a

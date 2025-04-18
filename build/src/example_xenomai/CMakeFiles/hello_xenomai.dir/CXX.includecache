@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/surrogate/Desktop/MARCH_Surrogate/src/example_xenomai/src/hello_xenomai.cpp
+hello_xenomai.h
+/home/surrogate/Desktop/MARCH_Surrogate/src/example_xenomai/src/hello_xenomai.h
+
+/home/surrogate/Desktop/MARCH_Surrogate/src/example_xenomai/src/hello_xenomai.h
+stdio.h
+-
+signal.h
+-
+unistd.h
+-
+alchemy/task.h
+-
+

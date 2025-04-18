@@ -1,0 +1,9 @@
+# Hashes of file build rules.
+1abf15810b976d9e37dea57a66c69291 ../proto_generated/control.pb.cc
+b7fc9e2a338d8a43fbd341d7c44f9d75 ../proto_generated/motion.pb.cc
+515ace9346a2f1a7fa3a7bbd2094baab ../proto_generated/msgs_common.pb.cc
+4db0a7a8507130cfe038e41d4c6080af ../proto_generated/msgs_config.pb.cc
+dd5336122e0cd7d4b03434bde7b6630c ../proto_generated/msgs_control.pb.cc
+4107d6b9c1ae43e836d7b70dd7e91800 ../proto_generated/msgs_motion.pb.cc
+1ce6e806f887e27b7cb3598e7ad39096 ../proto_generated/msgs_system.pb.cc
+9f4c2c377789f0faee79a346bfd3bfee ../proto_generated/system.pb.cc

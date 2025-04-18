@@ -1,0 +1,111 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"install"
+		],
+		"files" : 
+		[
+			"include/SOEM/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 98,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 100,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 102,
+				"parent" : 0
+			}
+		]
+	},
+	"installers" : 
+	[
+		{
+			"backtrace" : 1,
+			"component" : "Unspecified",
+			"destination" : "lib",
+			"paths" : 
+			[
+				"include/SOEM/libsoem.a"
+			],
+			"targetId" : "soem::@1ff090bef7c0cc66cd65",
+			"targetIndex" : 19,
+			"type" : "target"
+		},
+		{
+			"backtrace" : 1,
+			"component" : "Unspecified",
+			"cxxModuleBmiTarget" : 
+			{
+				"id" : "soem::@1ff090bef7c0cc66cd65",
+				"index" : 19
+			},
+			"destination" : "lib",
+			"type" : "cxxModuleBmi"
+		},
+		{
+			"backtrace" : 2,
+			"component" : "Unspecified",
+			"destination" : "share/soem/cmake",
+			"exportName" : "soemConfig",
+			"exportTargets" : 
+			[
+				{
+					"id" : "soem::@1ff090bef7c0cc66cd65",
+					"index" : 19
+				}
+			],
+			"paths" : 
+			[
+				"include/SOEM/CMakeFiles/Export/39806c66e6e7fd9076eb39407f12ee6f/soemConfig.cmake"
+			],
+			"type" : "export"
+		},
+		{
+			"backtrace" : 3,
+			"component" : "Unspecified",
+			"destination" : "include/soem",
+			"paths" : 
+			[
+				"include/SOEM/soem/ethercat.h",
+				"include/SOEM/soem/ethercatbase.h",
+				"include/SOEM/soem/ethercatcoe.h",
+				"include/SOEM/soem/ethercatconfig.h",
+				"include/SOEM/soem/ethercatconfiglist.h",
+				"include/SOEM/soem/ethercatdc.h",
+				"include/SOEM/soem/ethercateoe.h",
+				"include/SOEM/soem/ethercatfoe.h",
+				"include/SOEM/soem/ethercatmain.h",
+				"include/SOEM/soem/ethercatprint.h",
+				"include/SOEM/soem/ethercatsoe.h",
+				"include/SOEM/soem/ethercattype.h",
+				"include/SOEM/osal/linux/osal_defs.h",
+				"include/SOEM/osal/osal.h",
+				"include/SOEM/oshw/linux/nicdrv.h",
+				"include/SOEM/oshw/linux/oshw.h"
+			],
+			"type" : "file"
+		}
+	],
+	"paths" : 
+	{
+		"build" : "include/SOEM",
+		"source" : "include/SOEM"
+	}
+}

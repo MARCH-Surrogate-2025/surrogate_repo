@@ -1,0 +1,104 @@
+/home/surrogate/Downloads/clion-2024.3.5/bin/cmake/linux/x64/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=/home/surrogate/Downloads/clion-2024.3.5/bin/ninja/linux/x64/ninja -G Ninja -S /home/surrogate/Jaehyun/github_repos/surrogate_repo -B /home/surrogate/Jaehyun/github_repos/surrogate_repo/cmake-build-debug
+CMake Warning (dev) at CMakeLists.txt:1 (PROJECT):
+  cmake_minimum_required() should be called prior to this top-level project()
+  call.  Please see the cmake-commands(7) manual for usage documentation of
+  both commands.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+-- The C compiler identification is GNU 11.4.0
+-- The CXX compiler identification is GNU 11.4.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- 
+    ==========================================
+    Xenomai 3.2.1 alchemy skin
+        libs          : -Wl,--no-as-needed;-Wl,@/usr/xenomai/lib/modechk.wrappers;-lalchemy;-lcopperplate;/usr/xenomai/lib/xenomai/bootstrap-pic.o;-L/usr/xenomai/lib;-lcobalt;-lmodechk;-lpthread;-lrt
+        include       : /usr/xenomai/include/cobalt;/usr/xenomai/include;/usr/xenomai/include/alchemy
+        definitions   : _GNU_SOURCE;_REENTRANT;__COBALT__
+        ldflags       : -Wl,--no-as-needed -Wl,@/usr/xenomai/lib/modechk.wrappers -lalchemy -lcopperplate /usr/xenomai/lib/xenomai/bootstrap-pic.o  -L/usr/xenomai/lib -lcobalt -lmodechk -lpthread -lrt
+        cflags        : -I/usr/xenomai/include/cobalt -I/usr/xenomai/include -D_GNU_SOURCE -D_REENTRANT -fasynchronous-unwind-tables -D__COBALT__ -I/usr/xenomai/include/alchemy
+        other ldflags : 
+        other cflags  : -fasynchronous-unwind-tables
+    ==========================================
+    
+-- 
+    ==========================================
+    Xenomai 3.2.1 posix skin
+        libs          : -Wl,--no-as-needed;-Wl,@/usr/xenomai/lib/cobalt.wrappers;-Wl,@/usr/xenomai/lib/modechk.wrappers;/usr/xenomai/lib/xenomai/bootstrap-pic.o;-L/usr/xenomai/lib;-lcobalt;-lmodechk;-lpthread;-lrt
+        include       : /usr/xenomai/include/cobalt;/usr/xenomai/include
+        definitions   : _GNU_SOURCE;_REENTRANT;__COBALT__;__COBALT_WRAP__
+        ldflags       : -Wl,--no-as-needed -Wl,@/usr/xenomai/lib/cobalt.wrappers -Wl,@/usr/xenomai/lib/modechk.wrappers  /usr/xenomai/lib/xenomai/bootstrap-pic.o  -L/usr/xenomai/lib -lcobalt -lmodechk -lpthread -lrt
+        cflags        : -I/usr/xenomai/include/cobalt -I/usr/xenomai/include -D_GNU_SOURCE -D_REENTRANT -fasynchronous-unwind-tables -D__COBALT__ -D__COBALT_WRAP__
+        other ldflags : 
+        other cflags  : -fasynchronous-unwind-tables
+    ==========================================
+    
+-- 
+    ==========================================
+    Xenomai 3.2.1 rtdm skin
+        libs          : -Wl,--no-as-needed;-Wl,@/usr/xenomai/lib/cobalt.wrappers;-Wl,@/usr/xenomai/lib/modechk.wrappers;/usr/xenomai/lib/xenomai/bootstrap-pic.o;-L/usr/xenomai/lib;-lcobalt;-lmodechk;-lpthread;-lrt
+        include       : /usr/xenomai/include/cobalt;/usr/xenomai/include
+        definitions   : _GNU_SOURCE;_REENTRANT;__COBALT__;__COBALT_WRAP__
+        ldflags       : -Wl,--no-as-needed -Wl,@/usr/xenomai/lib/cobalt.wrappers -Wl,@/usr/xenomai/lib/modechk.wrappers  /usr/xenomai/lib/xenomai/bootstrap-pic.o  -L/usr/xenomai/lib -lcobalt -lmodechk -lpthread -lrt
+        cflags        : -I/usr/xenomai/include/cobalt -I/usr/xenomai/include -D_GNU_SOURCE -D_REENTRANT -fasynchronous-unwind-tables -D__COBALT__ -D__COBALT_WRAP__
+        other ldflags : 
+        other cflags  : -fasynchronous-unwind-tables
+    ==========================================
+    
+-- Found Xenomai: /usr/xenomai/bin/xeno-config (found version "3.2.1")
+CMake Warning (dev) at /home/surrogate/Downloads/clion-2024.3.5/bin/cmake/linux/x64/share/cmake-3.30/Modules/FindPackageHandleStandardArgs.cmake:441 (message):
+  The package name passed to `find_package_handle_standard_args` (XENOMAI)
+  does not match the name of the calling package (Xenomai).  This can lead to
+  problems in calling code that expects `find_package` result variables
+  (e.g., `_FOUND`) to follow a certain pattern.
+Call Stack (most recent call first):
+  cmake/FindXenomai.cmake:145 (find_package_handle_standard_args)
+  cmake/FindXenomai.cmake:188 (handle_standard_args)
+  CMakeLists.txt:10 (find_package)
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+-- Found XENOMAI: -Wl,--no-as-needed;-Wl,@/usr/xenomai/lib/modechk.wrappers;-lalchemy;-lcopperplate;/usr/xenomai/lib/xenomai/bootstrap-pic.o;-L/usr/xenomai/lib;-lcobalt;-lmodechk;-lpthread;-lrt
+CMake Warning (dev) at /home/surrogate/Downloads/clion-2024.3.5/bin/cmake/linux/x64/share/cmake-3.30/Modules/FindPackageHandleStandardArgs.cmake:441 (message):
+  The package name passed to `find_package_handle_standard_args`
+  (XENOMAI_POSIX) does not match the name of the calling package (Xenomai).
+  This can lead to problems in calling code that expects `find_package`
+  result variables (e.g., `_FOUND`) to follow a certain pattern.
+Call Stack (most recent call first):
+  cmake/FindXenomai.cmake:145 (find_package_handle_standard_args)
+  cmake/FindXenomai.cmake:189 (handle_standard_args)
+  CMakeLists.txt:10 (find_package)
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+-- Found XENOMAI_POSIX: -Wl,--no-as-needed;-Wl,@/usr/xenomai/lib/cobalt.wrappers;-Wl,@/usr/xenomai/lib/modechk.wrappers;/usr/xenomai/lib/xenomai/bootstrap-pic.o;-L/usr/xenomai/lib;-lcobalt;-lmodechk;-lpthread;-lrt
+CMake Warning (dev) at /home/surrogate/Downloads/clion-2024.3.5/bin/cmake/linux/x64/share/cmake-3.30/Modules/FindPackageHandleStandardArgs.cmake:441 (message):
+  The package name passed to `find_package_handle_standard_args`
+  (XENOMAI_RTDM) does not match the name of the calling package (Xenomai).
+  This can lead to problems in calling code that expects `find_package`
+  result variables (e.g., `_FOUND`) to follow a certain pattern.
+Call Stack (most recent call first):
+  cmake/FindXenomai.cmake:145 (find_package_handle_standard_args)
+  cmake/FindXenomai.cmake:190 (handle_standard_args)
+  CMakeLists.txt:10 (find_package)
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+-- Found XENOMAI_RTDM: -Wl,--no-as-needed;-Wl,@/usr/xenomai/lib/cobalt.wrappers;-Wl,@/usr/xenomai/lib/modechk.wrappers;/usr/xenomai/lib/xenomai/bootstrap-pic.o;-L/usr/xenomai/lib;-lcobalt;-lmodechk;-lpthread;-lrt
+Xenomai package was found
+-- SOEM: not building tests when built as dependency
+-- OS is linux
+-- LIB_DIR: lib
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+-- Found Threads: TRUE
+-- Using protobuf 26.1.0
+-- Using gRPC 1.64.0
+-- Configuring done (0.9s)
+-- Generating done (0.2s)
+-- Build files have been written to: /home/surrogate/Jaehyun/github_repos/surrogate_repo/cmake-build-debug

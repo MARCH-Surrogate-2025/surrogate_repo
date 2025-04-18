@@ -1,0 +1,2 @@
+/usr/bin/ar qc libmsgs_system_grpc_proto.a CMakeFiles/msgs_system_grpc_proto.dir/proto_generated/msgs_system.grpc.pb.cc.o CMakeFiles/msgs_system_grpc_proto.dir/proto_generated/msgs_system.pb.cc.o
+/usr/bin/ranlib libmsgs_system_grpc_proto.a

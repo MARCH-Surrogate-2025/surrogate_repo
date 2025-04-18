@@ -1,0 +1,2 @@
+/usr/bin/ar qc libcontrol_grpc_proto.a CMakeFiles/control_grpc_proto.dir/proto_generated/control.grpc.pb.cc.o CMakeFiles/control_grpc_proto.dir/proto_generated/control.pb.cc.o
+/usr/bin/ranlib libcontrol_grpc_proto.a

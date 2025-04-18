@@ -1,0 +1,150 @@
+// Copyright 2015 gRPC authors.
+//
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+//     http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+
+syntax = "proto3";
+package surrogate.grpc;
+
+
+
+message EmptyRequest {}
+message EmptyReply {}
+
+message DefaultReply {
+    CommandId command_id = 1;
+}
+
+// enum
+enum CommandId {
+    CMD_NULL = 0;
+    CMD_SYETEM_RESET = 1; // soft reset, hard reset?
+    CMD_SYSTEM_EMERGENCY_STOP = 2;
+
+    CMD_SET_DESIRED_STATE = 100;
+}
+
+enum SystemState {
+    SS_OFF = 0;
+    SS_ON = 1;
+    SS_RECOVERY = 2;
+    SS_EMERGENCY_STOP = 3;
+}
+
+////////////////////////////State/////////////////////////
+//message State {
+//  bool enable = 1;
+//}
+//
+////////////////////////////IntMode/////////////////////////
+//message IntMode {
+//  uint64 mode = 1;
+//}
+//
+////////////////////////////StopCat/////////////////////////
+//message StopCat {
+//  StopCategory category = 1;
+//}
+//
+////////////////////////////StopCat/////////////////////////
+//message PauseCat {
+//  PauseCategory category = 1;
+//}
+//
+////////////////////////////Response/////////////////////////
+//message Response {
+//  int64 code = 1;
+//  string msg = 2;
+//}
+//
+////////////////////////////Message/////////////////////////
+//message Message {
+//  string content = 1;
+//}
+//
+//// enum
+//enum OpState {
+//  OP_SYSTEM_OFF = 0;
+//  OP_SYSTEM_ON = 1;
+//  OP_VIOLATE = 2;
+//  OP_RECOVER_HARD = 3;
+//  OP_RECOVER_SOFT = 4;
+//  OP_IDLE = 5;
+//  OP_MOVING = 6;
+//  OP_TEACHING = 7;
+//  OP_COLLISION = 8;
+//  OP_STOP_AND_OFF = 9;
+//  OP_COMPLIANCE = 10;
+//  OP_BRAKE_CONTROL = 11;
+//  OP_SYSTEM_RESET = 12;
+//  OP_SYSTEM_SWITCH = 13;
+//  OP_VIOLATE_HARD = 15;
+//  OP_MANUAL_RECOVER = 16;
+//  TELE_OP = 17;
+//}
+//
+//enum TrajState {
+//  TRAJ_NONE = 0;
+//  TRAJ_INIT = 1;
+//  TRAJ_CALC = 2;
+//  TRAJ_STAND_BY = 3;
+//  TRAJ_ACC = 4;
+//  TRAJ_CRUISE = 5;
+//  TRAJ_DEC = 6;
+//  TRAJ_CANCELLING = 7;
+//  TRAJ_FINISHED = 8;
+//  TRAJ_ERROR = 9;
+//}
+//
+//enum TrajCondition {
+//  TRAJ_STARTED = 0;
+//  TRAJ_ACC_DONE = 1;
+//  TRAJ_CRZ_DONE = 2;
+//  TRAJ_DEC_DONE = 3;
+//}
+//
+//enum StopCategory {
+//  IMMEDIATE_BRAKE = 0;
+//  SMOOTH_BRAKE = 1;
+//  SMOOTH_ONLY = 2;
+//}
+//
+//enum PauseCategory {
+//  SMOOTH_PAUSE = 0;
+//  IMMEDIATE_PAUSE = 1;
+//}
+//
+//enum ProgramState {
+//  PROG_IDLE = 0;
+//  PROG_RUNNING = 1;
+//  PROG_PAUSING = 2;
+//  PROG_STOPPING = 3;
+//}
+//
+//enum CollisionPolicyType {
+//  COLL_NO_DETECT = 0;
+//  COLL_PAUSE = 1;
+//  COLL_RESUME_AFTER_SLEEP = 2;
+//  COLL_STOP = 3;
+//}
+//
+//enum TuningSpace {
+//  TUNE_ALL = 0;
+//  TUNE_JOINT = 1;
+//  TUNE_TASK = 2;
+//}
+//
+//enum TuningPrecision {
+//  LOW_PRECISION = 0;
+//  MIDDLE_PRECISION = 1;
+//  HIGH_PRECISION = 2;
+//}
