@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/hello_xenomai.dir/src/hello_xenomai.cpp.o"
+  "CMakeFiles/hello_xenomai.dir/src/hello_xenomai.cpp.o.d"
   "hello_xenomai"
   "hello_xenomai.pdb"
 )

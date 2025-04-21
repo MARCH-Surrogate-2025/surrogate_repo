@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/Test_Dynamixel.dir/src/Test_Dynamixel.cpp.o"
+  "CMakeFiles/Test_Dynamixel.dir/src/Test_Dynamixel.cpp.o.d"
   "Test_Dynamixel"
   "Test_Dynamixel.pdb"
 )

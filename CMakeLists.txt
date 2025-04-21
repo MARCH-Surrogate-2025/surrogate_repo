@@ -37,45 +37,46 @@ set(CMAKE_SHARED_LINKER_FLAGS "${CMAKE_SHARED_LINKER_FLAGS} ${xeno_ldflags}")
 # build SOEM library
 add_subdirectory(include/SOEM)
 
-# add gRPC library
-set(target_proto_names
-        "control"
-        "motion"
-        "system"
-        "msgs_common"
-        "msgs_config"
-        "msgs_control"
-        "msgs_motion"
-        "msgs_system"
-)
-include(include/gRPC/cpp/cmake/common.cmake)
-add_subdirectory(include/gRPC)
-include_directories("include/gRPC/cpp/proto_generated")
 
-set(target_grpc_protos)
-foreach (target_proto_name ${target_proto_names})
-    list(APPEND target_grpc_protos "${target_proto_name}_grpc_proto")
-endforeach ()
-
-add_library(custom_grpc_server SHARED include/gRPC/cpp/custom_server.cpp include/gRPC/cpp/custom_grpc_service.cpp)
-target_link_libraries(custom_grpc_server PUBLIC
-        ${target_grpc_protos}
-        absl::check
-        absl::flags
-        absl::flags_parse
-        absl::log
-        ${_REFLECTION}
-        ${_GRPC_GRPCPP}
-        ${_PROTOBUF_LIBPROTOBUF}
-)
+## add gRPC library
+#set(target_proto_names
+#        "control"
+#        "motion"
+#        "system"
+#        "msgs_common"
+#        "msgs_config"
+#        "msgs_control"
+#        "msgs_motion"
+#        "msgs_system"
+#)
+#include(include/gRPC/cpp/cmake/common.cmake)
+#add_subdirectory(include/gRPC)
+#include_directories("include/gRPC/cpp/proto_generated")
+#
+#set(target_grpc_protos)
+#foreach (target_proto_name ${target_proto_names})
+#    list(APPEND target_grpc_protos "${target_proto_name}_grpc_proto")
+#endforeach ()
+#
+#add_library(custom_grpc_server SHARED include/gRPC/cpp/custom_server.cpp include/gRPC/cpp/custom_grpc_service.cpp)
+#target_link_libraries(custom_grpc_server PUBLIC
+#        ${target_grpc_protos}
+#        absl::check
+#        absl::flags
+#        absl::flags_parse
+#        absl::log
+#        ${_REFLECTION}
+#        ${_GRPC_GRPCPP}
+#        ${_PROTOBUF_LIBPROTOBUF}
+#)
 
 add_library(custom_shared_memory STATIC include/SharedMemory/shared_memory.h)
 set_target_properties(custom_shared_memory PROPERTIES LINKER_LANGUAGE CXX)
 # build sources
-set(LIBS alchemy cobalt copperplate trank soem custom_grpc_server)
+set(LIBS alchemy cobalt copperplate trank soem)
 
 add_subdirectory(${CMAKE_SOURCE_DIR}/src/example_xenomai)
 add_subdirectory(${CMAKE_SOURCE_DIR}/src/Test_Wheel)
 add_subdirectory(${CMAKE_SOURCE_DIR}/src/Test_Dynamixel)
-add_subdirectory(${CMAKE_SOURCE_DIR}/src/test_integration)
+#add_subdirectory(${CMAKE_SOURCE_DIR}/src/test_integration)
 add_subdirectory(${CMAKE_SOURCE_DIR}/src/Test_Balancer)
