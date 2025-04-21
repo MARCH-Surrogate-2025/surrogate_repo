@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/hello_grpc.dir/src/hello_grpc.cpp.o"
+  "CMakeFiles/hello_grpc.dir/src/hello_grpc.cpp.o.d"
   "hello_grpc"
   "hello_grpc.pdb"
 )

@@ -4,7 +4,9 @@ file(REMOVE_RECURSE
   "../proto_generated/msgs_motion.pb.cc"
   "../proto_generated/msgs_motion.pb.h"
   "CMakeFiles/msgs_motion_grpc_proto.dir/proto_generated/msgs_motion.grpc.pb.cc.o"
+  "CMakeFiles/msgs_motion_grpc_proto.dir/proto_generated/msgs_motion.grpc.pb.cc.o.d"
   "CMakeFiles/msgs_motion_grpc_proto.dir/proto_generated/msgs_motion.pb.cc.o"
+  "CMakeFiles/msgs_motion_grpc_proto.dir/proto_generated/msgs_motion.pb.cc.o.d"
   "libmsgs_motion_grpc_proto.a"
   "libmsgs_motion_grpc_proto.pdb"
 )

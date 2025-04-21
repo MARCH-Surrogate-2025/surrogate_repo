@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/Test_Wheel.dir/src/Test_Wheel.cpp.o"
+  "CMakeFiles/Test_Wheel.dir/src/Test_Wheel.cpp.o.d"
   "Test_Wheel"
   "Test_Wheel.pdb"
 )

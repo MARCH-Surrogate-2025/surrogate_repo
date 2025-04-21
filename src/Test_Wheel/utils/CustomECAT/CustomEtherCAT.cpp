@@ -149,10 +149,15 @@ int CustomEtherCAT::SendCommand(int slave, int mode, int val)
 {
     if (system_ready)
     {
-        rxPDO[slave]->controlWord = CONTROLWORD_COMMAND_ENABLEOPERATION;
+        // ENABLE_OPERATION (0x000F) | NEW_SET_POINT (0x0010) = 0x001F
+        rxPDO[slave]->controlWord = CONTROLWORD_COMMAND_ENABLEOPERATION | CONTROLWORD_BIT4_NEWSETPOINT;
         rxPDO[slave]->modeOfOperation = mode;
-        // rxPDO[slave]->targetVelocity = val;
-        rxPDO[slave]->targetTorque = val;
+
+        if (mode == CYCLIC_SYNC_VELOCITY_MODE)
+            rxPDO[slave]->targetVelocity = val;
+        else if (mode == CYCLIC_SYNC_TORQUE_MODE)
+            rxPDO[slave]->targetTorque = val;
+
         return ProcessOneCycleCommand();
     }
     else

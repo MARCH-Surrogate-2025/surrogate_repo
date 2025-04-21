@@ -121,6 +121,4 @@
 // struct wheel_rx *rxPDO[WHEEL_NUM];
 // struct wheel_tx *txPDO[WHEEL_NUM];
 
-
-
 #endif

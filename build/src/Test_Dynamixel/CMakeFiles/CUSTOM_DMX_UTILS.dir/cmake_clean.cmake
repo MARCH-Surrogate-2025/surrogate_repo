@@ -1,6 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/CUSTOM_DMX_UTILS.dir/src/CustomDynamixel.cpp.o"
+  "CMakeFiles/CUSTOM_DMX_UTILS.dir/src/CustomDynamixel.cpp.o.d"
   "CMakeFiles/CUSTOM_DMX_UTILS.dir/src/EL6021.cpp.o"
+  "CMakeFiles/CUSTOM_DMX_UTILS.dir/src/EL6021.cpp.o.d"
   "libCUSTOM_DMX_UTILS.pdb"
   "libCUSTOM_DMX_UTILS.so"
 )

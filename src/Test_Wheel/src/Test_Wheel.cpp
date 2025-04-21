@@ -69,12 +69,14 @@ static void SoemEcat(void *arg)
         thread_tick_1++;
         float Deg_ZM = 0.0f;
         float z_velm = 0.0f;
-        read_and_parse_serial_data(fd, Deg_ZM, z_velm);
+        //read_and_parse_serial_data(fd, Deg_ZM, z_velm); 지움(윤재)
 
         // ec.SendCommand(0, CYCLIC_SYNC_VELOCITY_MODE, 300);
-
+        /* 기존 토크 제어 부분 일단 없앰(윤재)
         float tau = 200 * Deg_ZM;
-        ec.SendCommand(0, CYCLIC_SYNC_TORQUE_MODE, (int)tau);
+        ec.SendCommand(0, CYCLIC_SYNC_TORQUE_MODE, (int)tau);*/
+        int rpm = 100;
+        ec.SendCommand(0, CYCLIC_SYNC_VELOCITY_MODE, rpm);
         sw = ec.GetStatusWord(0);
         cw = ec.GetControlWord(0);   
 
@@ -204,8 +206,8 @@ int main(int argc, char* argv[])
     // rt_printf("[main] RT TicToc Task is created \n");
     // rt_task_create(&TicToc_task, "TicToc_task", 0, 90, 0);
     // rt_task_start(&TicToc_task, &TicToc, NULL);
-
-    const char* portname = "/dev/ttyACM0";  // 사용하려는 포트 (예: /dev/ttyUSB0, /dev/ttyACM0 등)
+    //여기부터 25번째 아래까지 주석처리함. 얘네는 외부에서 serial 통신으로 값 받아온느애들.(윤재)
+    /*const char* portname = "/dev/ttyACM0";  // 사용하려는 포트 (예: /dev/ttyUSB0, /dev/ttyACM0 등)
     fd = open(portname, O_RDWR | O_NOCTTY | O_NDELAY);  // 포트 열기
 
     if (fd == -1) {
@@ -230,13 +232,14 @@ int main(int argc, char* argv[])
     options.c_cflag |= CREAD | CLOCAL;  // 수신 활성화, 로컬 연결
 
     // 설정을 포트에 반영
-    tcsetattr(fd, TCSANOW, &options);
+    tcsetattr(fd, TCSANOW, &options);*/
 
     // Variables to hold parsed data
     float Deg_ZM = 0.0f;
     float z_velm = 0.0f;
 
     // Read and parse the data
+    /* 이부분도 수정(윤재)
     for(int i=0;i<100;i++){
             if (read_and_parse_serial_data(fd, Deg_ZM, z_velm)) {
         // Print the parsed values
@@ -244,7 +247,7 @@ int main(int argc, char* argv[])
     } else {
         std::cerr << "Failed to read valid data!" << std::endl;
     }
-    }
+    }*/
 
     
 

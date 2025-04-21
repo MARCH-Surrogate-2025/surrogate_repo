@@ -22,6 +22,7 @@ cmake_minimum_required(VERSION 3.8)
 project(CustomRPC C CXX)
 
 include(${CMAKE_CURRENT_SOURCE_DIR}/cmake/common.cmake)
+find_package(absl REQUIRED)
 
 set(target_proto_names
         "control"
@@ -33,6 +34,7 @@ set(target_proto_names
         "msgs_motion"
         "msgs_system"
 )
+
 set(target_generate_dir "${CMAKE_CURRENT_SOURCE_DIR}/proto_generated")
 file(MAKE_DIRECTORY ${target_generate_dir})
 include_directories("${target_generate_dir}")

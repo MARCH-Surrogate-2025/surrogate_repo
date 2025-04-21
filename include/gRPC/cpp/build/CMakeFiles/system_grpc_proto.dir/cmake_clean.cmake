@@ -4,7 +4,9 @@ file(REMOVE_RECURSE
   "../proto_generated/system.pb.cc"
   "../proto_generated/system.pb.h"
   "CMakeFiles/system_grpc_proto.dir/proto_generated/system.grpc.pb.cc.o"
+  "CMakeFiles/system_grpc_proto.dir/proto_generated/system.grpc.pb.cc.o.d"
   "CMakeFiles/system_grpc_proto.dir/proto_generated/system.pb.cc.o"
+  "CMakeFiles/system_grpc_proto.dir/proto_generated/system.pb.cc.o.d"
   "libsystem_grpc_proto.a"
   "libsystem_grpc_proto.pdb"
 )
