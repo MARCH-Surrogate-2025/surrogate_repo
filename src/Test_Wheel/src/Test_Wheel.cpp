@@ -67,26 +67,30 @@ static void SoemEcat(void *arg)
     while(working_soemecat)
     {
         thread_tick_1++;
-        float Deg_ZM = 0.0f;
+        /*float Deg_ZM = 0.0f;
         float z_velm = 0.0f;
-        //read_and_parse_serial_data(fd, Deg_ZM, z_velm); 지움(윤재)
+        read_and_parse_serial_data(fd, Deg_ZM, z_velm);*///(윤재 세줄)
 
         // ec.SendCommand(0, CYCLIC_SYNC_VELOCITY_MODE, 300);
-        /* 기존 토크 제어 부분 일단 없앰(윤재)
-        float tau = 200 * Deg_ZM;
-        ec.SendCommand(0, CYCLIC_SYNC_TORQUE_MODE, (int)tau);*/
-        int rpm = 100;
-        ec.SendCommand(0, CYCLIC_SYNC_VELOCITY_MODE, rpm);
+
+        /*float tau = 200 * Deg_ZM;
+        ec.SendCommand(0, CYCLIC_SYNC_TORQUE_MODE, (int)tau);*///(윤재두줄)
+
+        // Generate a sine wave for torque (sin(2 * pi * frequency * time))
+        float torque = 300 * sin(2 * M_PI * 1.0 * thread_tick_1 / 5000.0); // Frequency 0.2Hz
+
+        // Send command with calculated torque
+        ec.SendCommand(0, CYCLIC_SYNC_TORQUE_MODE, (int)torque);
+
         sw = ec.GetStatusWord(0);
-        cw = ec.GetControlWord(0);   
+        cw = ec.GetControlWord(0);
 
 
         // Read and parse the data
-  
 
-        rt_printf("[RT-SoemCat] Cycle: %d, StatusWord: %x, CommandWord(shutdown): %x, Actual Velocity: %d, Deg: %.2f, Vel: %.2f\n"
-                    , thread_tick_1, sw, cw
-                    , ec.txPDO[0]->velocityActualValue, Deg_ZM, z_velm);
+
+        rt_printf("[RT-SoemCat] Cycle: %d, StatusWord: %x, CommandWord(shutdown): %x, Actual Velocity: %d, Target Torque: %.2f\n"
+                  , thread_tick_1, sw, cw, ec.txPDO[0]->velocityActualValue, torque);
 
         // tick++;
         // if(tick>=1000)
@@ -124,7 +128,7 @@ void error_callback()
         sleep(1);
         rt_task_delete(&SoemEcat_task);
     }
-    
+
 
     exit(1);
 }
@@ -171,7 +175,7 @@ bool read_and_parse_serial_data(int fd, float &deg, float &vel) {
                 if (read_buffer[0] == '$') {
                     // Parse the string with sscanf: expected format is "$deg, vel"
                     int num_parsed = sscanf(read_buffer, "$%f, %f", &deg, &vel);
-                    
+
                     // If two numbers are successfully parsed
                     if (num_parsed == 2) {
                         line_received = true;
@@ -206,7 +210,7 @@ int main(int argc, char* argv[])
     // rt_printf("[main] RT TicToc Task is created \n");
     // rt_task_create(&TicToc_task, "TicToc_task", 0, 90, 0);
     // rt_task_start(&TicToc_task, &TicToc, NULL);
-    //여기부터 25번째 아래까지 주석처리함. 얘네는 외부에서 serial 통신으로 값 받아온느애들.(윤재)
+    //40줄정도 주석처리함 serial로 받는 부분임.
     /*const char* portname = "/dev/ttyACM0";  // 사용하려는 포트 (예: /dev/ttyUSB0, /dev/ttyACM0 등)
     fd = open(portname, O_RDWR | O_NOCTTY | O_NDELAY);  // 포트 열기
 
@@ -232,14 +236,13 @@ int main(int argc, char* argv[])
     options.c_cflag |= CREAD | CLOCAL;  // 수신 활성화, 로컬 연결
 
     // 설정을 포트에 반영
-    tcsetattr(fd, TCSANOW, &options);*/
+    tcsetattr(fd, TCSANOW, &options);
 
     // Variables to hold parsed data
     float Deg_ZM = 0.0f;
     float z_velm = 0.0f;
 
     // Read and parse the data
-    /* 이부분도 수정(윤재)
     for(int i=0;i<100;i++){
             if (read_and_parse_serial_data(fd, Deg_ZM, z_velm)) {
         // Print the parsed values
@@ -247,8 +250,8 @@ int main(int argc, char* argv[])
     } else {
         std::cerr << "Failed to read valid data!" << std::endl;
     }
-    }*/
-
+    }
+*/
     
 
     char* port_name = argv[1];

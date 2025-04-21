@@ -12,12 +12,12 @@
 
 class CustomEtherCAT {
 public:
-    #pragma pack(push,1)
+#pragma pack(push,1)
     struct wheel_rx
     {
         uint16_t controlWord;
         int8_t modeOfOperation;
-        int32_t targetVelocity;
+        // int32_t targetVelocity;
         int16_t targetTorque;
     };
     struct wheel_tx
@@ -26,7 +26,7 @@ public:
         int8_t modeOfOperationDisplay;
         int32_t velocityActualValue;
     };
-    #pragma pack(pop)
+#pragma pack(pop)
 
     struct wheel_rx *rxPDO[WHEEL_NUM];
     struct wheel_tx *txPDO[WHEEL_NUM];
