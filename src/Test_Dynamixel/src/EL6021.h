@@ -28,8 +28,8 @@
 #define EL6021_ENABLE_HALF_DUPLEX_SIZE                  1
 #define EL6021_BAUDRATE_SUBINDEX                        0x11
 #define EL6021_BAUDRATE_SIZE                            4
-#define EL6021_DATAFRAME_SUBINDEX                       0x11
-#define EL6021_DATAFRAME_SIZE                           4
+#define EL6021_DATAFRAME_SUBINDEX                       0x15//0x11
+#define EL6021_DATAFRAME_SIZE                           2//4
 
 // EL6021 Baudrate //int command, int target00                           9
 #define EL6021_BAUDRATE_115200                          10

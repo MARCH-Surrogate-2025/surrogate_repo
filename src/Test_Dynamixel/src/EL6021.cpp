@@ -31,6 +31,7 @@ int EL6021::SetSDO()
     {
         // set baudrate (115200)
         uint8_t baud_rate = EL6021_BAUDRATE_115200;
+		//uint32_t baud_rate = EL6021_BAUDRATE_115200;
         //uint8_t initial_baud;
         //uint8_t real_baud;
         //int real_baud_size = 1;
@@ -456,7 +457,8 @@ int EL6021::DXL_EnableMotor()
     //////////////////////////////////////////////
 
     // instruction data settings
-    int param_num = 3;
+    //int param_num = 4;
+	int param_num = 3;
     int param_length = param_num + 3;
     int data_length = param_num + 10;
 
@@ -483,7 +485,9 @@ int EL6021::DXL_EnableMotor()
     uint8_t param_2 = 0x01;                    // param_2 : enable (1:on)
     send_data[8] = (param_1 & 0x00FF);
     send_data[9] = (param_1 >> 8) & 0x00FF;
-    send_data[10] = param_2;
+	send_data[10] = param_2;
+    //send_data[10] = (param_2 & 0x00FF);//param_2;
+    //send_data[11] = (param_2 >> 8) & 0x00FF;
 
     // CRC (last 2 bits)
     uint16_t CRC = DXL_UpdateCRC(0, send_data, (5 + param_length));
@@ -497,6 +501,14 @@ int EL6021::DXL_EnableMotor()
     }
     rxPDO[1]->data[data_length - 2] = CRC_L;
     rxPDO[1]->data[data_length - 1] = CRC_H;
+	//printf("%x, %x, %x, %x, %x, %x, %x, %x, %x, %x.\n"
+	//	, send_data[4], send_data[5], send_data[6], send_data[7], send_data[8]
+	//	, send_data[9], send_data[10], send_data[11], CRC_L, CRC_H);
+	printf("%x, %x, %x, %x, %x, %x, %x, %x, %x, %x, %x, %x, %x\n"
+			, rxPDO[1]->data[0], rxPDO[1]->data[1], rxPDO[1]->data[2]
+			, rxPDO[1]->data[3], rxPDO[1]->data[4], rxPDO[1]->data[5]
+			, rxPDO[1]->data[6], rxPDO[1]->data[7], rxPDO[1]->data[8]
+			, rxPDO[1]->data[9], rxPDO[1]->data[10], rxPDO[1]->data[11], rxPDO[1]->data[12]);
 
     // return data_length;
 
@@ -534,16 +546,18 @@ int EL6021::DXL_EnableMotor()
         /////////////////////////
         ///// wait response /////
         /////////////////////////
+
         int test_tick = 0;
         int arrived_data_size = 0;
-
         sw_bit = (txPDO[1]->statusWord) & 0x0002;
         cw_bit = (rxPDO[1]->controlWord) & 0x0002;
-
+		//loop problem
         int first_tick = 0;
         (txPDO[1]->statusWord) &= 0x00ff;
         do
-        {
+        {	//printf("arr_size : %d , req_size : %d\n", arrived_data_size, required_packet_size);
+			//printf("arr_size : %d, sw_bit : %d, cur_sw : %d, cw_bit : %d\n", arrived_data_size, sw_bit, (txPDO[1]->statusWord) & 0x0002, cw_bit);
+			//printf("
             ProcessOneCycleCommand();
             test_tick++;
             if (test_tick == 1)
@@ -554,7 +568,9 @@ int EL6021::DXL_EnableMotor()
             {
                 first_tick = 0;
             }
-            arrived_data_size = ((txPDO[1]->statusWord) >> 8) + ((txPDO[1]->statusWord) >> 12) * 16;
+            arrived_data_size = (((txPDO[1]->statusWord) >> 8) & 0xFF) + (((txPDO[1]->statusWord) >> 12) & 0xF) * 16;
+			//arrived_data_size = ((txPDO[1]->statusWord) >> 8) + ((txPDO[1]->statusWord) >> 12) * 16;
+
 
             if (sw_bit != ((txPDO[1]->statusWord) & 0x0002)) // if previous statusword != current statusword
             {
@@ -572,7 +588,7 @@ int EL6021::DXL_EnableMotor()
                 printf("[%d] check point (sw: %x, data size: %d)\n"
                 , test_tick, (txPDO[1]->statusWord)&0x0003, arrived_data_size);
             }
-        } while (!((arrived_data_size == required_packet_size) && (sw_bit != ((txPDO[1]->statusWord) & 0x0002)) && (first_tick == 0)));
+        } while (!((arrived_data_size == required_packet_size) && (sw_bit != ((txPDO[1]->statusWord) & 0x0002)) ));//&& (first_tick == 0)));
 
         int8_t error_bit = (txPDO[1]->data[8]);
         return error_bit;

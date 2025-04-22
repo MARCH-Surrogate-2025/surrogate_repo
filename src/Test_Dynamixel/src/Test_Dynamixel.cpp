@@ -40,7 +40,7 @@ static void KeyInterrupt(void *arg)
 
 static void SoemEcat(void *arg)
 {
-    rt_task_set_periodic(NULL, TM_NOW, 1e7);    // 1ms loop
+    rt_task_set_periodic(NULL, TM_NOW, 1e6);    // 1ms loop
     
     RTIME curent_time, start_time;
     uint tick = 0;
