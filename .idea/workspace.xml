@@ -26,13 +26,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4a724794-8493-48f6-bb93-007055f4ad43" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/src/Test_Wheel/Test_Wheel" beforeDir="false" afterPath="$PROJECT_DIR$/build/src/Test_Wheel/Test_Wheel" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Test_Wheel/src/Test_Wheel.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/Test_Wheel/src/Test_Wheel.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Test_Wheel/utils/CustomECAT/CustomEtherCAT.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/Test_Wheel/utils/CustomECAT/CustomEtherCAT.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Test_Wheel/utils/CustomECAT/CustomEtherCAT.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/Test_Wheel/utils/CustomECAT/CustomEtherCAT.h" afterDir="false" />
-    </list>
+    <list default="true" id="4a724794-8493-48f6-bb93-007055f4ad43" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -44,6 +38,12 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/Test_Wheel/src/Test_Wheel.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/Test_Wheel/src/Test_Wheel.h" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/Test_Wheel/utils/CustomECAT/CustomEtherCAT.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/Test_Wheel/utils/CustomECAT/PDO.h" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="ProjectApplicationVersion">
     <option name="ide" value="CLion" />
@@ -229,6 +229,7 @@
       <workItem from="1745225139183" duration="40000" />
       <workItem from="1745225200062" duration="15093000" />
       <workItem from="1745408067842" duration="4000" />
+      <workItem from="1745479088455" duration="514000" />
     </task>
     <servers />
   </component>
