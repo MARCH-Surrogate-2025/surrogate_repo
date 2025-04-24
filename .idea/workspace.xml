@@ -28,19 +28,6 @@
   <component name="ChangeListManager">
     <list default="true" id="4a724794-8493-48f6-bb93-007055f4ad43" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/CMakeOutput.log" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/CMakeOutput.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/Makefile.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/include/SOEM/CMakeFiles/soem.dir/compiler_depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/build/include/SOEM/CMakeFiles/soem.dir/compiler_depend.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/include/SOEM/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/include/SOEM/cmake_install.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/src/Test_Balancer/CMakeFiles/CUSTOM_BALANCER_UTILS.dir/compiler_depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/build/src/Test_Balancer/CMakeFiles/CUSTOM_BALANCER_UTILS.dir/compiler_depend.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/src/Test_Balancer/CMakeFiles/Test_Balancer.dir/compiler_depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/build/src/Test_Balancer/CMakeFiles/Test_Balancer.dir/compiler_depend.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/src/Test_Dynamixel/CMakeFiles/CUSTOM_DMX_UTILS.dir/compiler_depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/build/src/Test_Dynamixel/CMakeFiles/CUSTOM_DMX_UTILS.dir/compiler_depend.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/src/Test_Dynamixel/CMakeFiles/Test_Dynamixel.dir/compiler_depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/build/src/Test_Dynamixel/CMakeFiles/Test_Dynamixel.dir/compiler_depend.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/src/Test_Dynamixel/Test_Dynamixel" beforeDir="false" afterPath="$PROJECT_DIR$/build/src/Test_Dynamixel/Test_Dynamixel" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/src/Test_Wheel/CMakeFiles/CUSTOM_ECAT_UTILS.dir/compiler_depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/build/src/Test_Wheel/CMakeFiles/CUSTOM_ECAT_UTILS.dir/compiler_depend.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/src/Test_Wheel/CMakeFiles/Test_Wheel.dir/compiler_depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/build/src/Test_Wheel/CMakeFiles/Test_Wheel.dir/compiler_depend.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/src/example_xenomai/CMakeFiles/hello_rt_task.dir/compiler_depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/build/src/example_xenomai/CMakeFiles/hello_rt_task.dir/compiler_depend.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/src/example_xenomai/CMakeFiles/hello_xenomai.dir/compiler_depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/build/src/example_xenomai/CMakeFiles/hello_xenomai.dir/compiler_depend.make" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Test_Dynamixel/src/EL6021.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/Test_Dynamixel/src/EL6021.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Test_Dynamixel/src/EL6021.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/Test_Dynamixel/src/EL6021.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Test_Dynamixel/src/Test_Dynamixel.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/Test_Dynamixel/src/Test_Dynamixel.cpp" afterDir="false" />
@@ -255,7 +242,10 @@
       <workItem from="1745045912362" duration="6000" />
       <workItem from="1745198162579" duration="332000" />
       <workItem from="1745219649094" duration="11842000" />
-      <workItem from="1745298578459" duration="22994000" />
+      <workItem from="1745298578459" duration="23456000" />
+      <workItem from="1745384126824" duration="10314000" />
+      <workItem from="1745418487113" duration="9000" />
+      <workItem from="1745463582966" duration="13841000" />
     </task>
     <servers />
   </component>

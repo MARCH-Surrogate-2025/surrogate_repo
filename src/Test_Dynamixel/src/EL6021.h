@@ -29,10 +29,15 @@
 #define EL6021_BAUDRATE_SUBINDEX                        0x11
 #define EL6021_BAUDRATE_SIZE                            4
 #define EL6021_DATAFRAME_SUBINDEX                       0x15//0x11
-#define EL6021_DATAFRAME_SIZE                           2//4
+#define EL6021_DATAFRAME_SIZE                           2
+#define EL6021_EXPLICIT_BAUDRATE_SUBINDEX               0x1B
+#define EL6021_EXPLICIT_BAUDRATE_SIZE                   4
+#define EL6021_EXTENDED_FRAME_SUBINDEX  				0x1C
+#define EL6021_EXTENDED_FRAME_SIZE      				2
 
 // EL6021 Baudrate //int command, int target00                           9
 #define EL6021_BAUDRATE_115200                          10
+#define EL6021_BAUDRATE_57600                           9
 #define EL6021_DATAFRAME_8N1                            3
 
 //////////////////////////////////////////

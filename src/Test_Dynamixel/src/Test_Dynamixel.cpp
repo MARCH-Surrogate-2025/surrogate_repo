@@ -65,11 +65,11 @@ static void SoemEcat(void *arg)
     ec.PrepareCommunication(1);
 
 
-    // ec.SendCommand();
-    // PRINT_BLU
-    // rt_printf("[RT-SoemCat] send command 1\n\n");
-    // PRINT_NRM
-    // usleep(2000);
+    //ec.SendCommand();
+    //PRINT_BLU
+    //rt_printf("[RT-SoemCat] send command 1\n\n");
+    //PRINT_NRM
+    //usleep(2000);
     
     /// DXL - Enable Motor
     if(ec.DXL_EnableMotor() == 0)
