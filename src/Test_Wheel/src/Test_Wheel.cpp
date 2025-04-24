@@ -80,8 +80,9 @@ static void SoemEcat(void *arg)
         float torque = 300 * sin(2 * M_PI * 1.0 * thread_tick_1 / 5000.0); // Frequency 0.2Hz
 
         // Send command with calculated torque
-        ec.SendCommand(0, CYCLIC_SYNC_TORQUE_MODE, (int)torque);
-
+        //ec.SendCommand(0, CYCLIC_SYNC_TORQUE_MODE, (int)torque);
+        ec.SendCommand(0, CYCLIC_SYNC_TORQUE_MODE, (int)200);
+        //ec.SendCommand(0,CYCLIC_SYNC_VELOCITY_MODE, int(100));
         sw = ec.GetStatusWord(0);
         cw = ec.GetControlWord(0);
 

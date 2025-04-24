@@ -151,7 +151,7 @@ int CustomEtherCAT::SendCommand(int slave, int mode, int val)
     {
         rxPDO[slave]->controlWord = CONTROLWORD_COMMAND_ENABLEOPERATION;
         rxPDO[slave]->modeOfOperation = mode;
-        // rxPDO[slave]->targetVelocity = val;
+        //rxPDO[slave]->targetVelocity = val;
         rxPDO[slave]->targetTorque = val;
         return ProcessOneCycleCommand();
     }
@@ -180,9 +180,9 @@ int CustomEtherCAT::EnableMotor(int slave)
     } while (((txPDO[slave]->statusWord) & STATUSWORD_STATE_MASK) != STATUSWORD_STATE_OPERATIONENABLED);
 
     rxPDO[slave]->controlWord = CONTROLWORD_COMMAND_ENABLEOPERATION;
-    // rxPDO[slave]->modeOfOperation = CYCLIC_SYNC_VELOCITY_MODE;
+    //rxPDO[slave]->modeOfOperation = CYCLIC_SYNC_VELOCITY_MODE;
     rxPDO[slave]->modeOfOperation = CYCLIC_SYNC_TORQUE_MODE;
-    // rxPDO[slave]->targetVelocity = 0;
+    //rxPDO[slave]->targetVelocity = 0;
     rxPDO[slave]->targetTorque = 0;
 
     return 1;

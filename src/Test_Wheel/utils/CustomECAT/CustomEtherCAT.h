@@ -17,7 +17,7 @@ public:
     {
         uint16_t controlWord;
         int8_t modeOfOperation;
-        // int32_t targetVelocity;
+        //int16_t targetVelocity;
         int16_t targetTorque;
     };
     struct wheel_tx
