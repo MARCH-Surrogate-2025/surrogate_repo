@@ -1,10 +1,2 @@
-/home/surrogate/Desktop/MARCH_Surrogate/include/gRPC/cpp/build/CMakeFiles/rebuild_cache.dir
-/home/surrogate/Desktop/MARCH_Surrogate/include/gRPC/cpp/build/CMakeFiles/msgs_motion_grpc_proto.dir
-/home/surrogate/Desktop/MARCH_Surrogate/include/gRPC/cpp/build/CMakeFiles/msgs_control_grpc_proto.dir
-/home/surrogate/Desktop/MARCH_Surrogate/include/gRPC/cpp/build/CMakeFiles/msgs_config_grpc_proto.dir
-/home/surrogate/Desktop/MARCH_Surrogate/include/gRPC/cpp/build/CMakeFiles/control_grpc_proto.dir
-/home/surrogate/Desktop/MARCH_Surrogate/include/gRPC/cpp/build/CMakeFiles/edit_cache.dir
-/home/surrogate/Desktop/MARCH_Surrogate/include/gRPC/cpp/build/CMakeFiles/msgs_system_grpc_proto.dir
-/home/surrogate/Desktop/MARCH_Surrogate/include/gRPC/cpp/build/CMakeFiles/system_grpc_proto.dir
-/home/surrogate/Desktop/MARCH_Surrogate/include/gRPC/cpp/build/CMakeFiles/motion_grpc_proto.dir
-/home/surrogate/Desktop/MARCH_Surrogate/include/gRPC/cpp/build/CMakeFiles/msgs_common_grpc_proto.dir
+/home/marchnuc1/Desktop/surrogate_repo/include/gRPC/cpp/build/CMakeFiles/edit_cache.dir
+/home/marchnuc1/Desktop/surrogate_repo/include/gRPC/cpp/build/CMakeFiles/rebuild_cache.dir

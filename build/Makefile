@@ -162,6 +162,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named custom_grpc_server
+
+# Build rule for target.
+custom_grpc_server: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 custom_grpc_server
+.PHONY : custom_grpc_server
+
+# fast build rule for target.
+custom_grpc_server/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/custom_grpc_server.dir/build.make CMakeFiles/custom_grpc_server.dir/build
+.PHONY : custom_grpc_server/fast
+
+#=============================================================================
 # Target rules for targets named custom_shared_memory
 
 # Build rule for target.
@@ -188,6 +201,110 @@ soem/fast:
 .PHONY : soem/fast
 
 #=============================================================================
+# Target rules for targets named control_grpc_proto
+
+# Build rule for target.
+control_grpc_proto: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 control_grpc_proto
+.PHONY : control_grpc_proto
+
+# fast build rule for target.
+control_grpc_proto/fast:
+	$(MAKE) $(MAKESILENT) -f include/gRPC/CMakeFiles/control_grpc_proto.dir/build.make include/gRPC/CMakeFiles/control_grpc_proto.dir/build
+.PHONY : control_grpc_proto/fast
+
+#=============================================================================
+# Target rules for targets named motion_grpc_proto
+
+# Build rule for target.
+motion_grpc_proto: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 motion_grpc_proto
+.PHONY : motion_grpc_proto
+
+# fast build rule for target.
+motion_grpc_proto/fast:
+	$(MAKE) $(MAKESILENT) -f include/gRPC/CMakeFiles/motion_grpc_proto.dir/build.make include/gRPC/CMakeFiles/motion_grpc_proto.dir/build
+.PHONY : motion_grpc_proto/fast
+
+#=============================================================================
+# Target rules for targets named system_grpc_proto
+
+# Build rule for target.
+system_grpc_proto: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 system_grpc_proto
+.PHONY : system_grpc_proto
+
+# fast build rule for target.
+system_grpc_proto/fast:
+	$(MAKE) $(MAKESILENT) -f include/gRPC/CMakeFiles/system_grpc_proto.dir/build.make include/gRPC/CMakeFiles/system_grpc_proto.dir/build
+.PHONY : system_grpc_proto/fast
+
+#=============================================================================
+# Target rules for targets named msgs_common_grpc_proto
+
+# Build rule for target.
+msgs_common_grpc_proto: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 msgs_common_grpc_proto
+.PHONY : msgs_common_grpc_proto
+
+# fast build rule for target.
+msgs_common_grpc_proto/fast:
+	$(MAKE) $(MAKESILENT) -f include/gRPC/CMakeFiles/msgs_common_grpc_proto.dir/build.make include/gRPC/CMakeFiles/msgs_common_grpc_proto.dir/build
+.PHONY : msgs_common_grpc_proto/fast
+
+#=============================================================================
+# Target rules for targets named msgs_config_grpc_proto
+
+# Build rule for target.
+msgs_config_grpc_proto: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 msgs_config_grpc_proto
+.PHONY : msgs_config_grpc_proto
+
+# fast build rule for target.
+msgs_config_grpc_proto/fast:
+	$(MAKE) $(MAKESILENT) -f include/gRPC/CMakeFiles/msgs_config_grpc_proto.dir/build.make include/gRPC/CMakeFiles/msgs_config_grpc_proto.dir/build
+.PHONY : msgs_config_grpc_proto/fast
+
+#=============================================================================
+# Target rules for targets named msgs_control_grpc_proto
+
+# Build rule for target.
+msgs_control_grpc_proto: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 msgs_control_grpc_proto
+.PHONY : msgs_control_grpc_proto
+
+# fast build rule for target.
+msgs_control_grpc_proto/fast:
+	$(MAKE) $(MAKESILENT) -f include/gRPC/CMakeFiles/msgs_control_grpc_proto.dir/build.make include/gRPC/CMakeFiles/msgs_control_grpc_proto.dir/build
+.PHONY : msgs_control_grpc_proto/fast
+
+#=============================================================================
+# Target rules for targets named msgs_motion_grpc_proto
+
+# Build rule for target.
+msgs_motion_grpc_proto: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 msgs_motion_grpc_proto
+.PHONY : msgs_motion_grpc_proto
+
+# fast build rule for target.
+msgs_motion_grpc_proto/fast:
+	$(MAKE) $(MAKESILENT) -f include/gRPC/CMakeFiles/msgs_motion_grpc_proto.dir/build.make include/gRPC/CMakeFiles/msgs_motion_grpc_proto.dir/build
+.PHONY : msgs_motion_grpc_proto/fast
+
+#=============================================================================
+# Target rules for targets named msgs_system_grpc_proto
+
+# Build rule for target.
+msgs_system_grpc_proto: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 msgs_system_grpc_proto
+.PHONY : msgs_system_grpc_proto
+
+# fast build rule for target.
+msgs_system_grpc_proto/fast:
+	$(MAKE) $(MAKESILENT) -f include/gRPC/CMakeFiles/msgs_system_grpc_proto.dir/build.make include/gRPC/CMakeFiles/msgs_system_grpc_proto.dir/build
+.PHONY : msgs_system_grpc_proto/fast
+
+#=============================================================================
 # Target rules for targets named hello_xenomai
 
 # Build rule for target.
@@ -212,6 +329,19 @@ hello_rt_task: cmake_check_build_system
 hello_rt_task/fast:
 	$(MAKE) $(MAKESILENT) -f src/example_xenomai/CMakeFiles/hello_rt_task.dir/build.make src/example_xenomai/CMakeFiles/hello_rt_task.dir/build
 .PHONY : hello_rt_task/fast
+
+#=============================================================================
+# Target rules for targets named hello_grpc
+
+# Build rule for target.
+hello_grpc: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 hello_grpc
+.PHONY : hello_grpc
+
+# fast build rule for target.
+hello_grpc/fast:
+	$(MAKE) $(MAKESILENT) -f src/example_xenomai/CMakeFiles/hello_grpc.dir/build.make src/example_xenomai/CMakeFiles/hello_grpc.dir/build
+.PHONY : hello_grpc/fast
 
 #=============================================================================
 # Target rules for targets named CUSTOM_PDO
@@ -279,6 +409,19 @@ Test_Dynamixel/fast:
 .PHONY : Test_Dynamixel/fast
 
 #=============================================================================
+# Target rules for targets named test_integration
+
+# Build rule for target.
+test_integration: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_integration
+.PHONY : test_integration
+
+# fast build rule for target.
+test_integration/fast:
+	$(MAKE) $(MAKESILENT) -f src/test_integration/CMakeFiles/test_integration.dir/build.make src/test_integration/CMakeFiles/test_integration.dir/build
+.PHONY : test_integration/fast
+
+#=============================================================================
 # Target rules for targets named CUSTOM_BALANCER_UTILS
 
 # Build rule for target.
@@ -304,6 +447,54 @@ Test_Balancer/fast:
 	$(MAKE) $(MAKESILENT) -f src/Test_Balancer/CMakeFiles/Test_Balancer.dir/build.make src/Test_Balancer/CMakeFiles/Test_Balancer.dir/build
 .PHONY : Test_Balancer/fast
 
+include/gRPC/cpp/custom_grpc_service.o: include/gRPC/cpp/custom_grpc_service.cpp.o
+.PHONY : include/gRPC/cpp/custom_grpc_service.o
+
+# target to build an object file
+include/gRPC/cpp/custom_grpc_service.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/custom_grpc_server.dir/build.make CMakeFiles/custom_grpc_server.dir/include/gRPC/cpp/custom_grpc_service.cpp.o
+.PHONY : include/gRPC/cpp/custom_grpc_service.cpp.o
+
+include/gRPC/cpp/custom_grpc_service.i: include/gRPC/cpp/custom_grpc_service.cpp.i
+.PHONY : include/gRPC/cpp/custom_grpc_service.i
+
+# target to preprocess a source file
+include/gRPC/cpp/custom_grpc_service.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/custom_grpc_server.dir/build.make CMakeFiles/custom_grpc_server.dir/include/gRPC/cpp/custom_grpc_service.cpp.i
+.PHONY : include/gRPC/cpp/custom_grpc_service.cpp.i
+
+include/gRPC/cpp/custom_grpc_service.s: include/gRPC/cpp/custom_grpc_service.cpp.s
+.PHONY : include/gRPC/cpp/custom_grpc_service.s
+
+# target to generate assembly for a file
+include/gRPC/cpp/custom_grpc_service.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/custom_grpc_server.dir/build.make CMakeFiles/custom_grpc_server.dir/include/gRPC/cpp/custom_grpc_service.cpp.s
+.PHONY : include/gRPC/cpp/custom_grpc_service.cpp.s
+
+include/gRPC/cpp/custom_server.o: include/gRPC/cpp/custom_server.cpp.o
+.PHONY : include/gRPC/cpp/custom_server.o
+
+# target to build an object file
+include/gRPC/cpp/custom_server.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/custom_grpc_server.dir/build.make CMakeFiles/custom_grpc_server.dir/include/gRPC/cpp/custom_server.cpp.o
+.PHONY : include/gRPC/cpp/custom_server.cpp.o
+
+include/gRPC/cpp/custom_server.i: include/gRPC/cpp/custom_server.cpp.i
+.PHONY : include/gRPC/cpp/custom_server.i
+
+# target to preprocess a source file
+include/gRPC/cpp/custom_server.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/custom_grpc_server.dir/build.make CMakeFiles/custom_grpc_server.dir/include/gRPC/cpp/custom_server.cpp.i
+.PHONY : include/gRPC/cpp/custom_server.cpp.i
+
+include/gRPC/cpp/custom_server.s: include/gRPC/cpp/custom_server.cpp.s
+.PHONY : include/gRPC/cpp/custom_server.s
+
+# target to generate assembly for a file
+include/gRPC/cpp/custom_server.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/custom_grpc_server.dir/build.make CMakeFiles/custom_grpc_server.dir/include/gRPC/cpp/custom_server.cpp.s
+.PHONY : include/gRPC/cpp/custom_server.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -323,10 +514,27 @@ help:
 	@echo "... Test_Balancer"
 	@echo "... Test_Dynamixel"
 	@echo "... Test_Wheel"
+	@echo "... control_grpc_proto"
+	@echo "... custom_grpc_server"
 	@echo "... custom_shared_memory"
+	@echo "... hello_grpc"
 	@echo "... hello_rt_task"
 	@echo "... hello_xenomai"
+	@echo "... motion_grpc_proto"
+	@echo "... msgs_common_grpc_proto"
+	@echo "... msgs_config_grpc_proto"
+	@echo "... msgs_control_grpc_proto"
+	@echo "... msgs_motion_grpc_proto"
+	@echo "... msgs_system_grpc_proto"
 	@echo "... soem"
+	@echo "... system_grpc_proto"
+	@echo "... test_integration"
+	@echo "... include/gRPC/cpp/custom_grpc_service.o"
+	@echo "... include/gRPC/cpp/custom_grpc_service.i"
+	@echo "... include/gRPC/cpp/custom_grpc_service.s"
+	@echo "... include/gRPC/cpp/custom_server.o"
+	@echo "... include/gRPC/cpp/custom_server.i"
+	@echo "... include/gRPC/cpp/custom_server.s"
 .PHONY : help
 
 

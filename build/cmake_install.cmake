@@ -45,9 +45,11 @@ endif()
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
   include("/home/marchnuc1/Desktop/surrogate_repo/build/include/SOEM/cmake_install.cmake")
+  include("/home/marchnuc1/Desktop/surrogate_repo/build/include/gRPC/cmake_install.cmake")
   include("/home/marchnuc1/Desktop/surrogate_repo/build/src/example_xenomai/cmake_install.cmake")
   include("/home/marchnuc1/Desktop/surrogate_repo/build/src/Test_Wheel/cmake_install.cmake")
   include("/home/marchnuc1/Desktop/surrogate_repo/build/src/Test_Dynamixel/cmake_install.cmake")
+  include("/home/marchnuc1/Desktop/surrogate_repo/build/src/test_integration/cmake_install.cmake")
   include("/home/marchnuc1/Desktop/surrogate_repo/build/src/Test_Balancer/cmake_install.cmake")
 
 endif()

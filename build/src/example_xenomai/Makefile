@@ -189,6 +189,44 @@ hello_rt_task/fast:
 	cd /home/marchnuc1/Desktop/surrogate_repo/build && $(MAKE) $(MAKESILENT) -f src/example_xenomai/CMakeFiles/hello_rt_task.dir/build.make src/example_xenomai/CMakeFiles/hello_rt_task.dir/build
 .PHONY : hello_rt_task/fast
 
+# Convenience name for target.
+src/example_xenomai/CMakeFiles/hello_grpc.dir/rule:
+	cd /home/marchnuc1/Desktop/surrogate_repo/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/example_xenomai/CMakeFiles/hello_grpc.dir/rule
+.PHONY : src/example_xenomai/CMakeFiles/hello_grpc.dir/rule
+
+# Convenience name for target.
+hello_grpc: src/example_xenomai/CMakeFiles/hello_grpc.dir/rule
+.PHONY : hello_grpc
+
+# fast build rule for target.
+hello_grpc/fast:
+	cd /home/marchnuc1/Desktop/surrogate_repo/build && $(MAKE) $(MAKESILENT) -f src/example_xenomai/CMakeFiles/hello_grpc.dir/build.make src/example_xenomai/CMakeFiles/hello_grpc.dir/build
+.PHONY : hello_grpc/fast
+
+src/hello_grpc.o: src/hello_grpc.cpp.o
+.PHONY : src/hello_grpc.o
+
+# target to build an object file
+src/hello_grpc.cpp.o:
+	cd /home/marchnuc1/Desktop/surrogate_repo/build && $(MAKE) $(MAKESILENT) -f src/example_xenomai/CMakeFiles/hello_grpc.dir/build.make src/example_xenomai/CMakeFiles/hello_grpc.dir/src/hello_grpc.cpp.o
+.PHONY : src/hello_grpc.cpp.o
+
+src/hello_grpc.i: src/hello_grpc.cpp.i
+.PHONY : src/hello_grpc.i
+
+# target to preprocess a source file
+src/hello_grpc.cpp.i:
+	cd /home/marchnuc1/Desktop/surrogate_repo/build && $(MAKE) $(MAKESILENT) -f src/example_xenomai/CMakeFiles/hello_grpc.dir/build.make src/example_xenomai/CMakeFiles/hello_grpc.dir/src/hello_grpc.cpp.i
+.PHONY : src/hello_grpc.cpp.i
+
+src/hello_grpc.s: src/hello_grpc.cpp.s
+.PHONY : src/hello_grpc.s
+
+# target to generate assembly for a file
+src/hello_grpc.cpp.s:
+	cd /home/marchnuc1/Desktop/surrogate_repo/build && $(MAKE) $(MAKESILENT) -f src/example_xenomai/CMakeFiles/hello_grpc.dir/build.make src/example_xenomai/CMakeFiles/hello_grpc.dir/src/hello_grpc.cpp.s
+.PHONY : src/hello_grpc.cpp.s
+
 src/hello_rt_task.o: src/hello_rt_task.cpp.o
 .PHONY : src/hello_rt_task.o
 
@@ -249,8 +287,12 @@ help:
 	@echo "... install/strip"
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
+	@echo "... hello_grpc"
 	@echo "... hello_rt_task"
 	@echo "... hello_xenomai"
+	@echo "... src/hello_grpc.o"
+	@echo "... src/hello_grpc.i"
+	@echo "... src/hello_grpc.s"
 	@echo "... src/hello_rt_task.o"
 	@echo "... src/hello_rt_task.i"
 	@echo "... src/hello_rt_task.s"

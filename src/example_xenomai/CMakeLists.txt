@@ -1,7 +1,7 @@
 set(EXECUTABLE_FILES
     hello_xenomai
     hello_rt_task
-#    hello_grpc
+    hello_grpc
 )
 
 foreach(executable_file ${EXECUTABLE_FILES})

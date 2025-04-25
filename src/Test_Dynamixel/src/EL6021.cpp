@@ -756,7 +756,7 @@ int EL6021::DXL_ReadCurrentPosition(int* _current_position)
         send_data[3] = 0x00;
 
         // id (4) + length (5~6) + instruction (7)
-        send_data[4] = 1;                            // id
+        send_data[4] = 0x01;                            // id
         send_data[5] = (param_length & 0x00FF);      // length-low
         send_data[6] = (param_length >> 8) & 0x00FF; // length-high
         send_data[7] = 0x02;                         // read instruction
@@ -804,6 +804,8 @@ int EL6021::DXL_ReadCurrentPosition(int* _current_position)
             ProcessOneCycleCommand();
         } while (((txPDO[1]->statusWord) & 0x0001) == sw_bit);
 
+
+
         /////////////////////////
         ///// wait response /////
         /////////////////////////
@@ -844,6 +846,12 @@ int EL6021::DXL_ReadCurrentPosition(int* _current_position)
             }
 
         } while (!((arrived_data_size == required_packet_size) && (sw_bit != ((txPDO[1]->statusWord) & 0x0002)) && (first_tick == 0)));
+
+		//printf("tx: %x, %x, %x, %x, %x, %x, %x, %x, %x, %x, %x, %x, %x, %x, %x\n"
+		//	, txPDO[1]->data[0], txPDO[1]->data[1], txPDO[1]->data[2]
+		//	, txPDO[1]->data[3], txPDO[1]->data[4], txPDO[1]->data[5]
+		//	, txPDO[1]->data[6], txPDO[1]->data[7], txPDO[1]->data[8]
+		//	, txPDO[1]->data[9], txPDO[1]->data[10], txPDO[1]->data[11], txPDO[1]->data[12], txPDO[1]->data[13], txPDO[1]->data[14]);
 
         *_current_position = (txPDO[1]->data[9]) + ((txPDO[1]->data[10]) << 8) + ((txPDO[1]->data[11]) << 16) + ((txPDO[1]->data[12]) << 24);
         int8_t error_bit = (txPDO[1]->data[13]);
