@@ -1,8 +1,8 @@
-# Install script for directory: /home/surrogate/Desktop/MARCH_Surrogate/include/SOEM
+# Install script for directory: /home/marchnuc2/git/surrogate_repo/include/SOEM
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/usr/local")
+  set(CMAKE_INSTALL_PREFIX "/home/marchnuc2/git/surrogate_repo/include/SOEM/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -12,7 +12,7 @@ if(NOT DEFINED CMAKE_INSTALL_CONFIG_NAME)
     string(REGEX REPLACE "^[^A-Za-z0-9_]+" ""
            CMAKE_INSTALL_CONFIG_NAME "${BUILD_TYPE}")
   else()
-    set(CMAKE_INSTALL_CONFIG_NAME "Debug")
+    set(CMAKE_INSTALL_CONFIG_NAME "")
   endif()
   message(STATUS "Install configuration: \"${CMAKE_INSTALL_CONFIG_NAME}\"")
 endif()
@@ -43,14 +43,14 @@ if(NOT DEFINED CMAKE_OBJDUMP)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE STATIC_LIBRARY FILES "/home/surrogate/Desktop/MARCH_Surrogate/build/include/SOEM/libsoem.a")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE STATIC_LIBRARY FILES "/home/marchnuc2/git/surrogate_repo/build/include/SOEM/libsoem.a")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/soem/cmake/soemConfig.cmake")
     file(DIFFERENT EXPORT_FILE_CHANGED FILES
          "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/soem/cmake/soemConfig.cmake"
-         "/home/surrogate/Desktop/MARCH_Surrogate/build/include/SOEM/CMakeFiles/Export/share/soem/cmake/soemConfig.cmake")
+         "/home/marchnuc2/git/surrogate_repo/build/include/SOEM/CMakeFiles/Export/share/soem/cmake/soemConfig.cmake")
     if(EXPORT_FILE_CHANGED)
       file(GLOB OLD_CONFIG_FILES "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/soem/cmake/soemConfig-*.cmake")
       if(OLD_CONFIG_FILES)
@@ -59,30 +59,30 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
       endif()
     endif()
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/soem/cmake" TYPE FILE FILES "/home/surrogate/Desktop/MARCH_Surrogate/build/include/SOEM/CMakeFiles/Export/share/soem/cmake/soemConfig.cmake")
-  if("${CMAKE_INSTALL_CONFIG_NAME}" MATCHES "^([Dd][Ee][Bb][Uu][Gg])$")
-    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/soem/cmake" TYPE FILE FILES "/home/surrogate/Desktop/MARCH_Surrogate/build/include/SOEM/CMakeFiles/Export/share/soem/cmake/soemConfig-debug.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/soem/cmake" TYPE FILE FILES "/home/marchnuc2/git/surrogate_repo/build/include/SOEM/CMakeFiles/Export/share/soem/cmake/soemConfig.cmake")
+  if("${CMAKE_INSTALL_CONFIG_NAME}" MATCHES "^()$")
+    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/soem/cmake" TYPE FILE FILES "/home/marchnuc2/git/surrogate_repo/build/include/SOEM/CMakeFiles/Export/share/soem/cmake/soemConfig-noconfig.cmake")
   endif()
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/soem" TYPE FILE FILES
-    "/home/surrogate/Desktop/MARCH_Surrogate/include/SOEM/soem/ethercat.h"
-    "/home/surrogate/Desktop/MARCH_Surrogate/include/SOEM/soem/ethercatbase.h"
-    "/home/surrogate/Desktop/MARCH_Surrogate/include/SOEM/soem/ethercatcoe.h"
-    "/home/surrogate/Desktop/MARCH_Surrogate/include/SOEM/soem/ethercatconfig.h"
-    "/home/surrogate/Desktop/MARCH_Surrogate/include/SOEM/soem/ethercatconfiglist.h"
-    "/home/surrogate/Desktop/MARCH_Surrogate/include/SOEM/soem/ethercatdc.h"
-    "/home/surrogate/Desktop/MARCH_Surrogate/include/SOEM/soem/ethercateoe.h"
-    "/home/surrogate/Desktop/MARCH_Surrogate/include/SOEM/soem/ethercatfoe.h"
-    "/home/surrogate/Desktop/MARCH_Surrogate/include/SOEM/soem/ethercatmain.h"
-    "/home/surrogate/Desktop/MARCH_Surrogate/include/SOEM/soem/ethercatprint.h"
-    "/home/surrogate/Desktop/MARCH_Surrogate/include/SOEM/soem/ethercatsoe.h"
-    "/home/surrogate/Desktop/MARCH_Surrogate/include/SOEM/soem/ethercattype.h"
-    "/home/surrogate/Desktop/MARCH_Surrogate/include/SOEM/osal/linux/osal_defs.h"
-    "/home/surrogate/Desktop/MARCH_Surrogate/include/SOEM/osal/osal.h"
-    "/home/surrogate/Desktop/MARCH_Surrogate/include/SOEM/oshw/linux/nicdrv.h"
-    "/home/surrogate/Desktop/MARCH_Surrogate/include/SOEM/oshw/linux/oshw.h"
+    "/home/marchnuc2/git/surrogate_repo/include/SOEM/soem/ethercat.h"
+    "/home/marchnuc2/git/surrogate_repo/include/SOEM/soem/ethercatbase.h"
+    "/home/marchnuc2/git/surrogate_repo/include/SOEM/soem/ethercatcoe.h"
+    "/home/marchnuc2/git/surrogate_repo/include/SOEM/soem/ethercatconfig.h"
+    "/home/marchnuc2/git/surrogate_repo/include/SOEM/soem/ethercatconfiglist.h"
+    "/home/marchnuc2/git/surrogate_repo/include/SOEM/soem/ethercatdc.h"
+    "/home/marchnuc2/git/surrogate_repo/include/SOEM/soem/ethercateoe.h"
+    "/home/marchnuc2/git/surrogate_repo/include/SOEM/soem/ethercatfoe.h"
+    "/home/marchnuc2/git/surrogate_repo/include/SOEM/soem/ethercatmain.h"
+    "/home/marchnuc2/git/surrogate_repo/include/SOEM/soem/ethercatprint.h"
+    "/home/marchnuc2/git/surrogate_repo/include/SOEM/soem/ethercatsoe.h"
+    "/home/marchnuc2/git/surrogate_repo/include/SOEM/soem/ethercattype.h"
+    "/home/marchnuc2/git/surrogate_repo/include/SOEM/osal/linux/osal_defs.h"
+    "/home/marchnuc2/git/surrogate_repo/include/SOEM/osal/osal.h"
+    "/home/marchnuc2/git/surrogate_repo/include/SOEM/oshw/linux/nicdrv.h"
+    "/home/marchnuc2/git/surrogate_repo/include/SOEM/oshw/linux/oshw.h"
     )
 endif()
 

@@ -1,6 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/custom_grpc_server.dir/include/gRPC/cpp/custom_grpc_service.cpp.o"
+  "CMakeFiles/custom_grpc_server.dir/include/gRPC/cpp/custom_grpc_service.cpp.o.d"
   "CMakeFiles/custom_grpc_server.dir/include/gRPC/cpp/custom_server.cpp.o"
+  "CMakeFiles/custom_grpc_server.dir/include/gRPC/cpp/custom_server.cpp.o.d"
   "libcustom_grpc_server.pdb"
   "libcustom_grpc_server.so"
 )

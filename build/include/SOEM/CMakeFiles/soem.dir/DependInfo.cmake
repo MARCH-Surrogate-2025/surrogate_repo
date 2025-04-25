@@ -1,30 +1,25 @@
+
+# Consider dependencies only in project.
+set(CMAKE_DEPENDS_IN_PROJECT_ONLY OFF)
+
 # The set of languages for which implicit dependencies are needed:
 set(CMAKE_DEPENDS_LANGUAGES
-  "C"
   )
-# The set of files for implicit dependencies of each language:
-set(CMAKE_DEPENDS_CHECK_C
-  "/home/surrogate/Desktop/MARCH_Surrogate/include/SOEM/osal/linux/osal.c" "/home/surrogate/Desktop/MARCH_Surrogate/build/include/SOEM/CMakeFiles/soem.dir/osal/linux/osal.c.o"
-  "/home/surrogate/Desktop/MARCH_Surrogate/include/SOEM/oshw/linux/nicdrv.c" "/home/surrogate/Desktop/MARCH_Surrogate/build/include/SOEM/CMakeFiles/soem.dir/oshw/linux/nicdrv.c.o"
-  "/home/surrogate/Desktop/MARCH_Surrogate/include/SOEM/oshw/linux/oshw.c" "/home/surrogate/Desktop/MARCH_Surrogate/build/include/SOEM/CMakeFiles/soem.dir/oshw/linux/oshw.c.o"
-  "/home/surrogate/Desktop/MARCH_Surrogate/include/SOEM/soem/ethercatbase.c" "/home/surrogate/Desktop/MARCH_Surrogate/build/include/SOEM/CMakeFiles/soem.dir/soem/ethercatbase.c.o"
-  "/home/surrogate/Desktop/MARCH_Surrogate/include/SOEM/soem/ethercatcoe.c" "/home/surrogate/Desktop/MARCH_Surrogate/build/include/SOEM/CMakeFiles/soem.dir/soem/ethercatcoe.c.o"
-  "/home/surrogate/Desktop/MARCH_Surrogate/include/SOEM/soem/ethercatconfig.c" "/home/surrogate/Desktop/MARCH_Surrogate/build/include/SOEM/CMakeFiles/soem.dir/soem/ethercatconfig.c.o"
-  "/home/surrogate/Desktop/MARCH_Surrogate/include/SOEM/soem/ethercatdc.c" "/home/surrogate/Desktop/MARCH_Surrogate/build/include/SOEM/CMakeFiles/soem.dir/soem/ethercatdc.c.o"
-  "/home/surrogate/Desktop/MARCH_Surrogate/include/SOEM/soem/ethercateoe.c" "/home/surrogate/Desktop/MARCH_Surrogate/build/include/SOEM/CMakeFiles/soem.dir/soem/ethercateoe.c.o"
-  "/home/surrogate/Desktop/MARCH_Surrogate/include/SOEM/soem/ethercatfoe.c" "/home/surrogate/Desktop/MARCH_Surrogate/build/include/SOEM/CMakeFiles/soem.dir/soem/ethercatfoe.c.o"
-  "/home/surrogate/Desktop/MARCH_Surrogate/include/SOEM/soem/ethercatmain.c" "/home/surrogate/Desktop/MARCH_Surrogate/build/include/SOEM/CMakeFiles/soem.dir/soem/ethercatmain.c.o"
-  "/home/surrogate/Desktop/MARCH_Surrogate/include/SOEM/soem/ethercatprint.c" "/home/surrogate/Desktop/MARCH_Surrogate/build/include/SOEM/CMakeFiles/soem.dir/soem/ethercatprint.c.o"
-  "/home/surrogate/Desktop/MARCH_Surrogate/include/SOEM/soem/ethercatsoe.c" "/home/surrogate/Desktop/MARCH_Surrogate/build/include/SOEM/CMakeFiles/soem.dir/soem/ethercatsoe.c.o"
-  )
-set(CMAKE_C_COMPILER_ID "GNU")
 
-# The include file search paths:
-set(CMAKE_C_TARGET_INCLUDE_PATH
-  "../include/SOEM/soem"
-  "../include/SOEM/osal"
-  "../include/SOEM/osal/linux"
-  "../include/SOEM/oshw/linux"
+# The set of dependency files which are needed:
+set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "/home/marchnuc2/git/surrogate_repo/include/SOEM/osal/linux/osal.c" "include/SOEM/CMakeFiles/soem.dir/osal/linux/osal.c.o" "gcc" "include/SOEM/CMakeFiles/soem.dir/osal/linux/osal.c.o.d"
+  "/home/marchnuc2/git/surrogate_repo/include/SOEM/oshw/linux/nicdrv.c" "include/SOEM/CMakeFiles/soem.dir/oshw/linux/nicdrv.c.o" "gcc" "include/SOEM/CMakeFiles/soem.dir/oshw/linux/nicdrv.c.o.d"
+  "/home/marchnuc2/git/surrogate_repo/include/SOEM/oshw/linux/oshw.c" "include/SOEM/CMakeFiles/soem.dir/oshw/linux/oshw.c.o" "gcc" "include/SOEM/CMakeFiles/soem.dir/oshw/linux/oshw.c.o.d"
+  "/home/marchnuc2/git/surrogate_repo/include/SOEM/soem/ethercatbase.c" "include/SOEM/CMakeFiles/soem.dir/soem/ethercatbase.c.o" "gcc" "include/SOEM/CMakeFiles/soem.dir/soem/ethercatbase.c.o.d"
+  "/home/marchnuc2/git/surrogate_repo/include/SOEM/soem/ethercatcoe.c" "include/SOEM/CMakeFiles/soem.dir/soem/ethercatcoe.c.o" "gcc" "include/SOEM/CMakeFiles/soem.dir/soem/ethercatcoe.c.o.d"
+  "/home/marchnuc2/git/surrogate_repo/include/SOEM/soem/ethercatconfig.c" "include/SOEM/CMakeFiles/soem.dir/soem/ethercatconfig.c.o" "gcc" "include/SOEM/CMakeFiles/soem.dir/soem/ethercatconfig.c.o.d"
+  "/home/marchnuc2/git/surrogate_repo/include/SOEM/soem/ethercatdc.c" "include/SOEM/CMakeFiles/soem.dir/soem/ethercatdc.c.o" "gcc" "include/SOEM/CMakeFiles/soem.dir/soem/ethercatdc.c.o.d"
+  "/home/marchnuc2/git/surrogate_repo/include/SOEM/soem/ethercateoe.c" "include/SOEM/CMakeFiles/soem.dir/soem/ethercateoe.c.o" "gcc" "include/SOEM/CMakeFiles/soem.dir/soem/ethercateoe.c.o.d"
+  "/home/marchnuc2/git/surrogate_repo/include/SOEM/soem/ethercatfoe.c" "include/SOEM/CMakeFiles/soem.dir/soem/ethercatfoe.c.o" "gcc" "include/SOEM/CMakeFiles/soem.dir/soem/ethercatfoe.c.o.d"
+  "/home/marchnuc2/git/surrogate_repo/include/SOEM/soem/ethercatmain.c" "include/SOEM/CMakeFiles/soem.dir/soem/ethercatmain.c.o" "gcc" "include/SOEM/CMakeFiles/soem.dir/soem/ethercatmain.c.o.d"
+  "/home/marchnuc2/git/surrogate_repo/include/SOEM/soem/ethercatprint.c" "include/SOEM/CMakeFiles/soem.dir/soem/ethercatprint.c.o" "gcc" "include/SOEM/CMakeFiles/soem.dir/soem/ethercatprint.c.o.d"
+  "/home/marchnuc2/git/surrogate_repo/include/SOEM/soem/ethercatsoe.c" "include/SOEM/CMakeFiles/soem.dir/soem/ethercatsoe.c.o" "gcc" "include/SOEM/CMakeFiles/soem.dir/soem/ethercatsoe.c.o.d"
   )
 
 # Targets to which this target links.

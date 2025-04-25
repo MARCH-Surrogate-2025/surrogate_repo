@@ -1,6 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/msgs_config_grpc_proto.dir/cpp/proto_generated/msgs_config.grpc.pb.cc.o"
+  "CMakeFiles/msgs_config_grpc_proto.dir/cpp/proto_generated/msgs_config.grpc.pb.cc.o.d"
   "CMakeFiles/msgs_config_grpc_proto.dir/cpp/proto_generated/msgs_config.pb.cc.o"
+  "CMakeFiles/msgs_config_grpc_proto.dir/cpp/proto_generated/msgs_config.pb.cc.o.d"
   "libmsgs_config_grpc_proto.pdb"
   "libmsgs_config_grpc_proto.so"
 )

@@ -12,6 +12,13 @@ if(Xenomai_FOUND)
     message("Xenomai package was found")
 endif(Xenomai_FOUND)
 
+# find Abseil package
+find_package(absl REQUIRED)
+if(absl_FOUND)
+    message(STATUS "Abseil package was found: ${absl_DIR}")
+endif()
+set(ABSL_PROPAGATE_CXX_STD ON)
+
 link_directories(
         "/usr/xenomai/lib"
 )

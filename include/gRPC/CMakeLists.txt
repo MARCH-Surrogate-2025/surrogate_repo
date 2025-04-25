@@ -18,6 +18,7 @@
 # that automatically builds all the dependencies before building helloworld.
 
 cmake_minimum_required(VERSION 3.8)
+set(ABSL_PROPAGATE_CXX_STD ON)
 
 project(CustomRPC C CXX)
 set(target_generate_dir "${CMAKE_CURRENT_SOURCE_DIR}/cpp/proto_generated")

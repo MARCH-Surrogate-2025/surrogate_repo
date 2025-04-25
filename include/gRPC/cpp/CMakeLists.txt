@@ -22,6 +22,7 @@ cmake_minimum_required(VERSION 3.8)
 project(CustomRPC C CXX)
 
 include(${CMAKE_CURRENT_SOURCE_DIR}/cmake/common.cmake)
+set(ABSL_PROPAGATE_CXX_STD ON)
 
 set(target_proto_names
         "control"

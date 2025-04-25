@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="BackendCodeEditorMiscSettings">
-    <option name="/Default/RiderDebugger/RiderRestoreDecompile/RestoreDecompileSetting/@EntryValue" value="false" type="bool" />
-    <option name="/Default/Housekeeping/GlobalSettingsUpgraded/IsUpgraded/@EntryValue" value="true" type="bool" />
     <option name="/Default/Housekeeping/FeatureSuggestion/FeatureSuggestionManager/DisabledSuggesters/=SwitchToGoToActionSuggester/@EntryIndexedValue" value="true" type="bool" />
-    <option name="/Default/Housekeeping/FeatureSuggestion/FeatureSuggestionManager/DisabledSuggesters/=SwitchToGoToActionSuggester/@EntryIndexRemoved" />
+    <option name="/Default/Housekeeping/GlobalSettingsUpgraded/IsUpgraded/@EntryValue" value="true" type="bool" />
+    <option name="/Default/RiderDebugger/RiderRestoreDecompile/RestoreDecompileSetting/@EntryValue" value="false" type="bool" />
   </component>
   <component name="CMakePresetLoader">{
   &quot;useNewFormat&quot;: true
@@ -27,7 +26,10 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4a724794-8493-48f6-bb93-007055f4ad43" name="Changes" comment="" />
+    <list default="true" id="4a724794-8493-48f6-bb93-007055f4ad43" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -39,6 +41,12 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/Test_Wheel/src/Test_Wheel.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/Test_Wheel/src/Test_Wheel.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/Test_Wheel/utils/CustomECAT/CustomEtherCAT.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/Test_Wheel/utils/CustomECAT/PDO.h" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProjectApplicationVersion">
     <option name="ide" value="CLion" />
@@ -62,10 +70,11 @@
     "RunOnceActivity.git.unshallow": "true",
     "RunOnceActivity.readMode.enableVisualFormatting": "true",
     "RunOnceActivity.west.config.association.type.startup.service": "true",
+    "SHELLCHECK.PATH": "신경 쓰임",
     "cf.first.check.clang-format": "false",
     "cidr.known.project.marker": "true",
-    "git-widget-placeholder": "develop",
-    "last_opened_file_path": "/home/surrogate/Jaehyun/github_repos/surrogate_repo",
+    "git-widget-placeholder": "feature__jh",
+    "last_opened_file_path": "/home/marchnuc2/git/surrogate_repo",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -74,7 +83,7 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="CMake Application.hello_grpc">
+  <component name="RunManager" selected="CMake 애플리케이션.CUSTOM_BALANCER_UTILS">
     <configuration name="CUSTOM_BALANCER_UTILS" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Surrogate" TARGET_NAME="CUSTOM_BALANCER_UTILS" CONFIG_NAME="Debug">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
@@ -106,11 +115,6 @@
       </method>
     </configuration>
     <configuration name="Test_Wheel" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Surrogate" TARGET_NAME="Test_Wheel" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Surrogate" RUN_TARGET_NAME="Test_Wheel">
-      <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -191,28 +195,28 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="CMake Application.custom_grpc_server" />
-      <item itemvalue="CMake Application.custom_shared_memory" />
-      <item itemvalue="CMake Application.control_grpc_proto" />
-      <item itemvalue="CMake Application.motion_grpc_proto" />
-      <item itemvalue="CMake Application.msgs_common_grpc_proto" />
-      <item itemvalue="CMake Application.msgs_config_grpc_proto" />
-      <item itemvalue="CMake Application.msgs_control_grpc_proto" />
-      <item itemvalue="CMake Application.msgs_motion_grpc_proto" />
-      <item itemvalue="CMake Application.msgs_system_grpc_proto" />
-      <item itemvalue="CMake Application.system_grpc_proto" />
-      <item itemvalue="CMake Application.soem" />
-      <item itemvalue="CMake Application.hello_grpc" />
-      <item itemvalue="CMake Application.hello_rt_task" />
-      <item itemvalue="CMake Application.hello_xenomai" />
-      <item itemvalue="CMake Application.CUSTOM_BALANCER_UTILS" />
-      <item itemvalue="CMake Application.Test_Balancer" />
-      <item itemvalue="CMake Application.CUSTOM_DMX_UTILS" />
-      <item itemvalue="CMake Application.Test_Dynamixel" />
-      <item itemvalue="CMake Application.test_integration" />
-      <item itemvalue="CMake Application.CUSTOM_ECAT_UTILS" />
-      <item itemvalue="CMake Application.CUSTOM_PDO" />
-      <item itemvalue="CMake Application.Test_Wheel" />
+      <item itemvalue="CMake 애플리케이션.CUSTOM_BALANCER_UTILS" />
+      <item itemvalue="CMake 애플리케이션.CUSTOM_DMX_UTILS" />
+      <item itemvalue="CMake 애플리케이션.CUSTOM_ECAT_UTILS" />
+      <item itemvalue="CMake 애플리케이션.CUSTOM_PDO" />
+      <item itemvalue="CMake 애플리케이션.Test_Balancer" />
+      <item itemvalue="CMake 애플리케이션.Test_Dynamixel" />
+      <item itemvalue="CMake 애플리케이션.Test_Wheel" />
+      <item itemvalue="CMake 애플리케이션.control_grpc_proto" />
+      <item itemvalue="CMake 애플리케이션.custom_grpc_server" />
+      <item itemvalue="CMake 애플리케이션.custom_shared_memory" />
+      <item itemvalue="CMake 애플리케이션.hello_grpc" />
+      <item itemvalue="CMake 애플리케이션.hello_rt_task" />
+      <item itemvalue="CMake 애플리케이션.hello_xenomai" />
+      <item itemvalue="CMake 애플리케이션.motion_grpc_proto" />
+      <item itemvalue="CMake 애플리케이션.msgs_common_grpc_proto" />
+      <item itemvalue="CMake 애플리케이션.msgs_config_grpc_proto" />
+      <item itemvalue="CMake 애플리케이션.msgs_control_grpc_proto" />
+      <item itemvalue="CMake 애플리케이션.msgs_motion_grpc_proto" />
+      <item itemvalue="CMake 애플리케이션.msgs_system_grpc_proto" />
+      <item itemvalue="CMake 애플리케이션.soem" />
+      <item itemvalue="CMake 애플리케이션.system_grpc_proto" />
+      <item itemvalue="CMake 애플리케이션.test_integration" />
     </list>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -225,6 +229,10 @@
       <updated>1744965832227</updated>
       <workItem from="1744965833958" duration="4000" />
       <workItem from="1744966074619" duration="625000" />
+      <workItem from="1745225139183" duration="40000" />
+      <workItem from="1745225200062" duration="15093000" />
+      <workItem from="1745408067842" duration="4000" />
+      <workItem from="1745479088455" duration="4560000" />
     </task>
     <servers />
   </component>

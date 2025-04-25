@@ -1,6 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/system_grpc_proto.dir/cpp/proto_generated/system.grpc.pb.cc.o"
+  "CMakeFiles/system_grpc_proto.dir/cpp/proto_generated/system.grpc.pb.cc.o.d"
   "CMakeFiles/system_grpc_proto.dir/cpp/proto_generated/system.pb.cc.o"
+  "CMakeFiles/system_grpc_proto.dir/cpp/proto_generated/system.pb.cc.o.d"
   "libsystem_grpc_proto.pdb"
   "libsystem_grpc_proto.so"
 )
