@@ -68,3 +68,11 @@
 /home/marchnuc1/Desktop/surrogate_repo/build/src/Test_Balancer/CMakeFiles/install.dir
 /home/marchnuc1/Desktop/surrogate_repo/build/src/Test_Balancer/CMakeFiles/install/local.dir
 /home/marchnuc1/Desktop/surrogate_repo/build/src/Test_Balancer/CMakeFiles/install/strip.dir
+/home/marchnuc1/Desktop/surrogate_repo/build/src/Test_RC/CMakeFiles/CUSTOM_RC_UTILS.dir
+/home/marchnuc1/Desktop/surrogate_repo/build/src/Test_RC/CMakeFiles/Test_RC.dir
+/home/marchnuc1/Desktop/surrogate_repo/build/src/Test_RC/CMakeFiles/edit_cache.dir
+/home/marchnuc1/Desktop/surrogate_repo/build/src/Test_RC/CMakeFiles/rebuild_cache.dir
+/home/marchnuc1/Desktop/surrogate_repo/build/src/Test_RC/CMakeFiles/list_install_components.dir
+/home/marchnuc1/Desktop/surrogate_repo/build/src/Test_RC/CMakeFiles/install.dir
+/home/marchnuc1/Desktop/surrogate_repo/build/src/Test_RC/CMakeFiles/install/local.dir
+/home/marchnuc1/Desktop/surrogate_repo/build/src/Test_RC/CMakeFiles/install/strip.dir

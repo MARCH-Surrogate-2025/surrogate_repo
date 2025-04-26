@@ -239,6 +239,9 @@ CUSTOM_DMX_UTILS_LIB_DEPENDS:STATIC=general;alchemy;general;cobalt;general;coppe
 //Dependencies for the target
 CUSTOM_ECAT_UTILS_LIB_DEPENDS:STATIC=general;alchemy;general;cobalt;general;copperplate;general;trank;general;soem;general;custom_grpc_server;
 
+//Dependencies for the target
+CUSTOM_RC_UTILS_LIB_DEPENDS:STATIC=general;alchemy;general;cobalt;general;copperplate;general;trank;general;soem;general;custom_grpc_server;
+
 //Value Computed by CMake
 CustomRPC_BINARY_DIR:STATIC=/home/marchnuc1/Desktop/surrogate_repo/build/include/gRPC
 
@@ -426,7 +429,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=8
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=9
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP

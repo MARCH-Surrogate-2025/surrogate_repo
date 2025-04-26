@@ -447,6 +447,32 @@ Test_Balancer/fast:
 	$(MAKE) $(MAKESILENT) -f src/Test_Balancer/CMakeFiles/Test_Balancer.dir/build.make src/Test_Balancer/CMakeFiles/Test_Balancer.dir/build
 .PHONY : Test_Balancer/fast
 
+#=============================================================================
+# Target rules for targets named CUSTOM_RC_UTILS
+
+# Build rule for target.
+CUSTOM_RC_UTILS: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CUSTOM_RC_UTILS
+.PHONY : CUSTOM_RC_UTILS
+
+# fast build rule for target.
+CUSTOM_RC_UTILS/fast:
+	$(MAKE) $(MAKESILENT) -f src/Test_RC/CMakeFiles/CUSTOM_RC_UTILS.dir/build.make src/Test_RC/CMakeFiles/CUSTOM_RC_UTILS.dir/build
+.PHONY : CUSTOM_RC_UTILS/fast
+
+#=============================================================================
+# Target rules for targets named Test_RC
+
+# Build rule for target.
+Test_RC: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Test_RC
+.PHONY : Test_RC
+
+# fast build rule for target.
+Test_RC/fast:
+	$(MAKE) $(MAKESILENT) -f src/Test_RC/CMakeFiles/Test_RC.dir/build.make src/Test_RC/CMakeFiles/Test_RC.dir/build
+.PHONY : Test_RC/fast
+
 include/gRPC/cpp/custom_grpc_service.o: include/gRPC/cpp/custom_grpc_service.cpp.o
 .PHONY : include/gRPC/cpp/custom_grpc_service.o
 
@@ -511,8 +537,10 @@ help:
 	@echo "... CUSTOM_DMX_UTILS"
 	@echo "... CUSTOM_ECAT_UTILS"
 	@echo "... CUSTOM_PDO"
+	@echo "... CUSTOM_RC_UTILS"
 	@echo "... Test_Balancer"
 	@echo "... Test_Dynamixel"
+	@echo "... Test_RC"
 	@echo "... Test_Wheel"
 	@echo "... control_grpc_proto"
 	@echo "... custom_grpc_server"

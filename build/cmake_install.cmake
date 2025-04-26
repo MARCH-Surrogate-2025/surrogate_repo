@@ -51,6 +51,7 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   include("/home/marchnuc1/Desktop/surrogate_repo/build/src/Test_Dynamixel/cmake_install.cmake")
   include("/home/marchnuc1/Desktop/surrogate_repo/build/src/test_integration/cmake_install.cmake")
   include("/home/marchnuc1/Desktop/surrogate_repo/build/src/Test_Balancer/cmake_install.cmake")
+  include("/home/marchnuc1/Desktop/surrogate_repo/build/src/Test_RC/cmake_install.cmake")
 
 endif()
 
