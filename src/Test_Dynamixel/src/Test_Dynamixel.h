@@ -80,6 +80,8 @@ int dxl_zero_position;
 int dxl_target_position;
 int dxl_current_position;
 
+int map(int x, int in_min, int in_max, int out_min, int out_max);
+
 
 // ------------------------------- //
 

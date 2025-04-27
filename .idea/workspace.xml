@@ -27,59 +27,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4a724794-8493-48f6-bb93-007055f4ad43" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Test_RC/CMakeLists.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Test_RC/src/EL3068.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Test_RC/src/EL3068.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Test_RC/src/Test_RC.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Test_RC/src/Test_RC.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeCache.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/Makefile.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/Makefile2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/TargetDirectories.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/TargetDirectories.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/custom_grpc_server.dir/compiler_depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/custom_grpc_server.dir/compiler_depend.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/custom_grpc_server.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/custom_grpc_server.dir/progress.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/custom_shared_memory.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/custom_shared_memory.dir/progress.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/progress.marks" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/build/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/cmake_install.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/include/SOEM/CMakeFiles/soem.dir/compiler_depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/build/include/SOEM/CMakeFiles/soem.dir/compiler_depend.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/include/SOEM/CMakeFiles/soem.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/build/include/SOEM/CMakeFiles/soem.dir/progress.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/include/SOEM/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/include/SOEM/cmake_install.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/include/gRPC/CMakeFiles/control_grpc_proto.dir/compiler_depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/build/include/gRPC/CMakeFiles/control_grpc_proto.dir/compiler_depend.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/include/gRPC/CMakeFiles/control_grpc_proto.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/build/include/gRPC/CMakeFiles/control_grpc_proto.dir/progress.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/include/gRPC/CMakeFiles/motion_grpc_proto.dir/compiler_depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/build/include/gRPC/CMakeFiles/motion_grpc_proto.dir/compiler_depend.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/include/gRPC/CMakeFiles/motion_grpc_proto.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/build/include/gRPC/CMakeFiles/motion_grpc_proto.dir/progress.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/include/gRPC/CMakeFiles/msgs_common_grpc_proto.dir/compiler_depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/build/include/gRPC/CMakeFiles/msgs_common_grpc_proto.dir/compiler_depend.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/include/gRPC/CMakeFiles/msgs_common_grpc_proto.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/build/include/gRPC/CMakeFiles/msgs_common_grpc_proto.dir/progress.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/include/gRPC/CMakeFiles/msgs_config_grpc_proto.dir/compiler_depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/build/include/gRPC/CMakeFiles/msgs_config_grpc_proto.dir/compiler_depend.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/include/gRPC/CMakeFiles/msgs_config_grpc_proto.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/build/include/gRPC/CMakeFiles/msgs_config_grpc_proto.dir/progress.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/include/gRPC/CMakeFiles/msgs_control_grpc_proto.dir/compiler_depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/build/include/gRPC/CMakeFiles/msgs_control_grpc_proto.dir/compiler_depend.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/include/gRPC/CMakeFiles/msgs_control_grpc_proto.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/build/include/gRPC/CMakeFiles/msgs_control_grpc_proto.dir/progress.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/include/gRPC/CMakeFiles/msgs_motion_grpc_proto.dir/compiler_depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/build/include/gRPC/CMakeFiles/msgs_motion_grpc_proto.dir/compiler_depend.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/include/gRPC/CMakeFiles/msgs_motion_grpc_proto.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/build/include/gRPC/CMakeFiles/msgs_motion_grpc_proto.dir/progress.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/include/gRPC/CMakeFiles/msgs_system_grpc_proto.dir/compiler_depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/build/include/gRPC/CMakeFiles/msgs_system_grpc_proto.dir/compiler_depend.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/include/gRPC/CMakeFiles/msgs_system_grpc_proto.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/build/include/gRPC/CMakeFiles/msgs_system_grpc_proto.dir/progress.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/include/gRPC/CMakeFiles/system_grpc_proto.dir/compiler_depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/build/include/gRPC/CMakeFiles/system_grpc_proto.dir/compiler_depend.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/include/gRPC/CMakeFiles/system_grpc_proto.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/build/include/gRPC/CMakeFiles/system_grpc_proto.dir/progress.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/src/Test_Balancer/CMakeFiles/CUSTOM_BALANCER_UTILS.dir/compiler_depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/build/src/Test_Balancer/CMakeFiles/CUSTOM_BALANCER_UTILS.dir/compiler_depend.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/src/Test_Balancer/CMakeFiles/Test_Balancer.dir/compiler_depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/build/src/Test_Balancer/CMakeFiles/Test_Balancer.dir/compiler_depend.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/src/Test_Balancer/CMakeFiles/Test_Balancer.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/build/src/Test_Balancer/CMakeFiles/Test_Balancer.dir/progress.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/src/Test_Dynamixel/CMakeFiles/CUSTOM_DMX_UTILS.dir/compiler_depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/build/src/Test_Dynamixel/CMakeFiles/CUSTOM_DMX_UTILS.dir/compiler_depend.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/src/Test_Dynamixel/CMakeFiles/Test_Dynamixel.dir/compiler_depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/build/src/Test_Dynamixel/CMakeFiles/Test_Dynamixel.dir/compiler_depend.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/src/Test_Dynamixel/CMakeFiles/Test_Dynamixel.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/build/src/Test_Dynamixel/CMakeFiles/Test_Dynamixel.dir/progress.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/src/Test_Wheel/CMakeFiles/CUSTOM_ECAT_UTILS.dir/compiler_depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/build/src/Test_Wheel/CMakeFiles/CUSTOM_ECAT_UTILS.dir/compiler_depend.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/src/Test_Wheel/CMakeFiles/Test_Wheel.dir/compiler_depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/build/src/Test_Wheel/CMakeFiles/Test_Wheel.dir/compiler_depend.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/src/Test_Wheel/CMakeFiles/Test_Wheel.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/build/src/Test_Wheel/CMakeFiles/Test_Wheel.dir/progress.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/src/example_xenomai/CMakeFiles/hello_grpc.dir/compiler_depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/build/src/example_xenomai/CMakeFiles/hello_grpc.dir/compiler_depend.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/src/example_xenomai/CMakeFiles/hello_grpc.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/build/src/example_xenomai/CMakeFiles/hello_grpc.dir/progress.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/src/example_xenomai/CMakeFiles/hello_rt_task.dir/compiler_depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/build/src/example_xenomai/CMakeFiles/hello_rt_task.dir/compiler_depend.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/src/example_xenomai/CMakeFiles/hello_rt_task.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/build/src/example_xenomai/CMakeFiles/hello_rt_task.dir/progress.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/src/example_xenomai/CMakeFiles/hello_xenomai.dir/compiler_depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/build/src/example_xenomai/CMakeFiles/hello_xenomai.dir/compiler_depend.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/src/example_xenomai/CMakeFiles/hello_xenomai.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/build/src/example_xenomai/CMakeFiles/hello_xenomai.dir/progress.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/src/test_integration/CMakeFiles/test_integration.dir/compiler_depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/build/src/test_integration/CMakeFiles/test_integration.dir/compiler_depend.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/src/test_integration/CMakeFiles/test_integration.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/build/src/test_integration/CMakeFiles/test_integration.dir/progress.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/src/Test_Dynamixel/Test_Dynamixel" beforeDir="false" afterPath="$PROJECT_DIR$/build/src/Test_Dynamixel/Test_Dynamixel" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/src/Test_RC/Test_RC" beforeDir="false" afterPath="$PROJECT_DIR$/build/src/Test_RC/Test_RC" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Test_Dynamixel/src/EL6021.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/Test_Dynamixel/src/EL6021.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Test_Dynamixel/src/EL6021.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/Test_Dynamixel/src/EL6021.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Test_Dynamixel/src/Test_Dynamixel.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/Test_Dynamixel/src/Test_Dynamixel.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Test_Dynamixel/src/Test_Dynamixel.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/Test_Dynamixel/src/Test_Dynamixel.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Test_RC/src/Test_RC.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/Test_RC/src/Test_RC.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -309,7 +265,9 @@
       <workItem from="1745463582966" duration="15910000" />
       <workItem from="1745556765910" duration="2224000" />
       <workItem from="1745564567016" duration="783000" />
-      <workItem from="1745655182072" duration="19503000" />
+      <workItem from="1745655182072" duration="21631000" />
+      <workItem from="1745733062757" duration="342000" />
+      <workItem from="1745733785821" duration="12297000" />
     </task>
     <servers />
   </component>

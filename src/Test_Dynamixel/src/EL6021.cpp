@@ -27,8 +27,10 @@ int EL6021::InitSlaves(char *ifname)
 int EL6021::SetSDO()
 {
     // EL6021 - 1. COM Settings
-    for (int slave = 2; slave <= ec_slavecount; slave++)
-    {
+    //for (int slave = 2; slave <= ec_slavecount; slave++)
+	int slave = 2;
+    if(slave == 2)
+	{
         // set baudrate (115200)
         uint8_t baud_rate = EL6021_BAUDRATE_115200;
         //uint8_t initial_baud;
@@ -81,7 +83,11 @@ int EL6021::SetSDO()
     ec_config_map(&IOmap);
     ec_configdc();
 
-    for (int slave = 1; slave <= ec_slavecount; slave++)
+	expected_WKC = (ec_group[0].outputsWKC * 2) + ec_group[0].inputsWKC;
+    printf("Calculated expectedWKC: %d\n", expected_WKC);
+
+    //for (int slave = 1; slave <= ec_slavecount; slave++)
+	if(slave == 2)
     {
         rxPDO[slave - 1] = (struct EL6021_rx *)(ec_slave[slave].outputs);
         txPDO[slave - 1] = (struct EL6021_tx *)(ec_slave[slave].inputs);
@@ -92,11 +98,17 @@ int EL6021::SetSDO()
     ec_statecheck(0, EC_STATE_SAFE_OP, EC_TIMEOUTSTATE * 4);
 
     printf("\033[1;32m[RT-SoemEcat] request operational state for all slaves.\033[0m\n");
+
     ec_slave[0].state = EC_STATE_OPERATIONAL;
+	ec_slave[1].state = EC_STATE_OPERATIONAL;
+	ec_slave[2].state = EC_STATE_OPERATIONAL;
+	ec_slave[3].state = EC_STATE_OPERATIONAL;
+
 
     // send one valid process data to make outputs in slaves happy
     ec_send_processdata();
     ec_receive_processdata(EC_TIMEOUTRET);
+
 
     // request OP state for all slaves
     ec_writestate(0);
@@ -110,11 +122,20 @@ int EL6021::SetSDO()
         ec_statecheck(0, EC_STATE_OPERATIONAL, 50000);
     } while (chk-- && (ec_slave[0].state != EC_STATE_OPERATIONAL));
 
+
     if (ec_slave[0].state == EC_STATE_OPERATIONAL)
     {
+		//printf("debug: %s\n",ec_slave[3].inputs);
+
         printf("\033[1;32m[RT-SoemCat] slave 1 reached operational state.\033[0m\n");
         system_ready = true;
+
     }
+	else
+	{
+		printf("Not all slaves reached operational state.\033[0m\n");
+	}
+
 
     return 0;
 }
@@ -398,6 +419,48 @@ int EL6021::UpdateCommand(int target_position, int *current_position)
         return -1;
 }
 
+int EL6021::RC_ReadPWM()
+{
+	//printf("tset\n");
+	/*
+	for (int i = 1; i <= ec_slavecount; i++)
+	{
+    	rt_printf("Slave[%d]: %s\n", i, ec_slave[i].name);
+     	rt_printf("    Input Bytes (Ibytes): %d\n", ec_slave[i].Ibytes);
+    	rt_printf("    Output Bytes (Obytes): %d\n", ec_slave[i].Obytes);
+    	rt_printf("    inputs pointer: %p\n", ec_slave[i].inputs);
+     	rt_printf("    outputs pointer: %p\n", ec_slave[i].outputs);
+	}*/
+	/*
+	for (int i = 1; i <= ec_slavecount; i++)
+	{
+    	printf("Slave[%d] (%s) State: 0x%02X\n", i, ec_slave[i].name, ec_slave[i].state);
+	}
+	*/
+
+	uint8_t *ai_data = ec_slave[3].inputs;
+	if (ai_data == NULL)
+	{
+    	rt_printf("Error: ai_data is NULL!\n");
+	}
+	else
+	{
+
+    	ch1 = *(int16_t *)(ai_data + 2);
+        ch2 = *(int16_t *)(ai_data + 6);
+       	ch3 = *(int16_t *)(ai_data + 10);
+        ch4 = *(int16_t *)(ai_data + 14);
+        ch5 = *(int16_t *)(ai_data + 18);
+        ch6 = *(int16_t *)(ai_data + 22);
+
+        //printf("[RT-Remote] CH1: %d | CH2: %d | CH3: %d\n", ch1, ch2, ch3);
+	}
+
+
+	return 0;
+}
+
+
 
 int EL6021::DXL_PrepareCommand()
 {
@@ -599,6 +662,7 @@ int EL6021::DXL_EnableMotor()
 						, txPDO[1]->data[3], txPDO[1]->data[4], txPDO[1]->data[5]
 						, txPDO[1]->data[6], txPDO[1]->data[7], txPDO[1]->data[8]
 						, txPDO[1]->data[9], txPDO[1]->data[10]);
+
 
             }
         } while (!((arrived_data_size == required_packet_size) && (sw_bit != ((txPDO[1]->statusWord) & 0x0002)) && (first_tick == 0)));

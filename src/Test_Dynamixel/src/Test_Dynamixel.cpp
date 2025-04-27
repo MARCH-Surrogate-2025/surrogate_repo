@@ -74,6 +74,7 @@ static void SoemEcat(void *arg)
     /// DXL - Enable Motor
     if(ec.DXL_EnableMotor() == 0)
     {
+		//printf("debug\n");
         PRINT_BLU
         rt_printf("[RT-SoemCat] Dynamixel motors are enabled.\n");
         PRINT_NRM
@@ -104,24 +105,42 @@ static void SoemEcat(void *arg)
     int thread_tick_1 = 0;
     start_time = rt_timer_read();
     double duration_time;
+	static int prev_target_position = 2048;
     working_soemecat = true;
     rt_printf("\033[1;34m[RT-SoemCat] Enter rt thread.\033[0m\n");
+	//loop
     while(working_soemecat)
     {
         thread_tick_1++;
 
+
         // update command
         double freq = 3;
         double amp = 500;
-        dxl_target_position = (int)(amp*sin(2*M_PI*freq*thread_tick_1*0.001)) + dxl_zero_position;
-        ec.DXL_WriteTargetPosition(dxl_target_position);
+		ec.RC_ReadPWM();
+        //dxl_target_position = (int)(amp*sin(2*M_PI*freq*thread_tick_1*0.001)) + dxl_zero_position;
+        //RC_PWM_Targetposition setting
+		dxl_target_position = map(ec.ch1, 600, 990, 1024, 3072);
+		if (dxl_target_position < 1024) dxl_target_position = 1024;
+		if (dxl_target_position > 3072) dxl_target_position = 3072;
+		int diff = abs(dxl_target_position - prev_target_position);
+		const int threshold = 11;
+
+		if (diff >= threshold)
+		{
+    		ec.DXL_WriteTargetPosition(dxl_target_position);
+    		prev_target_position = dxl_target_position;
+		}
+
+
+		//ec.DXL_WriteTargetPosition(dxl_target_position);
         ec.DXL_ReadCurrentPosition(&dxl_current_position);
         duration_time = rt_timer_read() - start_time;
         start_time = rt_timer_read();
 
-        rt_printf("[RT-SoemCat] Cycle: %d (dt: %2.3f ms), Target Position: %d, CurrentPosition: %d \r"
+        rt_printf("[RT-SoemCat] Cycle: %d (dt: %2.3f ms), CH1: %d | Target Position: %d, CurrentPosition: %d \r"
                     , thread_tick_1, duration_time / 1e6
-                    , dxl_target_position, dxl_current_position);
+                    , ec.ch1, dxl_target_position, dxl_current_position);
 
          
         rt_task_wait_period(NULL);
@@ -149,6 +168,10 @@ static void SoemEcat(void *arg)
     rt_printf("[RT-SoemCat] quit. \n");
 }
 
+int map(int x, int in_min, int in_max, int out_min, int out_max)
+{
+    return (x - in_min) * (out_max - out_min) / (in_max - in_min) + out_min;
+}
 
 void error_callback()
 {

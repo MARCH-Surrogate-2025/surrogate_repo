@@ -107,6 +107,15 @@ class EL6021
         struct EL6021_rx *rxPDO[WHEEL_NUM];
         struct EL6021_tx *txPDO[WHEEL_NUM];
 
+		int16_t ch1;
+		int16_t ch2;
+		int16_t ch3;
+		int16_t ch4;
+		int16_t ch5;
+		int16_t ch6;
+
+
+
 
 
         int InitSlaves(char* ifname);
@@ -121,6 +130,9 @@ class EL6021
         int SendCommand();
         int UpdateCommand(int target_position, int *current_position);
         int PrepareCommunication(int slave);
+
+		// EL3068
+		int RC_ReadPWM();
 
         // Dynamixel
         // CustomDynamixel dxl_write();

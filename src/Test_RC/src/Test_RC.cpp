@@ -15,22 +15,27 @@ RT_TASK ecat_task;
 
 void ecat_loop(void *arg)
 {
+    uint64_t start_time = rt_timer_read();
     rt_task_set_periodic(NULL, TM_NOW, 1000000); // 1ms 주기
 
     while (1)
     {
+        uint64_t now = rt_timer_read();
+        double duration_time = (now - start_time) / 1e6;
+        start_time = now;
+
         ec_send_processdata();
         wkc = ec_receive_processdata(EC_TIMEOUTRET);
 
         if (wkc >= expectedWKC)
         {
-            uint8_t *ai_data = ec_slave[2].inputs;
-            printf("ai_data raw dump: ");
-            for (int i = 0; i < 12; i++)
-            {
-                printf("%02X ", ai_data[i]);
-            }
-            printf("\n");
+            uint8_t *ai_data = ec_slave[3].inputs;
+            //printf("ai_data raw dump: ");
+            //for (int i = 0; i < 12; i++)
+            //{
+            //    printf("%02X ", ai_data[i]);
+            //}
+            //printf("\n");
 
             int16_t ch1 = *(int16_t *)(ai_data + 2);
             int16_t ch2 = *(int16_t *)(ai_data + 6);
@@ -39,7 +44,7 @@ void ecat_loop(void *arg)
             int16_t ch5 = *(int16_t *)(ai_data + 18);
             int16_t ch6 = *(int16_t *)(ai_data + 22);
 
-            printf("CH1: %d | CH2: %d | CH3: %d\n", ch1, ch2, ch3);
+            printf("[RT-Remote] dt: %2.3f ms | CH1: %d | CH2: %d | CH3: %d\n", duration_time, ch1, ch2, ch3);
         }
 
         rt_task_wait_period(NULL);
