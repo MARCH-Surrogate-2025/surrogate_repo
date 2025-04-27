@@ -28,70 +28,76 @@ int EL6021::SetSDO()
 {
     // EL6021 - 1. COM Settings
     //for (int slave = 2; slave <= ec_slavecount; slave++)
-	int slave = 2;
-    if(slave == 2)
+
+	for (int slave = 2; slave <= ec_slavecount; slave++)
 	{
-        // set baudrate (115200)
-        uint8_t baud_rate = EL6021_BAUDRATE_115200;
-        //uint8_t initial_baud;
-        //uint8_t real_baud;
-        //int real_baud_size = 1;
-        //ec_SDOread(slave, EL6021_COMSETTINGS_INDEX, EL6021_BAUDRATE_SUBINDEX, FALSE, &real_baud_size, &initial_baud, EC_TIMEOUTSAFE);
-        ec_SDOwrite(slave, EL6021_COMSETTINGS_INDEX, EL6021_BAUDRATE_SUBINDEX, FALSE, EL6021_BAUDRATE_SIZE, &baud_rate, EC_TIMEOUTSAFE);
-        //ec_SDOread(slave, EL6021_COMSETTINGS_INDEX, EL6021_BAUDRATE_SUBINDEX, FALSE, &real_baud_size, &real_baud, EC_TIMEOUTSAFE);
-        //printf("[SetSDO] Baudrate is changed from %d to %d.\n", initial_baud, real_baud);
+    	if(slave == 2 || slave == 4)
+		{
+        	// set baudrate (115200)
+        	uint8_t baud_rate = EL6021_BAUDRATE_115200;
+        	//uint8_t initial_baud;
+        	//uint8_t real_baud;
+        	//int real_baud_size = 1;
+        	//ec_SDOread(slave, EL6021_COMSETTINGS_INDEX, EL6021_BAUDRATE_SUBINDEX, FALSE, &real_baud_size, &initial_baud, EC_TIMEOUTSAFE);
+        	ec_SDOwrite(slave, EL6021_COMSETTINGS_INDEX, EL6021_BAUDRATE_SUBINDEX, FALSE, EL6021_BAUDRATE_SIZE, &baud_rate, EC_TIMEOUTSAFE);
+        	//ec_SDOread(slave, EL6021_COMSETTINGS_INDEX, EL6021_BAUDRATE_SUBINDEX, FALSE, &real_baud_size, &real_baud, EC_TIMEOUTSAFE);
+        	//printf("[SetSDO] Baudrate is changed from %d to %d.\n", initial_baud, real_baud);
 
-        // enable half duplex (RS485))
-        bool is_RS485 = true;
-        ec_SDOwrite(slave, EL6021_COMSETTINGS_INDEX, EL6021_ENABLE_HALF_DUPLEX_SUBINDEX, FALSE, EL6021_ENABLE_HALF_DUPLEX_SIZE, &is_RS485, EC_TIMEOUTSAFE);
+        	// enable half duplex (RS485))
+        	bool is_RS485 = true;
+        	ec_SDOwrite(slave, EL6021_COMSETTINGS_INDEX, EL6021_ENABLE_HALF_DUPLEX_SUBINDEX, FALSE, EL6021_ENABLE_HALF_DUPLEX_SIZE, &is_RS485, EC_TIMEOUTSAFE);
 
-        // data frame (8N1)
-        uint8_t data_frame = EL6021_DATAFRAME_8N1;
-        ec_SDOwrite(slave, EL6021_COMSETTINGS_INDEX, EL6021_DATAFRAME_SUBINDEX, FALSE, EL6021_DATAFRAME_SIZE, &data_frame, EC_TIMEOUTSAFE);
+        	// data frame (8N1)
+        	uint8_t data_frame = EL6021_DATAFRAME_8N1;
+        	ec_SDOwrite(slave, EL6021_COMSETTINGS_INDEX, EL6021_DATAFRAME_SUBINDEX, FALSE, EL6021_DATAFRAME_SIZE, &data_frame, EC_TIMEOUTSAFE);
 
-		uint32_t explicit_baud = 0x0001C200;   // 115200
-		uint16_t extended_frame = 0x0003;      // 8N1
-		ec_SDOwrite(slave, EL6021_COMSETTINGS_INDEX, EL6021_EXPLICIT_BAUDRATE_SUBINDEX, FALSE, EL6021_EXPLICIT_BAUDRATE_SIZE, &explicit_baud, EC_TIMEOUTSAFE);
+			uint32_t explicit_baud = 0x0001C200;   // 115200
+			uint16_t extended_frame = 0x0003;      // 8N1
+			ec_SDOwrite(slave, EL6021_COMSETTINGS_INDEX, EL6021_EXPLICIT_BAUDRATE_SUBINDEX, FALSE, EL6021_EXPLICIT_BAUDRATE_SIZE, &explicit_baud, EC_TIMEOUTSAFE);
 
-		ec_SDOwrite(slave, EL6021_COMSETTINGS_INDEX, EL6021_EXTENDED_FRAME_SUBINDEX, FALSE, EL6021_EXTENDED_FRAME_SIZE, &extended_frame, EC_TIMEOUTSAFE);
+			ec_SDOwrite(slave, EL6021_COMSETTINGS_INDEX, EL6021_EXTENDED_FRAME_SUBINDEX, FALSE, EL6021_EXTENDED_FRAME_SIZE, &extended_frame, EC_TIMEOUTSAFE);
 
 
-        bool com01, com02, com03, com04, com05;
-        int data_frame_real;
-        int data_f_size = 4;
-        int bool_size = 1;
-        ec_SDOread(slave, EL6021_COMSETTINGS_INDEX, 0x01, FALSE, &bool_size, &com01, EC_TIMEOUTSAFE);
-        ec_SDOread(slave, EL6021_COMSETTINGS_INDEX, 0x02, FALSE, &bool_size, &com02, EC_TIMEOUTSAFE);
-        ec_SDOread(slave, EL6021_COMSETTINGS_INDEX, 0x03, FALSE, &bool_size, &com03, EC_TIMEOUTSAFE);
-        ec_SDOread(slave, EL6021_COMSETTINGS_INDEX, 0x04, FALSE, &bool_size, &com04, EC_TIMEOUTSAFE);
-        ec_SDOread(slave, EL6021_COMSETTINGS_INDEX, 0x05, FALSE, &bool_size, &com05, EC_TIMEOUTSAFE);
-        int com01_int, com02_int, com03_int, com04_int, com05_int;
-        if (com01 == true) com01_int = 1;
-        else com01_int = 0;
-        if (com02 == true) com02_int = 1;
-        else com02_int = 0;
-        if (com03 == true) com03_int = 1;
-        else com03_int = 0;
-        if (com04 == true) com04_int = 1;
-        else com04_int = 0;
-        if (com05 == true) com05_int = 1;
-        else com05_int = 0;
-        printf("[COM Settings] 01: %d, 02: %d, 03: %d, 04: %d, 05: %d.\n", com01_int, com02_int, com03_int, com04_int, com05_int);
-    }
+        	bool com01, com02, com03, com04, com05;
+        	int data_frame_real;
+        	int data_f_size = 4;
+        	int bool_size = 1;
+        	ec_SDOread(slave, EL6021_COMSETTINGS_INDEX, 0x01, FALSE, &bool_size, &com01, EC_TIMEOUTSAFE);
+        	ec_SDOread(slave, EL6021_COMSETTINGS_INDEX, 0x02, FALSE, &bool_size, &com02, EC_TIMEOUTSAFE);
+        	ec_SDOread(slave, EL6021_COMSETTINGS_INDEX, 0x03, FALSE, &bool_size, &com03, EC_TIMEOUTSAFE);
+        	ec_SDOread(slave, EL6021_COMSETTINGS_INDEX, 0x04, FALSE, &bool_size, &com04, EC_TIMEOUTSAFE);
+        	ec_SDOread(slave, EL6021_COMSETTINGS_INDEX, 0x05, FALSE, &bool_size, &com05, EC_TIMEOUTSAFE);
+        	int com01_int, com02_int, com03_int, com04_int, com05_int;
+        	if (com01 == true) com01_int = 1;
+        	else com01_int = 0;
+        	if (com02 == true) com02_int = 1;
+        	else com02_int = 0;
+        	if (com03 == true) com03_int = 1;
+        	else com03_int = 0;
+        	if (com04 == true) com04_int = 1;
+        	else com04_int = 0;
+        	if (com05 == true) com05_int = 1;
+        	else com05_int = 0;
+        	printf("[COM Settings_slave] 01: %d, 02: %d, 03: %d, 04: %d, 05: %d.\n", com01_int, com02_int, com03_int, com04_int, com05_int);
+    	}
+	}
 
     // EL6021 - 2. IO map
-    ec_config_map(&IOmap);
+    //ec_config_map(&IOmap);
     ec_configdc();
 
 	expected_WKC = (ec_group[0].outputsWKC * 2) + ec_group[0].inputsWKC;
     printf("Calculated expectedWKC: %d\n", expected_WKC);
 
     //for (int slave = 1; slave <= ec_slavecount; slave++)
-	if(slave == 2)
-    {
-        rxPDO[slave - 1] = (struct EL6021_rx *)(ec_slave[slave].outputs);
-        txPDO[slave - 1] = (struct EL6021_tx *)(ec_slave[slave].inputs);
-    }
+	for (int slave = 2; slave <= ec_slavecount; slave++)
+	{
+		if(slave == 2 || slave == 4)
+    	{
+        	rxPDO[slave - 1] = (struct EL6021_rx *)(ec_slave[slave].outputs);
+        	txPDO[slave - 1] = (struct EL6021_tx *)(ec_slave[slave].inputs);
+    	}
+	}
     // printf("\033[1;32m[RT-SoemEcat] slaves mapped, state to SAFE_OP.\033[0m\n");
 
     // wait for all slaves to reach SAFE_OP state
@@ -103,6 +109,7 @@ int EL6021::SetSDO()
 	ec_slave[1].state = EC_STATE_OPERATIONAL;
 	ec_slave[2].state = EC_STATE_OPERATIONAL;
 	ec_slave[3].state = EC_STATE_OPERATIONAL;
+	ec_slave[4].state = EC_STATE_OPERATIONAL;
 
 
     // send one valid process data to make outputs in slaves happy
@@ -142,21 +149,42 @@ int EL6021::SetSDO()
 
 int EL6021::PrepareCommunication(int slave)
 {
-    do
-    {
-        rxPDO[slave]->controlWord = EL6021_CONTROLWORD_INITIALIZE;
-        ProcessOneCycleCommand();
-        usleep(1000);
-    } while (GetStatusWord(slave) != EL6021_STATUSWORD_INITIALIZED);
-    printf("[DynamixelEtherCAT] Terminal initialization is completed (%d).\n", GetStatusWord(slave));
+	if(slave == 1)
+	{
+    	do
+    	{
+        	rxPDO[slave]->controlWord = EL6021_CONTROLWORD_INITIALIZE;
+        	ProcessOneCycleCommand();
+        	usleep(1000);
+    	} while (GetStatusWord(slave) != EL6021_STATUSWORD_INITIALIZED);
+    	printf("[DynamixelEtherCAT] Terminal initialization is completed (%d).\n", GetStatusWord(slave));
 
-    do
-    {
-        rxPDO[slave]->controlWord = EL6021_CONTROLWORD_PREPARE;
-        ProcessOneCycleCommand();
-        usleep(1000);
-    } while (GetStatusWord(slave) != EL6021_STATUSWORD_READYTOEXCHANGE);
-    printf("[DynamixelEtherCAT] Terminal is ready for serial data exchange (%d).\n", GetStatusWord(slave));
+    	do
+    	{
+        	rxPDO[slave]->controlWord = EL6021_CONTROLWORD_PREPARE;
+        	ProcessOneCycleCommand();
+        	usleep(1000);
+    	} while (GetStatusWord(slave) != EL6021_STATUSWORD_READYTOEXCHANGE);
+    	printf("[DynamixelEtherCAT] Terminal is ready for serial data exchange (%d).\n", GetStatusWord(slave));
+	}
+	else if(slave == 3)
+	{
+	    do
+    	{
+        	rxPDO[slave]->controlWord = EL6021_CONTROLWORD_INITIALIZE;
+        	ProcessOneCycleCommand();
+        	usleep(1000);
+    	} while (GetStatusWord(slave) != EL6021_STATUSWORD_INITIALIZED);
+    	printf("[IMU_EtherCAT] Terminal initialization is completed (%d).\n", GetStatusWord(slave));
+
+    	do
+    	{
+        	rxPDO[slave]->controlWord = EL6021_CONTROLWORD_PREPARE;
+        	ProcessOneCycleCommand();
+        	usleep(1000);
+    	} while (GetStatusWord(slave) != EL6021_STATUSWORD_READYTOEXCHANGE);
+    	printf("[IMU_EtherCAT] Terminal is ready for serial data exchange (%d).\n", GetStatusWord(slave));
+	}
 
     usleep(1000);
     return 0;
@@ -418,6 +446,79 @@ int EL6021::UpdateCommand(int target_position, int *current_position)
     else
         return -1;
 }
+
+int EL6021::ReadIMUData(float* roll, float* pitch, float* yaw)
+{
+    const int imu_slave_index = 4;
+    const int imu_txPDO_index = imu_slave_index - 1;
+    const int buffer_size = 64;
+    uint8_t buffer[buffer_size] = {0};
+
+
+
+    int sw_bit = (txPDO[imu_txPDO_index]->statusWord) & 0x0001;
+    int cw_bit = (rxPDO[imu_txPDO_index]->controlWord) & 0x0001;
+    if (cw_bit == 1)
+        rxPDO[imu_txPDO_index]->controlWord &= 0xFFFE;
+    else
+        rxPDO[imu_txPDO_index]->controlWord += 0x0001;
+
+    int timeout = 1000;
+    do
+    {
+        ProcessOneCycleCommand();
+        timeout--;
+    } while (((txPDO[imu_txPDO_index]->statusWord) & 0x0001) == sw_bit && timeout > 0);
+
+    if (timeout <= 0)
+    {
+        printf("[IMU-ERROR] Timeout waiting for data ready\n");
+        return -1;
+    }
+
+	int received_size = ((txPDO[imu_txPDO_index]->statusWord) >> 8) & 0xFF;
+    if (received_size > buffer_size) received_size = buffer_size;
+    memcpy(buffer, txPDO[imu_txPDO_index]->data, received_size);
+
+
+    if (buffer[0] != '*')
+    {
+        printf("[IMU-ERROR] Invalid start character: %c\n", buffer[0]);
+        return -1;
+    }
+
+
+    char* token;
+    char* saveptr;
+    int token_count = 0;
+
+    token = strtok_r((char*)&buffer[1], ",", &saveptr);
+    while (token != NULL)
+    {
+        float value = atof(token);
+        if (token_count == 0) *roll = value;
+        else if (token_count == 1) *pitch = value;
+        else if (token_count == 2) *yaw = value;
+
+        token = strtok_r(NULL, ",", &saveptr);
+        token_count++;
+        if (token_count >= 3) break;
+    }
+
+    if (token_count < 3)
+    {
+        printf("[IMU-ERROR] Not enough data fields parsed.\n");
+        return -1;
+    }
+
+
+    printf("[IMU] Roll: %.2f deg, Pitch: %.2f deg, Yaw: %.2f deg\n", *roll, *pitch, *yaw);
+
+    return 0;
+}
+
+
+
 
 int EL6021::RC_ReadPWM()
 {

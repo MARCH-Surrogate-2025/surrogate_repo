@@ -63,6 +63,8 @@ static void SoemEcat(void *arg)
    
     // EL6021 - 3: Initialize and ready to communicate
     ec.PrepareCommunication(1);
+	ec.PrepareCommunication(3);
+
 
 
     //ec.SendCommand();
@@ -118,6 +120,7 @@ static void SoemEcat(void *arg)
         double freq = 3;
         double amp = 500;
 		ec.RC_ReadPWM();
+		//ec.ReadIMUData(&ec.roll, &ec.pitch, &ec.yaw);
         //dxl_target_position = (int)(amp*sin(2*M_PI*freq*thread_tick_1*0.001)) + dxl_zero_position;
         //RC_PWM_Targetposition setting
 		dxl_target_position = map(ec.ch1, 600, 990, 1024, 3072);

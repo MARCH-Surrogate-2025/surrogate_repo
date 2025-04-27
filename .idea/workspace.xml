@@ -27,15 +27,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4a724794-8493-48f6-bb93-007055f4ad43" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/src/Test_Dynamixel/Test_Dynamixel" beforeDir="false" afterPath="$PROJECT_DIR$/build/src/Test_Dynamixel/Test_Dynamixel" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/src/Test_RC/Test_RC" beforeDir="false" afterPath="$PROJECT_DIR$/build/src/Test_RC/Test_RC" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Test_Dynamixel/src/EL6021.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/Test_Dynamixel/src/EL6021.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Test_Dynamixel/src/EL6021.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/Test_Dynamixel/src/EL6021.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Test_Dynamixel/src/Test_Dynamixel.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/Test_Dynamixel/src/Test_Dynamixel.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Test_Dynamixel/src/Test_Dynamixel.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/Test_Dynamixel/src/Test_Dynamixel.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Test_RC/src/Test_RC.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/Test_RC/src/Test_RC.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -267,7 +263,7 @@
       <workItem from="1745564567016" duration="783000" />
       <workItem from="1745655182072" duration="21631000" />
       <workItem from="1745733062757" duration="342000" />
-      <workItem from="1745733785821" duration="12297000" />
+      <workItem from="1745733785821" duration="18087000" />
     </task>
     <servers />
   </component>

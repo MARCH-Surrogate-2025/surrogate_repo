@@ -1,7 +1,7 @@
 #ifndef EL6021_EL6021_H
 #define EL6021_EL6021_H
 
-#define WHEEL_NUM               2
+#define WHEEL_NUM               3
 
 // EL6021 StatusWord //
 #define EL6021_STATUSWORD_BIT0_TRANSMIT_ACCEPTED       0
@@ -114,6 +114,10 @@ class EL6021
 		int16_t ch5;
 		int16_t ch6;
 
+		float roll;
+		float pitch;
+		float yaw;
+
 
 
 
@@ -133,6 +137,8 @@ class EL6021
 
 		// EL3068
 		int RC_ReadPWM();
+		//2nd EL6021
+		int ReadIMUData(float* roll, float* pitch, float* yaw);
 
         // Dynamixel
         // CustomDynamixel dxl_write();
