@@ -83,7 +83,7 @@ int EL6021::SetSDO()
 	}
 
     // EL6021 - 2. IO map
-    //ec_config_map(&IOmap);
+    ec_config_map(&IOmap);
     ec_configdc();
 
 	expected_WKC = (ec_group[0].outputsWKC * 2) + ec_group[0].inputsWKC;
@@ -96,10 +96,16 @@ int EL6021::SetSDO()
     	{
         	rxPDO[slave - 1] = (struct EL6021_rx *)(ec_slave[slave].outputs);
         	txPDO[slave - 1] = (struct EL6021_tx *)(ec_slave[slave].inputs);
+
+			//printf("[DEBUG] slave %d : rxPDO addr = %p, txPDO addr = %p\n", slave, rxPDO[slave-1], txPDO[slave-1]);
     	}
 	}
-    // printf("\033[1;32m[RT-SoemEcat] slaves mapped, state to SAFE_OP.\033[0m\n");
 
+
+
+
+    // printf("\033[1;32m[RT-SoemEcat] slaves mapped, state to SAFE_OP.\033[0m\n");
+	//printf("debug\n");
     // wait for all slaves to reach SAFE_OP state
     ec_statecheck(0, EC_STATE_SAFE_OP, EC_TIMEOUTSTATE * 4);
 
@@ -110,7 +116,6 @@ int EL6021::SetSDO()
 	ec_slave[2].state = EC_STATE_OPERATIONAL;
 	ec_slave[3].state = EC_STATE_OPERATIONAL;
 	ec_slave[4].state = EC_STATE_OPERATIONAL;
-
 
     // send one valid process data to make outputs in slaves happy
     ec_send_processdata();
@@ -144,6 +149,7 @@ int EL6021::SetSDO()
 	}
 
 
+
     return 0;
 }
 
@@ -167,7 +173,7 @@ int EL6021::PrepareCommunication(int slave)
     	} while (GetStatusWord(slave) != EL6021_STATUSWORD_READYTOEXCHANGE);
     	printf("[DynamixelEtherCAT] Terminal is ready for serial data exchange (%d).\n", GetStatusWord(slave));
 	}
-	else if(slave == 3)
+	if(slave == 3)
 	{
 	    do
     	{
@@ -185,6 +191,7 @@ int EL6021::PrepareCommunication(int slave)
     	} while (GetStatusWord(slave) != EL6021_STATUSWORD_READYTOEXCHANGE);
     	printf("[IMU_EtherCAT] Terminal is ready for serial data exchange (%d).\n", GetStatusWord(slave));
 	}
+
 
     usleep(1000);
     return 0;
@@ -454,65 +461,76 @@ int EL6021::ReadIMUData(float* roll, float* pitch, float* yaw)
     const int buffer_size = 64;
     uint8_t buffer[buffer_size] = {0};
 
-
-
-    int sw_bit = (txPDO[imu_txPDO_index]->statusWord) & 0x0001;
-    int cw_bit = (rxPDO[imu_txPDO_index]->controlWord) & 0x0001;
-    if (cw_bit == 1)
-        rxPDO[imu_txPDO_index]->controlWord &= 0xFFFE;
-    else
-        rxPDO[imu_txPDO_index]->controlWord += 0x0001;
+    int prev_sw_bit = (txPDO[imu_txPDO_index]->statusWord) & 0x0002;
 
     int timeout = 1000;
-    do
+    while (timeout--)
     {
         ProcessOneCycleCommand();
-        timeout--;
-    } while (((txPDO[imu_txPDO_index]->statusWord) & 0x0001) == sw_bit && timeout > 0);
+
+
+        int curr_sw_bit = (txPDO[imu_txPDO_index]->statusWord) & 0x0002;
+
+        if (curr_sw_bit != prev_sw_bit)
+        {
+            // controlword ack
+            if ((rxPDO[imu_txPDO_index]->controlWord & 0x0002) == 0x0002)
+                rxPDO[imu_txPDO_index]->controlWord &= ~0x0002;
+            else
+                rxPDO[imu_txPDO_index]->controlWord |= 0x0002;
+
+            break;
+        }
+    }
 
     if (timeout <= 0)
     {
-        printf("[IMU-ERROR] Timeout waiting for data ready\n");
+        printf("[IMU-ERROR] Timeout waiting for new data.\n");
         return -1;
     }
 
-	int received_size = ((txPDO[imu_txPDO_index]->statusWord) >> 8) & 0xFF;
+
+    int received_size = ((txPDO[imu_txPDO_index]->statusWord) >> 8) & 0xFF;
     if (received_size > buffer_size) received_size = buffer_size;
     memcpy(buffer, txPDO[imu_txPDO_index]->data, received_size);
 
-
-    if (buffer[0] != '*')
+    if (received_size < 10)
     {
-        printf("[IMU-ERROR] Invalid start character: %c\n", buffer[0]);
+        printf("[IMU-ERROR] Not enough data received (%d bytes)\n", received_size);
         return -1;
     }
 
-
-    char* token;
-    char* saveptr;
-    int token_count = 0;
-
-    token = strtok_r((char*)&buffer[1], ",", &saveptr);
-    while (token != NULL)
+    uint16_t sop = (buffer[0] << 8) | buffer[1];
+    if (sop != 0x5555)
     {
-        float value = atof(token);
-        if (token_count == 0) *roll = value;
-        else if (token_count == 1) *pitch = value;
-        else if (token_count == 2) *yaw = value;
-
-        token = strtok_r(NULL, ",", &saveptr);
-        token_count++;
-        if (token_count >= 3) break;
-    }
-
-    if (token_count < 3)
-    {
-        printf("[IMU-ERROR] Not enough data fields parsed.\n");
+        printf("[IMU-ERROR] Invalid SOP: 0x%04X\n", sop);
         return -1;
     }
 
+    int16_t roll_raw  = (buffer[2] << 8) | buffer[3];
+    int16_t pitch_raw = (buffer[4] << 8) | buffer[5];
+    int16_t yaw_raw   = (buffer[6] << 8) | buffer[7];
 
-    printf("[IMU] Roll: %.2f deg, Pitch: %.2f deg, Yaw: %.2f deg\n", *roll, *pitch, *yaw);
+    uint16_t received_chk = (buffer[8] << 8) | buffer[9];
+
+    uint16_t calculated_chk = 0;
+    for (int i = 0; i < 8; i++)
+    {
+        calculated_chk += buffer[i];
+    }
+    calculated_chk &= 0xFFFF;
+
+    if (calculated_chk != received_chk)
+    {
+        printf("[IMU-ERROR] Checksum mismatch! (calculated: 0x%04X, received: 0x%04X)\n", calculated_chk, received_chk);
+        return -1;
+    }
+
+    *roll = (float)roll_raw / 10.0f;
+    *pitch = (float)pitch_raw / 10.0f;
+    *yaw = (float)yaw_raw / 10.0f;
+
+    printf("[IMU] Roll: %.2f deg, Pitch: %.2f deg, Yaw: %.2f deg (CHK OK)\n", *roll, *pitch, *yaw);
 
     return 0;
 }
@@ -968,7 +986,6 @@ int EL6021::DXL_ReadCurrentPosition(int* _current_position)
         {
             ProcessOneCycleCommand();
         } while (((txPDO[1]->statusWord) & 0x0001) == sw_bit);
-
 
 
         /////////////////////////

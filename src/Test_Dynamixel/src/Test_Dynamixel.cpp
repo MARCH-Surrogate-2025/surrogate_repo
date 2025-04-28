@@ -120,7 +120,7 @@ static void SoemEcat(void *arg)
         double freq = 3;
         double amp = 500;
 		ec.RC_ReadPWM();
-		//ec.ReadIMUData(&ec.roll, &ec.pitch, &ec.yaw);
+		ec.ReadIMUData(&ec.roll, &ec.pitch, &ec.yaw);
         //dxl_target_position = (int)(amp*sin(2*M_PI*freq*thread_tick_1*0.001)) + dxl_zero_position;
         //RC_PWM_Targetposition setting
 		dxl_target_position = map(ec.ch1, 600, 990, 1024, 3072);
@@ -141,9 +141,9 @@ static void SoemEcat(void *arg)
         duration_time = rt_timer_read() - start_time;
         start_time = rt_timer_read();
 
-        rt_printf("[RT-SoemCat] Cycle: %d (dt: %2.3f ms), CH1: %d | Target Position: %d, CurrentPosition: %d \r"
-                    , thread_tick_1, duration_time / 1e6
-                    , ec.ch1, dxl_target_position, dxl_current_position);
+        //rt_printf("[RT-SoemCat] Cycle: %d (dt: %2.3f ms), CH1: %d | Target Position: %d, CurrentPosition: %d \r"
+        //            , thread_tick_1, duration_time / 1e6
+        //            , ec.ch1, dxl_target_position, dxl_current_position);
 
          
         rt_task_wait_period(NULL);

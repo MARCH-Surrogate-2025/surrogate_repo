@@ -1,7 +1,7 @@
 #ifndef EL6021_EL6021_H
 #define EL6021_EL6021_H
 
-#define WHEEL_NUM               3
+#define WHEEL_NUM               4
 
 // EL6021 StatusWord //
 #define EL6021_STATUSWORD_BIT0_TRANSMIT_ACCEPTED       0
