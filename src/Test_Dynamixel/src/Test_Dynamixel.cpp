@@ -141,9 +141,9 @@ static void SoemEcat(void *arg)
         duration_time = rt_timer_read() - start_time;
         start_time = rt_timer_read();
 
-        //rt_printf("[RT-SoemCat] Cycle: %d (dt: %2.3f ms), CH1: %d | Target Position: %d, CurrentPosition: %d \r"
-        //            , thread_tick_1, duration_time / 1e6
-        //            , ec.ch1, dxl_target_position, dxl_current_position);
+        rt_printf("[RT-SoemCat] Cycle: %d (dt: %2.3f ms), CH1: %d | Target Position: %d, CurrentPosition: %d | Roll: %.2f deg, Pitch: %.2f deg, Yaw: %.2f deg\r"
+                    , thread_tick_1, duration_time / 1e6
+                    , ec.ch1, dxl_target_position, dxl_current_position , ec.roll, ec.pitch, ec.yaw);
 
          
         rt_task_wait_period(NULL);

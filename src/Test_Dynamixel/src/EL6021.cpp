@@ -454,83 +454,119 @@ int EL6021::UpdateCommand(int target_position, int *current_position)
         return -1;
 }
 
+
+
 int EL6021::ReadIMUData(float* roll, float* pitch, float* yaw)
 {
     const int imu_slave_index = 4;
     const int imu_txPDO_index = imu_slave_index - 1;
-    const int buffer_size = 64;
-    uint8_t buffer[buffer_size] = {0};
+    const int buffer_size = 128;
 
-    int prev_sw_bit = (txPDO[imu_txPDO_index]->statusWord) & 0x0002;
+    static uint8_t accum_buffer[256] = {0};  // Circular buffer for IMU ASCII stream
+    static int accum_len = 0;
 
-    int timeout = 1000;
-    while (timeout--)
-    {
-        ProcessOneCycleCommand();
-
-
-        int curr_sw_bit = (txPDO[imu_txPDO_index]->statusWord) & 0x0002;
-
-        if (curr_sw_bit != prev_sw_bit)
-        {
-            // controlword ack
-            if ((rxPDO[imu_txPDO_index]->controlWord & 0x0002) == 0x0002)
-                rxPDO[imu_txPDO_index]->controlWord &= ~0x0002;
-            else
-                rxPDO[imu_txPDO_index]->controlWord |= 0x0002;
-
-            break;
-        }
-    }
-
-    if (timeout <= 0)
-    {
-        printf("[IMU-ERROR] Timeout waiting for new data.\n");
-        return -1;
-    }
+	// --- (1) Trigger data reception toggle ---
+    ProcessOneCycleCommand();
+    int sw_bit = (txPDO[imu_txPDO_index]->statusWord) & 0x0002;
+	rxPDO[imu_txPDO_index]->controlWord ^= 0x0002;
 
 
+	// --- (2) Append received bytes to buffer ---
     int received_size = ((txPDO[imu_txPDO_index]->statusWord) >> 8) & 0xFF;
-    if (received_size > buffer_size) received_size = buffer_size;
-    memcpy(buffer, txPDO[imu_txPDO_index]->data, received_size);
+    if (received_size <= 0 || received_size > buffer_size) return -1;
 
-    if (received_size < 10)
+    if (accum_len + received_size >= sizeof(accum_buffer))
     {
-        printf("[IMU-ERROR] Not enough data received (%d bytes)\n", received_size);
+        //printf("[IMU-WARNING] Buffer overflow, resetting\n");
+        accum_len = 0;
+    }
+
+    memcpy(accum_buffer + accum_len, txPDO[imu_txPDO_index]->data, received_size);
+    accum_len += received_size;
+
+	// --- (3) Parse line from '*' to '\n' ---
+    char* start_ptr = (char*)memchr(accum_buffer, '*', accum_len);
+
+    if (!start_ptr)
+    {
+		// No valid start found – remove garbage or reset
+        if (accum_len > 240)
+        {
+            printf("[IMU-ERROR] '*' not found and buffer too long – reset\n");
+            accum_len = 0;
+        }
+        else
+        {
+            memmove(accum_buffer, accum_buffer + 1, accum_len - 1);
+            accum_len -= 1;
+        }
         return -1;
     }
 
-    uint16_t sop = (buffer[0] << 8) | buffer[1];
-    if (sop != 0x5555)
+    char* end_ptr = (char*)memchr(start_ptr, '\n', ((char*)accum_buffer + accum_len) - start_ptr);
+    if (!end_ptr)  // Incomplete line – wait for next packet
     {
-        printf("[IMU-ERROR] Invalid SOP: 0x%04X\n", sop);
+        //printf("[IMU-ERROR] End marker '\\n' not found yet\n");
+        return -1;
+    }
+/*
+	printf("[DEBUG] Current buffer: ");
+	for (int i = 0; i < accum_len; i++) {
+    	printf("%02X ", accum_buffer[i]);
+	}
+	printf("\n");
+
+	printf("[DEBUG-ASCII] ");
+	for (int i = 0; i < accum_len; i++) {
+    	char c = (char)accum_buffer[i];
+    	if (c == '\n') printf("\\n");
+    	else if (c == '\r') printf("\\r");
+    	else printf("%c", (c >= 32 && c <= 126) ? c : '.');
+	}
+	printf("\n");
+*/
+
+
+	 // Adjust line length if CR precedes LF
+    int line_len = end_ptr - start_ptr;
+	if (line_len > 0 && *(end_ptr - 1) == '\r') {
+    	line_len--;
+	}
+
+    if (line_len <= 0 || line_len >= 128)
+    {
+        printf("[IMU-ERROR] Invalid line length – reset\n");
+        accum_len = 0;
         return -1;
     }
 
-    int16_t roll_raw  = (buffer[2] << 8) | buffer[3];
-    int16_t pitch_raw = (buffer[4] << 8) | buffer[5];
-    int16_t yaw_raw   = (buffer[6] << 8) | buffer[7];
+	// --- (4) Extract and parse the line ---
+    char line[128] = {0};
+    memcpy(line, start_ptr + 1, line_len - 1);
+    line[line_len - 1] = '\0';
 
-    uint16_t received_chk = (buffer[8] << 8) | buffer[9];
-
-    uint16_t calculated_chk = 0;
-    for (int i = 0; i < 8; i++)
+    float r = 0, p = 0, y_ = 0;
+    int parsed = sscanf(line, "%f,%f,%f", &r, &p, &y_);
+    if (parsed == 3)
     {
-        calculated_chk += buffer[i];
+        *roll = r;
+        *pitch = p;
+        *yaw = y_;
+        //printf("[IMU] Roll: %.2f deg, Pitch: %.2f deg, Yaw: %.2f deg\n", *roll, *pitch, *yaw);
     }
-    calculated_chk &= 0xFFFF;
-
-    if (calculated_chk != received_chk)
+    else
     {
-        printf("[IMU-ERROR] Checksum mismatch! (calculated: 0x%04X, received: 0x%04X)\n", calculated_chk, received_chk);
+        printf("[IMU-ERROR] Failed to parse float values: \"%s\"\n", line);
+        accum_len = 0;
         return -1;
     }
 
-    *roll = (float)roll_raw / 10.0f;
-    *pitch = (float)pitch_raw / 10.0f;
-    *yaw = (float)yaw_raw / 10.0f;
+	// --- (5) Remove processed data ---
+    int processed = (end_ptr - (char*)accum_buffer) + 1;
+    memmove(accum_buffer, accum_buffer + processed, accum_len - processed);
+    accum_len -= processed;
 
-    printf("[IMU] Roll: %.2f deg, Pitch: %.2f deg, Yaw: %.2f deg (CHK OK)\n", *roll, *pitch, *yaw);
+
 
     return 0;
 }

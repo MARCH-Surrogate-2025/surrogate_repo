@@ -30,7 +30,6 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/src/Test_Dynamixel/Test_Dynamixel" beforeDir="false" afterPath="$PROJECT_DIR$/build/src/Test_Dynamixel/Test_Dynamixel" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Test_Dynamixel/src/EL6021.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/Test_Dynamixel/src/EL6021.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Test_Dynamixel/src/EL6021.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/Test_Dynamixel/src/EL6021.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Test_Dynamixel/src/Test_Dynamixel.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/Test_Dynamixel/src/Test_Dynamixel.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -264,7 +263,9 @@
       <workItem from="1745655182072" duration="21631000" />
       <workItem from="1745733062757" duration="342000" />
       <workItem from="1745733785821" duration="18139000" />
-      <workItem from="1745816647121" duration="14935000" />
+      <workItem from="1745816647121" duration="15006000" />
+      <workItem from="1745901309668" duration="8810000" />
+      <workItem from="1745910527301" duration="10608000" />
     </task>
     <servers />
   </component>
